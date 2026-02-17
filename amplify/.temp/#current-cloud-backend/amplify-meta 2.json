@@ -1,0 +1,109 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-peatutoramplify-dev-2d63d-authRole",
+      "UnauthRoleArn": "arn:aws:iam::224535575080:role/amplify-peatutoramplify-dev-2d63d-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::224535575080:role/amplify-peatutoramplify-dev-2d63d-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-peatutoramplify-dev-2d63d-deployment",
+      "UnauthRoleName": "amplify-peatutoramplify-dev-2d63d-unauthRole",
+      "StackName": "amplify-peatutoramplify-dev-2d63d",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:224535575080:stack/amplify-peatutoramplify-dev-2d63d/811415e0-ace9-11f0-8791-06a408653a75",
+      "AmplifyAppId": "d1kkm06tti0z7k"
+    }
+  },
+  "auth": {
+    "peatutoramplifyc0036cb6": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-peatutoramplify-dev-2d63d-deployment/amplify-cfn-templates/auth/peatutoramplifyc0036cb6-cloudformation-template.json",
+        "logicalId": "authpeatutoramplifyc0036cb6"
+      },
+      "lastPushTimeStamp": "2025-10-22T03:12:18.929Z",
+      "output": {
+        "UserPoolId": "ap-southeast-2_UX9P8lVZr",
+        "AppClientIDWeb": "23tjofisjp36onc52rpkf1215a",
+        "AppClientID": "64blrrlokl39ninmrok17hp921",
+        "IdentityPoolId": "ap-southeast-2:905e8105-344e-4d2c-adbe-7b94cd07e660",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-southeast-2:224535575080:userpool/ap-southeast-2_UX9P8lVZr",
+        "IdentityPoolName": "peatutoramplifyc0036cb6_identitypool_c0036cb6__dev",
+        "UserPoolName": "peatutoramplifyc0036cb6_userpool_c0036cb6"
+      },
+      "lastPushDirHash": "jGuWSIuhomOfWB3/jEMJjOUjlGg="
+    }
+  },
+  "api": {
+    "peatutoramplify": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "peatutoramplifyc0036cb6"
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authpeatutoramplifyc0036cb6"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "sz5gy3rmznfothgxvdcwe7r2eu",
+        "GraphQLAPIEndpointOutput": "https://yqvfpafppfh3tcozb3rlgelsei.appsync-api.ap-southeast-2.amazonaws.com/graphql"
+      },
+      "lastPushTimeStamp": "2025-10-22T03:12:23.174Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-peatutoramplify-dev-2d63d-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apipeatutoramplify"
+      },
+      "lastPushDirHash": "hGWJwMnc2p/Ge7wWqWcTzJT2Ux0="
+    }
+  },
+  "storage": {
+    "s3storage": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "lastPushTimeStamp": "2025-10-22T03:12:18.931Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-peatutoramplify-dev-2d63d-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages3storage"
+      },
+      "output": {
+        "BucketName": "peatutorstorage2d63d-dev",
+        "Region": "ap-southeast-2"
+      },
+      "lastPushDirHash": "6jJVjce8buiRxEqf8hldCnRXn2w="
+    }
+  }
+}

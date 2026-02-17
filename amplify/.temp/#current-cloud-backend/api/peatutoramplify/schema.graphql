@@ -1,0 +1,827 @@
+# ==============================================
+# Sprint 5 — UPDATED (no user-declared createdAt/updatedAt)
+# ==============================================
+
+type Worksheet @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  userId: String!
+  title: String!
+  fileType: String
+  fileName: String!
+  s3WorksheetKey: String!
+  extractionResult: String
+  questionCount: Int
+  totalMarks: Int
+  uploadedAt: AWSDateTime!
+  fileSize: Int
+  contentHash: String
+  sourceFileHashes: [String]
+  lastAccessedAt: AWSDateTime
+
+  # Relationships
+  questions: [Question] @hasMany(indexName: "byWorksheetQuestions", fields: ["id"])
+  fullWorksheetSolutions: [FullWorksheetSolution] @hasMany(indexName: "byWorksheetSolutions", fields: ["id"])
+  homeworkAssignments: [Homework] @hasMany(indexName: "byWorksheet", fields: ["id"])
+  metadata: [WorksheetMetadata] @hasMany(indexName: "byWorksheet", fields: ["id"])
+}
+
+type Question @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  worksheetId: ID! @index(name: "byWorksheetQuestions", sortKeyFields: ["questionId"])
+  userId: String!
+
+  questionId: String!
+  questionText: String!
+  marks: Int!
+  skillsTested: [String]
+  hints: String
+  stepByStep: String
+  answer: String
+
+  isSubpart: Boolean!
+  parentQuestionId: String
+
+  # Relationships
+  worksheet: Worksheet @belongsTo(fields: ["worksheetId"])
+  solutionFeedbacks: [SolutionFeedback] @hasMany(indexName: "byQuestionFeedback", fields: ["id"])
+  metadata: [QuestionMetadata] @hasMany(indexName: "byQuestion", fields: ["id"])
+}
+
+type SolutionFeedback @model @auth(rules: [
+  { allow: owner }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  questionId: ID! @index(name: "byQuestionFeedback", sortKeyFields: ["submittedAt"])
+  worksheetId: ID! @index(name: "byWorksheetAllFeedback", sortKeyFields: ["submittedAt"])
+  userId: String!
+
+  s3SolutionImageKey: String!
+
+  feedback: String!
+  isCorrect: Boolean
+  suggestions: [String]
+
+  attemptNumber: Int!
+  submittedAt: AWSDateTime!
+
+  # Relationships
+  question: Question @belongsTo(fields: ["questionId"])
+
+  # AI metadata
+  aiModel: String
+  tokensUsed: Int
+}
+
+type FullWorksheetSolution @model @auth(rules: [
+  { allow: owner }
+  { allow: private, operations: [read] }   # Teachers can read
+]) {
+  id: ID!
+  worksheetId: ID! @index(name: "byWorksheetSolutions", sortKeyFields: ["submittedAt"])
+  userId: String!
+
+  # Existing AI feedback fields
+  s3SolutionImageKey: String!
+  overallFeedback: String!
+  overallScore: Int!
+  totalQuestions: Int!
+  completedQuestions: [String]
+  questionsWithIssues: [String]
+  suggestions: [String]
+  detailedFeedback: String
+
+  attemptNumber: Int!
+  submittedAt: AWSDateTime!
+
+  # Relationships
+  worksheet: Worksheet @belongsTo(fields: ["worksheetId"])
+
+  # AI metadata
+  aiModel: String
+  tokensUsed: Int
+
+  # Optional homework link (submission for homework)
+  homeworkId: ID @index(name: "byHomeworkSubmissions")
+  homework: Homework @belongsTo(fields: ["homeworkId"])
+
+  # Homework-specific metadata
+  isLate: Boolean
+  teacherReviewed: Boolean
+  teacherNotes: String
+  teacherReviewedAt: AWSDateTime
+  teacherReviewedBy: String
+}
+
+type UserStats @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  userId: String!
+
+  userRole: UserRole
+
+  totalWorksheets: Int!
+  totalQuestions: Int!
+  totalSolutionsSubmitted: Int!
+  totalFeedbackReceived: Int!
+
+  averageScore: Float
+  correctAnswersCount: Int!
+  totalAttemptsCount: Int!
+
+  lastActiveAt: AWSDateTime
+}
+
+# ==============================================
+# NEW MODELS - Sprint 4 Multi-User Features
+# ==============================================
+
+type UserProfile @model @auth(rules: [
+  { allow: owner, ownerField: "userId", operations: [create, update, delete, read] }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  userId: ID! @index(name: "byUserId", queryField: "profileByUserId")
+  email: String!
+  userRole: UserRole!
+  displayName: String!
+  schoolName: String
+  gradeLevel: String
+  profileImageUrl: String
+  onboardingCompleted: Boolean!
+}
+
+type Classroom @model @auth(rules: [
+  { allow: owner, ownerField: "teacherId", operations: [create, update, delete, read] }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  teacherId: ID! @index(name: "byTeacher", sortKeyFields: ["id"])  # changed from createdAt
+  className: String!
+  classCode: String! @index(name: "byClassCode", queryField: "classroomByCode")
+  subject: String
+  description: String
+  gradeLevel: String
+  isActive: Boolean!
+
+  memberships: [ClassroomMembership] @hasMany(indexName: "byClassroom", fields: ["id"])
+  homework: [Homework] @hasMany(indexName: "byClassroom", fields: ["id"])
+  studentProgress: [StudentProgress] @hasMany(indexName: "byClassroom", fields: ["id"])
+}
+
+type ClassroomMembership @model @auth(rules: [
+  { allow: owner, ownerField: "studentId", operations: [create, read, update, delete] }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  classroomId: ID! @index(name: "byClassroom", sortKeyFields: ["enrolledAt"])
+  studentId: ID! @index(name: "byStudent", sortKeyFields: ["enrolledAt"])
+  status: MembershipStatus!
+  enrolledAt: AWSDateTime!
+  approvedAt: AWSDateTime
+  approvedBy: ID
+
+  classroom: Classroom @belongsTo(fields: ["classroomId"])
+}
+
+type ParentChildRelationship @model @auth(rules: [
+  { allow: owner, ownerField: "childId", operations: [create, update, delete, read] }
+  { allow: private, operations: [read, update] }
+]) {
+  id: ID!
+  parentId: ID! @index(name: "byParent", sortKeyFields: ["id"])
+  childId: ID! @index(name: "byChild", sortKeyFields: ["id"])
+  linkingCode: String! @index(name: "byLinkingCode", queryField: "relationshipByLinkingCode")
+  relationshipType: RelationshipType!
+  status: LinkStatus!
+  approvedAt: AWSDateTime
+}
+
+# ==============================================
+# Homework & Analytics
+# ==============================================
+
+type Homework @model @auth(rules: [
+  { allow: owner, ownerField: "teacherId", operations: [create, update, delete, read] }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  classroomId: ID! @index(name: "byClassroom", sortKeyFields: ["dueDate"])
+  teacherId: ID!
+
+  title: String!
+  description: String
+  dueDate: AWSDateTime!
+  assignedDate: AWSDateTime!
+  totalPoints: Int
+  isPublished: Boolean!
+
+  worksheetId: ID! @index(name: "byWorksheet")
+  worksheet: Worksheet @belongsTo(fields: ["worksheetId"])
+
+  instructions: String
+  learningObjectives: String
+
+  allowLateSubmissions: Boolean
+  allowMultipleAttempts: Boolean
+  maxAttempts: Int
+
+  classroom: Classroom @belongsTo(fields: ["classroomId"])
+
+  submissions: [FullWorksheetSolution] @hasMany(indexName: "byHomeworkSubmissions", fields: ["id"])
+}
+
+type HomeworkAnalytics @model @auth(rules: [
+  { allow: private, operations: [read] }
+  { allow: owner, ownerField: "teacherId", operations: [read, create, update, delete] }
+]) {
+  id: ID!
+  homeworkId: ID! @index(name: "byHomework")
+  teacherId: ID!
+
+  # Completion tracking
+  totalStudents: Int!
+  submittedCount: Int!
+  totalSubmissions: Int!
+  lateCount: Int!
+
+  # Engagement metrics
+  averageAttempts: Float
+  multipleAttemptsCount: Int
+
+  # Review tracking
+  reviewedCount: Int!
+  pendingReviewCount: Int!
+
+  # Aggregated insights
+  commonMistakes: String
+  strugglingStudents: [String]
+
+  # Timestamps (business-managed)
+  lastUpdatedAt: AWSDateTime!
+  lastCalculatedAt: AWSDateTime
+}
+
+# ==============================================
+# Student Progress
+# ==============================================
+
+type StudentProgress @model @auth(rules: [
+  { allow: owner, ownerField: "studentId", operations: [read, create, update, delete] }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  studentId: ID! @index(name: "byStudent")
+  classroomId: ID! @index(name: "byClassroom")
+
+  classroom: Classroom @belongsTo(fields: ["classroomId"])
+
+  # Homework completion tracking
+  totalHomeworkAssigned: Int!
+  totalHomeworkCompleted: Int!
+  totalHomeworkLate: Int!
+
+  # Submission patterns
+  totalSubmissions: Int!
+  averageAttemptsPerHomework: Float
+
+  # Engagement
+  currentStreak: Int
+  longestStreak: Int
+
+  # Learning patterns
+  skillsBreakdown: String
+  strengthAreas: [String]
+  improvementAreas: [String]
+
+  # Business timestamps
+  lastSubmissionAt: AWSDateTime
+  progressUpdatedAt: AWSDateTime
+}
+
+# ==============================================
+# ENUMS
+# ==============================================
+
+enum UserRole {
+  TEACHER
+  STUDENT
+  PARENT
+}
+
+enum MembershipStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  INACTIVE
+}
+
+enum RelationshipType {
+  PARENT
+  GUARDIAN
+  TUTOR
+}
+
+enum LinkStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  REVOKED
+}
+
+enum SubmissionStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  SUBMITTED
+  REVIEWED
+  LATE
+}
+
+# ==============================================
+# SPRINT 7.1: Deep Worksheet Analytics Engine
+# ==============================================
+
+# ==============================================
+# Worksheet Metadata (Comprehensive AI analysis)
+# ==============================================
+
+type WorksheetMetadata @model @auth(rules: [
+  { allow: owner, operations: [create, update, delete, read] }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  worksheetId: ID! @index(name: "byWorksheet")
+  userId: ID!
+  
+  # Worksheet-level metadata
+  topics: [String!]!                    # ["Addition", "Subtraction", "Fractions"]
+  difficulty: String!                   # "Grade 3", "Grade 4", "Grade 5", etc.
+  cognitiveSkills: [String!]!          # ["Computation", "Problem Solving", "Reasoning"]
+  questionTypes: [String!]!            # ["Multiple Choice", "Word Problem", "Computation"]
+  
+  # Estimated time and complexity
+  estimatedTimeMinutes: Int            # AI-estimated completion time
+  complexityLevel: String              # "Easy", "Medium", "Hard", "Very Hard"
+  
+  # Standards alignment (optional)
+  commonCoreStandards: [String]        # ["4.NBT.A.1", "4.NBT.A.2"]
+  bloomsTaxonomyLevels: [String]       # ["Remember", "Understand", "Apply", "Analyze"]
+  
+  # Relationships
+  worksheet: Worksheet @belongsTo(fields: ["worksheetId"])
+  
+  # ==============================================
+  # Enhanced WorksheetMetadata (Add curriculum fields)
+  # ==============================================
+  # ADD these fields to the existing WorksheetMetadata type:
+  # MOE Curriculum alignment
+  curriculumCountry: String              # "SG"
+  curriculumVersion: String              # "2021"
+  moeCurriculumCodes: [String]           # ["P2-NA-MD-3.1", "P2-NA-MD-3.2"]
+  detectedGradeLevel: String             # "Primary 2" (AI-detected from content)
+  curriculumConfidence: Float            # 0.0-1.0 confidence in curriculum mapping
+  # ==============================================
+
+  # Metadata
+  extractedAt: AWSDateTime!
+  aiModel: String!                      # "gpt-4o"
+  tokensUsed: Int
+}
+
+# ==============================================
+# Question Metadata (Enhanced question analytics)
+# ==============================================
+
+type QuestionMetadata @model @auth(rules: [
+  { allow: owner, operations: [create, update, delete, read] }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  questionId: ID! @index(name: "byQuestion")
+  userId: ID!
+  
+  # Question classification
+  questionType: String!                 # "Multiple Choice", "Word Problem", "Computation", "Show Your Work"
+  difficultyLevel: String!             # "Easy", "Medium", "Hard"
+  cognitiveLevel: String!              # "Remember", "Understand", "Apply", "Analyze", "Evaluate", "Create"
+  
+  # Concepts and skills
+  primaryConcept: String!               # "Addition", "Fractions", "Division"
+  secondaryConcepts: [String]          # Related concepts
+  prerequisiteSkills: [String]         # Skills needed to solve this
+  
+  # Common errors (AI-predicted)
+  commonMistakes: [String]             # ["Forgets to carry", "Sign errors"]
+  conceptualChallenges: [String]       # ["Understanding place value"]
+  
+  # Problem characteristics
+  hasMultipleSteps: Boolean!
+  requiresVisualization: Boolean!
+  isWordProblem: Boolean!
+  
+  # Relationships
+  question: Question @belongsTo(fields: ["questionId"])
+  
+  # Metadata
+  extractedAt: AWSDateTime!
+  aiModel: String!
+}
+
+# ==============================================
+# Concept Mastery Tracking
+# ==============================================
+
+type ConceptMastery @model @auth(rules: [
+  { allow: owner, ownerField: "studentId", operations: [create, update, delete, read] }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  studentId: ID! @index(name: "byStudent", sortKeyFields: ["concept"])
+  classroomId: ID @index(name: "byClassroom")
+  
+  # Concept identification
+  concept: String!                      # "Addition", "Fractions", "Division"
+  gradeLevel: String                    # "Grade 4", "Grade 5"
+  
+  # Mastery metrics (0-100)
+  masteryPercentage: Float!             # Overall mastery: 0-100
+  accuracyRate: Float!                  # % of correct answers
+  
+  # Attempt tracking
+  totalAttempts: Int!                   # Total questions attempted
+  correctAttempts: Int!                 # Number correct
+  incorrectAttempts: Int!               # Number incorrect
+  
+  # Trend analysis
+  trend: String!                        # "improving", "stable", "declining"
+  recentQuestions: Int!                 # Questions in last 7 days
+  lastPracticed: AWSDateTime
+  
+  # Performance breakdown
+  easyQuestions: Int!                   # Count of easy questions attempted
+  mediumQuestions: Int!
+  hardQuestions: Int!
+  easyCorrect: Int!                     # Count correct by difficulty
+  mediumCorrect: Int!
+  hardCorrect: Int!
+  
+  # Learning insights
+  strengthAreas: [String]               # Sub-concepts where student excels
+  improvementAreas: [String]            # Sub-concepts needing work
+  recommendedPractice: [String]         # AI-generated practice suggestions
+  
+  # ==============================================
+  # Enhanced ConceptMastery (Add curriculum fields)
+  # ==============================================
+  # ADD these fields to the existing ConceptMastery type:
+  # Curriculum alignment
+  curriculumCode: String                 # "P3-NA-FR-1.1"
+  curriculumStrand: String               # "Number and Algebra"
+  curriculumSubStrand: String            # "Fractions"
+  prerequisitesMastered: Boolean         # true if all prerequisites are mastered
+  prerequisiteGaps: [String]             # ["P2-NA-FR-1.1"] missing prerequisites
+  # ==============================================  
+  
+  # Metadata
+  calculatedAt: AWSDateTime!
+  lastUpdatedAt: AWSDateTime!
+}
+
+# ==============================================
+# Error Pattern Analysis
+# ==============================================
+
+type ErrorPattern @model @auth(rules: [
+  { allow: owner, ownerField: "studentId", operations: [create, update, delete, read] }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  studentId: ID! @index(name: "byStudent", sortKeyFields: ["detectedAt"])
+  classroomId: ID @index(name: "byClassroom")
+  
+  # Error classification
+  errorType: String!                    # "Careless Mistake", "Conceptual Error", "Procedural Error"
+  errorCategory: String!                # "Computation", "Sign Errors", "Multi-step Problems"
+  severity: String!                     # "low", "medium", "high"
+  
+  # Frequency tracking
+  occurrenceCount: Int!                 # How many times this error occurred
+  firstSeen: AWSDateTime!
+  lastSeen: AWSDateTime!
+  
+  # Context
+  affectedConcepts: [String!]!          # Concepts where this error appears
+  exampleQuestionIds: [String]          # Sample questions showing this error
+  
+  # Analysis
+  description: String!                  # "Student often forgets to carry in addition"
+  rootCause: String                     # AI-analyzed root cause
+  remediation: String                   # Suggested intervention
+  
+  # Resolution tracking
+  isResolved: Boolean!
+  resolvedAt: AWSDateTime
+  
+  # Metadata
+  detectedAt: AWSDateTime!
+  lastAnalyzedAt: AWSDateTime!
+  aiModel: String
+}
+
+# ==============================================
+# Practice Problem Bank (for Sprint 7.4)
+# ==============================================
+
+type PracticeProblem @model @auth(rules: [
+  { allow: private, operations: [read] }
+  { allow: owner, operations: [create, read] }
+]) {
+  id: ID!
+  sourceWorksheetId: ID! @index(name: "bySourceWorksheet")
+  sourceQuestionId: ID
+  userId: ID!
+  
+  # Problem details
+  problemText: String!
+  answer: String!
+  stepByStep: String
+  hints: [String]
+  
+  # Classification
+  concept: String!                      # "Addition", "Fractions"
+  difficultyLevel: String!             # "easier", "similar", "harder" (relative to source)
+  questionType: String!                # "Multiple Choice", "Word Problem", etc.
+  
+  # Generation metadata
+  generatedFrom: String!                # "source_question", "concept_based"
+  difficultyAdjustment: String         # "minus_1", "same", "plus_1"
+  
+  # Usage tracking
+  timesUsed: Int!
+  averageScore: Float
+  
+  # ==============================================
+  # Enhanced PracticeProblem (Add curriculum fields)
+  # ==============================================
+  # ADD these fields to the existing PracticeProblem type:
+  # Curriculum alignment
+  curriculumCode: String                 # "P2-NA-MD-3.1"
+  curriculumGradeLevel: String           # "Primary 2"
+  respectsGradeBoundary: Boolean         # true if problem is grade-appropriate
+  # ==============================================
+
+  # Metadata
+  generatedAt: AWSDateTime!
+  aiModel: String!
+  tokensUsed: Int
+}
+
+# ==============================================
+# Student Analytics Summary (aggregated view)
+# ==============================================
+
+type StudentAnalyticsSummary @model @auth(rules: [
+  { allow: owner, ownerField: "studentId", operations: [create, update, delete, read] }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  studentId: ID! @index(name: "byStudent")
+  classroomId: ID @index(name: "byClassroom")
+  
+  # Overall performance
+  overallProgress: Float!               # 0-100 percentage
+  totalQuestionsAttempted: Int!
+  totalQuestionsCorrect: Int!
+  overallAccuracy: Float!
+  
+  # Mastered concepts (80%+ mastery)
+  masteredConcepts: [String!]!
+  developingConcepts: [String!]!        # 60-79% mastery
+  needsWorkConcepts: [String!]!         # <60% mastery
+  
+  # Top strengths and weaknesses
+  topStrengths: [String!]!              # Top 3 concepts
+  topWeaknesses: [String!]!             # Bottom 3 concepts
+  
+  # Error analysis summary
+  mostCommonErrors: [String!]!
+  highSeverityErrorCount: Int!
+  mediumSeverityErrorCount: Int!
+  
+  # Engagement metrics
+  currentStreak: Int!
+  longestStreak: Int!
+  practiceFrequency: String!            # "Daily", "Weekly", "Occasional"
+  
+  # Cognitive profile (radar chart data)
+  computationScore: Float!              # 0-100
+  problemSolvingScore: Float!
+  reasoningScore: Float!
+  accuracyScore: Float!
+  wordProblemScore: Float!
+  
+  # Metadata
+  lastCalculated: AWSDateTime!
+  lastUpdated: AWSDateTime!
+}
+
+# ==============================================
+# USAGE NOTES
+# ==============================================
+#
+# 1. **WorksheetMetadata**: Created when worksheet is uploaded, extracted by AI
+# 2. **QuestionMetadata**: Created for each question during extraction
+# 3. **ConceptMastery**: Updated after each submission (quiz/homework)
+# 4. **ErrorPattern**: Created/updated by AI analysis of incorrect answers
+# 5. **PracticeProblem**: Generated on-demand (Sprint 7.4)
+# 6. **StudentAnalyticsSummary**: Nightly aggregation job or on-demand calculation
+#
+# ==============================================
+
+# ==============================================
+# SPRINT 8: Curriculum Standards Integration
+# Singapore MOE Primary Mathematics Syllabus 2021
+# ==============================================
+
+# ==============================================
+# Curriculum Standard (Official Syllabus Topics)
+# ==============================================
+
+type CurriculumStandard @model @auth(rules: [
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  
+  # Curriculum identification
+  country: String!                      # "SG" for Singapore
+  curriculumName: String!               # "MOE Primary Mathematics"
+  curriculumVersion: String!            # "2021"
+  
+  # Grade level
+  gradeLevel: String!                   # "Primary 1", "Primary 2", etc.
+  gradeLevelCode: String!               # "P1", "P2", "P3", etc.
+  
+  # Syllabus structure (hierarchical)
+  strand: String!                       # "Number and Algebra", "Measurement and Geometry", "Statistics"
+  strandCode: String!                   # "NA", "MG", "ST"
+  subStrand: String!                    # "Whole Numbers", "Fractions", "Money", etc.
+  subStrandCode: String!                # "WN", "FR", "MO", etc.
+  
+  # Topic details
+  topicNumber: String!                  # "1", "2", "3" (main topic number)
+  topicTitle: String!                   # "Numbers up to 100", "Addition and Subtraction"
+  
+  # Sub-topic details (the actual learning objective)
+  subTopicCode: String!                 # "1.1", "1.2", "2.1", etc.
+  subTopicDescription: String!          # "counting to tell the number of objects in a given set"
+  
+  # Full unique code for referencing
+  # Format: P1-NA-WN-1.1 (GradeLevel-Strand-SubStrand-SubTopicCode)
+  curriculumCode: String! @index(name: "byCurriculumCode", queryField: "standardByCode")
+  
+  # Searchable keywords for AI mapping
+  keywords: [String!]!                  # ["counting", "objects", "set", "number"]
+  
+  # Learning progression
+  sequenceOrder: Int!                   # Global ordering within grade (1, 2, 3...)
+  prerequisiteCodes: [String]           # ["P1-NA-WN-1.0"] prior concepts needed
+  
+  # Additional metadata
+  bulletPoints: [String]                # Sub-bullets like "• within 20", "• rectangle", etc.
+  notes: String                         # Any additional notes from syllabus
+  
+  # Status
+  isActive: Boolean!                    # For soft deprecation
+  effectiveFrom: String                 # "2021" when this standard became effective
+  effectiveUntil: String                # null if still current, "2025" if deprecated
+}
+
+# ==============================================
+# Curriculum Topic Summary (Aggregated view)
+# ==============================================
+
+type CurriculumTopicSummary @model @auth(rules: [
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  
+  # Identification
+  country: String!
+  curriculumVersion: String!
+  gradeLevel: String!
+  gradeLevelCode: String!
+  
+  # Topic grouping
+  strand: String!
+  strandCode: String!
+  subStrand: String!
+  subStrandCode: String!
+  topicNumber: String!
+  topicTitle: String!
+  
+  # Unique topic code (without sub-topic)
+  # Format: P1-NA-WN-1 (GradeLevel-Strand-SubStrand-TopicNumber)
+  topicCode: String! @index(name: "byTopicCode", queryField: "topicSummaryByCode")
+  
+  # Aggregated data
+  subTopicCount: Int!                   # Number of sub-topics under this topic
+  subTopicCodes: [String!]!             # ["P1-NA-WN-1.1", "P1-NA-WN-1.2", ...]
+  
+  # All keywords from sub-topics (for search)
+  allKeywords: [String!]!
+  
+  # Sequence
+  sequenceOrder: Int!
+  
+  isActive: Boolean!
+}
+# ==============================================
+# Student Curriculum Progress
+# ==============================================
+
+type StudentCurriculumProgress @model @auth(rules: [
+  { allow: owner, ownerField: "studentId", operations: [create, update, delete, read] }
+  { allow: private, operations: [read] }
+]) {
+  id: ID!
+  studentId: ID! @index(name: "byStudent", sortKeyFields: ["gradeLevel"])
+  classroomId: ID @index(name: "byClassroom")
+  
+  # Target curriculum
+  country: String!                      # "SG"
+  curriculumVersion: String!            # "2021"
+  gradeLevel: String!                   # "Primary 2"
+  gradeLevelCode: String!               # "P2"
+  
+  # Coverage metrics
+  totalTopicsInGrade: Int!              # Total curriculum topics for this grade
+  topicsAttempted: Int!                 # Topics with at least one attempt
+  topicsMastered: Int!                  # Topics with 80%+ mastery
+  topicsInProgress: Int!                # Topics with 50-79% mastery
+  topicsNotStarted: Int!                # Topics with <50% or no attempts
+  
+  # Coverage percentage
+  coveragePercentage: Float!            # (topicsAttempted / totalTopicsInGrade) * 100
+  masteryPercentage: Float!             # (topicsMastered / totalTopicsInGrade) * 100
+  
+  # By strand breakdown (JSON encoded for flexibility)
+  strandProgress: String!               # JSON: {"NA": {attempted: 5, mastered: 3}, "MG": {...}}
+  
+  # Detailed tracking
+  masteredTopicCodes: [String!]!        # ["P2-NA-WN-1.1", "P2-NA-WN-1.2"]
+  inProgressTopicCodes: [String!]!
+  notStartedTopicCodes: [String!]!
+  
+  # Gaps and recommendations
+  prerequisiteGaps: [String]            # Prerequisites not yet mastered
+  recommendedNextTopics: [String]       # Next topics to focus on
+  
+  # Metadata
+  lastCalculatedAt: AWSDateTime!
+  lastUpdatedAt: AWSDateTime!
+}
+# ==============================================
+# INDEXES FOR EFFICIENT QUERIES
+# ==============================================
+#
+# Key query patterns supported:
+#
+# 1. Get all standards for a grade:
+#    query { listCurriculumStandards(filter: {gradeLevel: {eq: "Primary 1"}}) }
+#
+# 2. Get standard by code:
+#    query { standardByCode(curriculumCode: "P1-NA-WN-1.1") }
+#
+# 3. Get all standards for a strand in a grade:
+#    query { listCurriculumStandards(filter: {
+#      gradeLevel: {eq: "Primary 2"},
+#      strand: {eq: "Number and Algebra"}
+#    })}
+#
+# 4. Get student's curriculum progress:
+#    query { listStudentCurriculumProgresses(filter: {studentId: {eq: "xxx"}}) }
+#
+# ==============================================
+
+# ==============================================
+# USAGE NOTES
+# ==============================================
+#
+# 1. **CurriculumStandard**: Read-only reference data seeded from MOE syllabus
+#    - One record per sub-topic (e.g., "1.1 counting to tell the number...")
+#    - Use curriculumCode for unique identification
+#    - Keywords enable AI topic mapping
+#
+# 2. **CurriculumTopicSummary**: Aggregated view for UI display
+#    - One record per main topic (e.g., "1. Numbers up to 100")
+#    - Groups related sub-topics for easier navigation
+#
+# 3. **StudentCurriculumProgress**: Tracks student's syllabus coverage
+#    - Updated after each worksheet/homework submission
+#    - Identifies gaps and recommends next topics
+#
+# 4. **Integration with existing models**:
+#    - WorksheetMetadata.moeCurriculumCodes links worksheets to standards
+#    - ConceptMastery.curriculumCode links mastery to specific standards
+#    - PracticeProblem.curriculumCode ensures grade-appropriate generation
+#
+# ==============================================

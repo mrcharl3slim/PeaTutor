@@ -1,0 +1,51 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "Find the gradient and equation of the line passing through (2,3) and (6,11).",
+      "marks": 4,
+      "skills_tested": [
+        "gradient",
+        "equation of line"
+      ],
+      "subparts": [],
+      "hints": "Use m = (y2 - y1)/(x2 - x1), then y - y1 = m(x - x1).",
+      "step_by_step": "m=\\frac{11-3}{6-2}=2.\\; y-3=2(x-2)\\Rightarrow y=2x-1.",
+      "answer": "m=2,\\; y=2x-1"
+    },
+    {
+      "id": "Q2",
+      "text": "The line L has equation y=2x-5. From point P(4,3), find:",
+      "marks": 6,
+      "skills_tested": [
+        "perpendicular",
+        "distance"
+      ],
+      "subparts": [
+        {
+          "id": "Q2a",
+          "text": "Equation of the line through P perpendicular to L.",
+          "marks": 3,
+          "skills_tested": [
+            "perpendicular",
+            "equation of line"
+          ],
+          "hints": "Slope of L is 2; perpendicular slope is -1/2.",
+          "step_by_step": "m_\\perp=-\\tfrac{1}{2}.\\; y-3=-\\tfrac{1}{2}(x-4)\\Rightarrow y=-\\tfrac{1}{2}x+5.",
+          "answer": "y=-\\tfrac{1}{2}x+5"
+        },
+        {
+          "id": "Q2b",
+          "text": "Shortest distance from P to L.",
+          "marks": 3,
+          "skills_tested": [
+            "distance"
+          ],
+          "hints": "Use point-to-line distance formula.",
+          "step_by_step": "d=\\frac{|2\\cdot 4-1\\cdot 3-5|}{\\sqrt{2^2+(-1)^2}}=\\frac{|8-3-5|}{\\sqrt{5}}=0.",
+          "answer": "0"
+        }
+      ]
+    }
+  ]
+}

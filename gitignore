@@ -1,0 +1,103 @@
+# ===========================
+# PeaTutor .gitignore
+# iOS + SwiftUI + AWS Amplify
+# ===========================
+
+# --------------------
+# Xcode
+# --------------------
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+
+# --------------------
+# Swift Package Manager
+# --------------------
+.build/
+Packages/
+*.resolved
+
+# --------------------
+# CocoaPods (if used)
+# --------------------
+Pods/
+
+# --------------------
+# AWS Amplify
+# --------------------
+amplify/#current-cloud-backend/
+amplify/backend/amplify-meta.json
+amplify/backend/awscloudformation/
+amplify/team-provider-info.json
+amplify/.config/local-*
+
+# AWS config files (contain pool IDs, endpoints)
+amplifyconfiguration.json
+awsconfiguration.json
+aws-exports.json
+amplifyconfiguration.dart
+
+# --------------------
+# API Keys & Secrets
+# --------------------
+*.env
+.env.*
+Secrets.plist
+Secrets.swift
+APIKeys.swift
+
+# --------------------
+# OS Files
+# --------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# --------------------
+# IDE / Editors
+# --------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --------------------
+# Archives & Builds
+# --------------------
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.app
+*.xcarchive
+
+# --------------------
+# Playgrounds
+# --------------------
+timeline.xctimeline
+playground.xcworkspace
+
+# --------------------
+# Fastlane (if used)
+# --------------------
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output

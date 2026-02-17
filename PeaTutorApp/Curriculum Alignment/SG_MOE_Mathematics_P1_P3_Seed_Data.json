@@ -1,0 +1,1073 @@
+{
+  "metadata": {
+    "country": "SG",
+    "curriculumName": "MOE Primary Mathematics",
+    "curriculumVersion": "2021",
+    "source": "2021 Primary Mathematics Syllabus P1 to P6 (Updated Dec 2024)",
+    "generatedAt": "2025-01-01",
+    "notes": "In 2025, the 2021 syllabus applies to P1-P5. P6 uses 2013 syllabus until 2026."
+  },
+  "strandCodes": {
+    "Number and Algebra": "NA",
+    "Measurement and Geometry": "MG",
+    "Statistics": "ST"
+  },
+  "subStrandCodes": {
+    "Whole Numbers": "WN",
+    "Fractions": "FR",
+    "Money": "MO",
+    "Measurement": "ME",
+    "Length": "LE",
+    "Time": "TI",
+    "Length, Mass and Volume": "LMV",
+    "Area and Volume": "AV",
+    "Geometry": "GE",
+    "2D Shapes": "2D",
+    "3D Shapes": "3D",
+    "Angles": "AN",
+    "Perpendicular and Parallel Lines": "PP",
+    "Data Representation and Interpretation": "DR"
+  },
+  "levels": [
+    {
+      "gradeLevel": "Primary 1",
+      "gradeLevelCode": "P1",
+      "strands": [
+        {
+          "strand": "Number and Algebra",
+          "strandCode": "NA",
+          "subStrands": [
+            {
+              "subStrand": "Whole Numbers",
+              "subStrandCode": "WN",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Numbers up to 100",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "counting to tell the number of objects in a given set",
+                      "keywords": ["counting", "objects", "set", "number", "how many"],
+                      "sequenceOrder": 1
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "number notation, representations and place values (tens, ones)",
+                      "keywords": ["notation", "place value", "tens", "ones", "representation", "digit"],
+                      "sequenceOrder": 2
+                    },
+                    {
+                      "subTopicCode": "1.3",
+                      "description": "reading and writing numbers in numerals and in words",
+                      "keywords": ["reading", "writing", "numerals", "words", "number words"],
+                      "sequenceOrder": 3
+                    },
+                    {
+                      "subTopicCode": "1.4",
+                      "description": "comparing the number of objects in two or more sets",
+                      "keywords": ["comparing", "more", "less", "fewer", "same", "equal", "sets"],
+                      "sequenceOrder": 4
+                    },
+                    {
+                      "subTopicCode": "1.5",
+                      "description": "comparing and ordering numbers",
+                      "keywords": ["comparing", "ordering", "greater", "smaller", "ascending", "descending"],
+                      "sequenceOrder": 5
+                    },
+                    {
+                      "subTopicCode": "1.6",
+                      "description": "patterns in number sequences",
+                      "keywords": ["patterns", "sequences", "number pattern", "what comes next"],
+                      "sequenceOrder": 6
+                    },
+                    {
+                      "subTopicCode": "1.7",
+                      "description": "ordinal numbers (first, second, up to tenth) and symbols (1st, 2nd, 3rd, etc.)",
+                      "keywords": ["ordinal", "first", "second", "third", "position", "1st", "2nd", "3rd"],
+                      "sequenceOrder": 7
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "2",
+                  "topicTitle": "Addition and Subtraction",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "2.1",
+                      "description": "concepts of addition and subtraction",
+                      "keywords": ["addition", "subtraction", "add", "subtract", "concept", "meaning"],
+                      "sequenceOrder": 8
+                    },
+                    {
+                      "subTopicCode": "2.2",
+                      "description": "use of +, – and =",
+                      "keywords": ["plus", "minus", "equals", "symbol", "sign", "+", "-", "="],
+                      "sequenceOrder": 9
+                    },
+                    {
+                      "subTopicCode": "2.3",
+                      "description": "relationship between addition and subtraction",
+                      "keywords": ["relationship", "inverse", "fact family", "related facts"],
+                      "sequenceOrder": 10
+                    },
+                    {
+                      "subTopicCode": "2.4",
+                      "description": "adding more than two 1-digit numbers",
+                      "keywords": ["adding", "three numbers", "multiple addends", "1-digit"],
+                      "sequenceOrder": 11
+                    },
+                    {
+                      "subTopicCode": "2.5",
+                      "description": "adding and subtracting within 100",
+                      "keywords": ["adding", "subtracting", "within 100", "two-digit"],
+                      "sequenceOrder": 12
+                    },
+                    {
+                      "subTopicCode": "2.6",
+                      "description": "adding and subtracting using algorithms",
+                      "keywords": ["algorithm", "method", "column", "vertical", "regrouping"],
+                      "sequenceOrder": 13
+                    },
+                    {
+                      "subTopicCode": "2.7",
+                      "description": "mental calculation involving addition and subtraction",
+                      "keywords": ["mental", "calculation", "mental math", "head"],
+                      "bulletPoints": [
+                        "within 20",
+                        "of a 2-digit number and ones without renaming",
+                        "of a 2-digit number and tens"
+                      ],
+                      "sequenceOrder": 14
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "3",
+                  "topicTitle": "Multiplication and Division",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "3.1",
+                      "description": "concepts of multiplication and division",
+                      "keywords": ["multiplication", "division", "multiply", "divide", "concept", "meaning", "groups"],
+                      "sequenceOrder": 15
+                    },
+                    {
+                      "subTopicCode": "3.2",
+                      "description": "use of x",
+                      "keywords": ["times", "multiply", "symbol", "x", "×"],
+                      "sequenceOrder": 16
+                    },
+                    {
+                      "subTopicCode": "3.3",
+                      "description": "multiplying within 40",
+                      "keywords": ["multiplying", "within 40", "times tables", "product"],
+                      "sequenceOrder": 17
+                    },
+                    {
+                      "subTopicCode": "3.4",
+                      "description": "dividing within 20",
+                      "keywords": ["dividing", "within 20", "sharing", "grouping", "quotient"],
+                      "sequenceOrder": 18
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "subStrand": "Money",
+              "subStrandCode": "MO",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Money",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "counting amount of money",
+                      "keywords": ["counting", "money", "coins", "notes", "cents", "dollars", "amount"],
+                      "bulletPoints": [
+                        "in cents up to $1",
+                        "in dollars up to $100"
+                      ],
+                      "sequenceOrder": 19
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strand": "Measurement and Geometry",
+          "strandCode": "MG",
+          "subStrands": [
+            {
+              "subStrand": "Measurement",
+              "subStrandCode": "ME",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Length",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "measuring length in centimetres",
+                      "keywords": ["measuring", "length", "centimetres", "cm", "ruler"],
+                      "sequenceOrder": 20
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "use of abbreviation cm",
+                      "keywords": ["abbreviation", "cm", "centimetre", "unit"],
+                      "sequenceOrder": 21
+                    },
+                    {
+                      "subTopicCode": "1.3",
+                      "description": "comparing and ordering lengths in cm",
+                      "keywords": ["comparing", "ordering", "longer", "shorter", "longest", "shortest"],
+                      "sequenceOrder": 22
+                    },
+                    {
+                      "subTopicCode": "1.4",
+                      "description": "measuring and drawing a line segment to the nearest cm",
+                      "keywords": ["measuring", "drawing", "line segment", "nearest", "ruler"],
+                      "sequenceOrder": 23
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "2",
+                  "topicTitle": "Time",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "2.1",
+                      "description": "telling time to 5 minutes",
+                      "keywords": ["telling time", "clock", "5 minutes", "hour", "minute"],
+                      "sequenceOrder": 24
+                    },
+                    {
+                      "subTopicCode": "2.2",
+                      "description": "use of 'am' and 'pm'",
+                      "keywords": ["am", "pm", "morning", "afternoon", "evening", "night"],
+                      "sequenceOrder": 25
+                    },
+                    {
+                      "subTopicCode": "2.3",
+                      "description": "use of abbreviations h and min",
+                      "keywords": ["abbreviation", "h", "hour", "min", "minute", "unit"],
+                      "sequenceOrder": 26
+                    },
+                    {
+                      "subTopicCode": "2.4",
+                      "description": "duration of one hour/half hour",
+                      "keywords": ["duration", "hour", "half hour", "30 minutes", "how long"],
+                      "sequenceOrder": 27
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "subStrand": "Geometry",
+              "subStrandCode": "GE",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "2D Shapes",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "identifying, naming, describing and classifying 2D shapes",
+                      "keywords": ["2D", "shapes", "identify", "name", "describe", "classify", "flat"],
+                      "bulletPoints": [
+                        "rectangle",
+                        "square",
+                        "triangle",
+                        "circle",
+                        "half circle",
+                        "quarter circle"
+                      ],
+                      "sequenceOrder": 28
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "forming different 2D figures with",
+                      "keywords": ["forming", "figures", "combine", "compose", "make"],
+                      "bulletPoints": [
+                        "rectangle",
+                        "square",
+                        "triangle",
+                        "half circle",
+                        "quarter circle"
+                      ],
+                      "sequenceOrder": 29
+                    },
+                    {
+                      "subTopicCode": "1.3",
+                      "description": "identifying the 2D shapes that make up a given figure",
+                      "keywords": ["identifying", "shapes", "decompose", "parts", "made of"],
+                      "sequenceOrder": 30
+                    },
+                    {
+                      "subTopicCode": "1.4",
+                      "description": "copying figures on dot grid or square grid",
+                      "keywords": ["copying", "dot grid", "square grid", "draw", "reproduce"],
+                      "sequenceOrder": 31
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strand": "Statistics",
+          "strandCode": "ST",
+          "subStrands": [
+            {
+              "subStrand": "Data Representation and Interpretation",
+              "subStrandCode": "DR",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Picture Graphs",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "reading and interpreting data from picture graphs",
+                      "keywords": ["picture graph", "pictograph", "data", "reading", "interpreting", "chart"],
+                      "sequenceOrder": 32
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "gradeLevel": "Primary 2",
+      "gradeLevelCode": "P2",
+      "strands": [
+        {
+          "strand": "Number and Algebra",
+          "strandCode": "NA",
+          "subStrands": [
+            {
+              "subStrand": "Whole Numbers",
+              "subStrandCode": "WN",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Numbers up to 1000",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "counting in tens/hundreds",
+                      "keywords": ["counting", "tens", "hundreds", "skip counting"],
+                      "prerequisiteCodes": ["P1-NA-WN-1.1"],
+                      "sequenceOrder": 1
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "number notation, representations and place values (hundreds, tens, ones)",
+                      "keywords": ["notation", "place value", "hundreds", "tens", "ones", "three-digit"],
+                      "prerequisiteCodes": ["P1-NA-WN-1.2"],
+                      "sequenceOrder": 2
+                    },
+                    {
+                      "subTopicCode": "1.3",
+                      "description": "reading and writing numbers in numerals and in words",
+                      "keywords": ["reading", "writing", "numerals", "words", "number words", "three-digit"],
+                      "prerequisiteCodes": ["P1-NA-WN-1.3"],
+                      "sequenceOrder": 3
+                    },
+                    {
+                      "subTopicCode": "1.4",
+                      "description": "comparing and ordering numbers",
+                      "keywords": ["comparing", "ordering", "greater", "smaller", "ascending", "descending", "1000"],
+                      "prerequisiteCodes": ["P1-NA-WN-1.5"],
+                      "sequenceOrder": 4
+                    },
+                    {
+                      "subTopicCode": "1.5",
+                      "description": "patterns in number sequences",
+                      "keywords": ["patterns", "sequences", "number pattern", "rule"],
+                      "prerequisiteCodes": ["P1-NA-WN-1.6"],
+                      "sequenceOrder": 5
+                    },
+                    {
+                      "subTopicCode": "1.6",
+                      "description": "odd and even numbers",
+                      "keywords": ["odd", "even", "numbers", "classify"],
+                      "sequenceOrder": 6
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "2",
+                  "topicTitle": "Addition and Subtraction",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "2.1",
+                      "description": "addition and subtraction algorithms (up to 3 digits)",
+                      "keywords": ["algorithm", "3 digits", "regrouping", "carrying", "borrowing"],
+                      "prerequisiteCodes": ["P1-NA-WN-2.6"],
+                      "sequenceOrder": 7
+                    },
+                    {
+                      "subTopicCode": "2.2",
+                      "description": "mental calculation involving addition and subtraction of a 3-digit number and ones/tens/hundreds",
+                      "keywords": ["mental", "calculation", "3-digit", "mental math"],
+                      "prerequisiteCodes": ["P1-NA-WN-2.7"],
+                      "sequenceOrder": 8
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "3",
+                  "topicTitle": "Multiplication and Division",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "3.1",
+                      "description": "multiplication tables of 2, 3, 4, 5 and 10",
+                      "keywords": ["multiplication tables", "times tables", "2", "3", "4", "5", "10"],
+                      "prerequisiteCodes": ["P1-NA-WN-3.1", "P1-NA-WN-3.3"],
+                      "sequenceOrder": 9
+                    },
+                    {
+                      "subTopicCode": "3.2",
+                      "description": "use of ÷",
+                      "keywords": ["division", "divide", "symbol", "÷"],
+                      "prerequisiteCodes": ["P1-NA-WN-3.4"],
+                      "sequenceOrder": 10
+                    },
+                    {
+                      "subTopicCode": "3.3",
+                      "description": "relationship between multiplication and division",
+                      "keywords": ["relationship", "inverse", "fact family", "related facts"],
+                      "sequenceOrder": 11
+                    },
+                    {
+                      "subTopicCode": "3.4",
+                      "description": "multiplying and dividing within the multiplication tables",
+                      "keywords": ["multiplying", "dividing", "within tables", "facts"],
+                      "sequenceOrder": 12
+                    },
+                    {
+                      "subTopicCode": "3.5",
+                      "description": "mental calculation involving multiplication and division within multiplication tables of 2, 3, 4, 5 and 10",
+                      "keywords": ["mental", "calculation", "times tables", "quick recall"],
+                      "sequenceOrder": 13
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "subStrand": "Fractions",
+              "subStrandCode": "FR",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Fraction of a Whole",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "fraction as part of a whole",
+                      "keywords": ["fraction", "part", "whole", "piece", "equal parts"],
+                      "sequenceOrder": 14
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "notation and representations of fractions",
+                      "keywords": ["notation", "numerator", "denominator", "fraction bar", "representation"],
+                      "sequenceOrder": 15
+                    },
+                    {
+                      "subTopicCode": "1.3",
+                      "description": "comparing and ordering fractions with denominators of given fractions not exceeding 12",
+                      "keywords": ["comparing", "ordering", "fractions", "unit fractions", "like fractions"],
+                      "bulletPoints": [
+                        "unit fractions",
+                        "like fractions"
+                      ],
+                      "sequenceOrder": 16
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "2",
+                  "topicTitle": "Addition and Subtraction",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "2.1",
+                      "description": "adding and subtracting like fractions within one whole with denominators of given fractions not exceeding 12",
+                      "keywords": ["adding", "subtracting", "like fractions", "same denominator"],
+                      "sequenceOrder": 17
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "subStrand": "Money",
+              "subStrandCode": "MO",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Money",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "counting amount of money in dollars and cents",
+                      "keywords": ["counting", "money", "dollars", "cents", "mixed"],
+                      "prerequisiteCodes": ["P1-NA-MO-1.1"],
+                      "sequenceOrder": 18
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "reading and writing money in decimal notation",
+                      "keywords": ["decimal", "notation", "money", "$", "point"],
+                      "sequenceOrder": 19
+                    },
+                    {
+                      "subTopicCode": "1.3",
+                      "description": "comparing two or three amounts of money",
+                      "keywords": ["comparing", "money", "more", "less", "expensive", "cheaper"],
+                      "sequenceOrder": 20
+                    },
+                    {
+                      "subTopicCode": "1.4",
+                      "description": "converting an amount of money in decimal notation to cents only, and vice versa",
+                      "keywords": ["converting", "decimal", "cents", "dollars to cents"],
+                      "sequenceOrder": 21
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strand": "Measurement and Geometry",
+          "strandCode": "MG",
+          "subStrands": [
+            {
+              "subStrand": "Measurement",
+              "subStrandCode": "ME",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Length, Mass and Volume",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "measuring",
+                      "keywords": ["measuring", "length", "mass", "volume", "metres", "kilograms", "grams", "litres"],
+                      "bulletPoints": [
+                        "length in metres",
+                        "mass in kilograms/grams",
+                        "volume of liquid in litres"
+                      ],
+                      "prerequisiteCodes": ["P1-MG-ME-1.1"],
+                      "sequenceOrder": 22
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "using appropriate units of measurement and their abbreviations m, g, kg, ℓ",
+                      "keywords": ["units", "abbreviations", "m", "g", "kg", "litre", "appropriate"],
+                      "sequenceOrder": 23
+                    },
+                    {
+                      "subTopicCode": "1.3",
+                      "description": "comparing and ordering",
+                      "keywords": ["comparing", "ordering", "lengths", "masses", "volumes", "heavier", "lighter"],
+                      "bulletPoints": [
+                        "lengths",
+                        "masses",
+                        "volumes"
+                      ],
+                      "sequenceOrder": 24
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "2",
+                  "topicTitle": "Time",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "2.1",
+                      "description": "telling time to the minute",
+                      "keywords": ["telling time", "minute", "clock", "exact time"],
+                      "prerequisiteCodes": ["P1-MG-ME-2.1"],
+                      "sequenceOrder": 25
+                    },
+                    {
+                      "subTopicCode": "2.2",
+                      "description": "measuring time in hours and minutes",
+                      "keywords": ["measuring", "time", "hours", "minutes", "duration"],
+                      "sequenceOrder": 26
+                    },
+                    {
+                      "subTopicCode": "2.3",
+                      "description": "converting time in hours and minutes to minutes only, and vice versa",
+                      "keywords": ["converting", "hours", "minutes", "time conversion"],
+                      "sequenceOrder": 27
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "subStrand": "Geometry",
+              "subStrandCode": "GE",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "2D Shapes",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "making/completing patterns with 2D shapes according to one or two of the following attributes",
+                      "keywords": ["patterns", "2D shapes", "attributes", "size", "shape", "colour", "orientation"],
+                      "bulletPoints": [
+                        "size",
+                        "shape",
+                        "colour",
+                        "orientation"
+                      ],
+                      "prerequisiteCodes": ["P1-MG-GE-1.1"],
+                      "sequenceOrder": 28
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "2",
+                  "topicTitle": "3D Shapes",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "2.1",
+                      "description": "identifying, naming, describing and classifying 3D shapes",
+                      "keywords": ["3D", "shapes", "solid", "cube", "cuboid", "cone", "cylinder", "sphere"],
+                      "bulletPoints": [
+                        "cube",
+                        "cuboid",
+                        "cone",
+                        "cylinder",
+                        "sphere"
+                      ],
+                      "sequenceOrder": 29
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strand": "Statistics",
+          "strandCode": "ST",
+          "subStrands": [
+            {
+              "subStrand": "Data Representation and Interpretation",
+              "subStrandCode": "DR",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Picture Graphs with Scales",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "reading and interpreting data from picture graphs with scales",
+                      "keywords": ["picture graph", "pictograph", "scales", "data", "key", "symbol represents"],
+                      "prerequisiteCodes": ["P1-ST-DR-1.1"],
+                      "sequenceOrder": 30
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "gradeLevel": "Primary 3",
+      "gradeLevelCode": "P3",
+      "strands": [
+        {
+          "strand": "Number and Algebra",
+          "strandCode": "NA",
+          "subStrands": [
+            {
+              "subStrand": "Whole Numbers",
+              "subStrandCode": "WN",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Numbers up to 10 000",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "counting in hundreds/thousands",
+                      "keywords": ["counting", "hundreds", "thousands", "skip counting"],
+                      "prerequisiteCodes": ["P2-NA-WN-1.1"],
+                      "sequenceOrder": 1
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "number notation, representations and place values (thousands, hundreds, tens, ones)",
+                      "keywords": ["notation", "place value", "thousands", "four-digit", "10000"],
+                      "prerequisiteCodes": ["P2-NA-WN-1.2"],
+                      "sequenceOrder": 2
+                    },
+                    {
+                      "subTopicCode": "1.3",
+                      "description": "reading and writing numbers in numerals and in words",
+                      "keywords": ["reading", "writing", "numerals", "words", "four-digit"],
+                      "prerequisiteCodes": ["P2-NA-WN-1.3"],
+                      "sequenceOrder": 3
+                    },
+                    {
+                      "subTopicCode": "1.4",
+                      "description": "comparing and ordering numbers",
+                      "keywords": ["comparing", "ordering", "greater", "smaller", "10000"],
+                      "prerequisiteCodes": ["P2-NA-WN-1.4"],
+                      "sequenceOrder": 4
+                    },
+                    {
+                      "subTopicCode": "1.5",
+                      "description": "patterns in number sequences",
+                      "keywords": ["patterns", "sequences", "rule", "number pattern"],
+                      "prerequisiteCodes": ["P2-NA-WN-1.5"],
+                      "sequenceOrder": 5
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "2",
+                  "topicTitle": "Addition and Subtraction",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "2.1",
+                      "description": "addition and subtraction algorithms (up to 4 digits)",
+                      "keywords": ["algorithm", "4 digits", "regrouping", "carrying", "borrowing"],
+                      "prerequisiteCodes": ["P2-NA-WN-2.1"],
+                      "sequenceOrder": 6
+                    },
+                    {
+                      "subTopicCode": "2.2",
+                      "description": "mental calculation involving addition and subtraction of two 2-digit numbers",
+                      "keywords": ["mental", "calculation", "2-digit", "mental math", "two numbers"],
+                      "prerequisiteCodes": ["P2-NA-WN-2.2"],
+                      "sequenceOrder": 7
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "3",
+                  "topicTitle": "Multiplication and Division",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "3.1",
+                      "description": "multiplication tables of 6, 7, 8 and 9",
+                      "keywords": ["multiplication tables", "times tables", "6", "7", "8", "9"],
+                      "prerequisiteCodes": ["P2-NA-WN-3.1"],
+                      "sequenceOrder": 8
+                    },
+                    {
+                      "subTopicCode": "3.2",
+                      "description": "multiplying and dividing within the multiplication tables",
+                      "keywords": ["multiplying", "dividing", "tables", "facts"],
+                      "prerequisiteCodes": ["P2-NA-WN-3.4"],
+                      "sequenceOrder": 9
+                    },
+                    {
+                      "subTopicCode": "3.3",
+                      "description": "division with remainder",
+                      "keywords": ["division", "remainder", "left over", "R"],
+                      "sequenceOrder": 10
+                    },
+                    {
+                      "subTopicCode": "3.4",
+                      "description": "multiplication and division algorithms (up to 3 digits by 1 digit)",
+                      "keywords": ["algorithm", "3 digits", "1 digit", "long multiplication", "long division"],
+                      "sequenceOrder": 11
+                    },
+                    {
+                      "subTopicCode": "3.5",
+                      "description": "mental calculation involving multiplication and division within multiplication tables",
+                      "keywords": ["mental", "calculation", "times tables", "quick recall"],
+                      "prerequisiteCodes": ["P2-NA-WN-3.5"],
+                      "sequenceOrder": 12
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "subStrand": "Fractions",
+              "subStrandCode": "FR",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Equivalent fractions",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "equivalent fractions",
+                      "keywords": ["equivalent", "fractions", "same value", "equal"],
+                      "prerequisiteCodes": ["P2-NA-FR-1.1", "P2-NA-FR-1.2"],
+                      "sequenceOrder": 13
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "expressing a fraction in its simplest form",
+                      "keywords": ["simplest form", "simplify", "reduce", "lowest terms"],
+                      "sequenceOrder": 14
+                    },
+                    {
+                      "subTopicCode": "1.3",
+                      "description": "comparing and ordering unlike fractions with denominators of given fractions not exceeding 12",
+                      "keywords": ["comparing", "ordering", "unlike fractions", "different denominators"],
+                      "prerequisiteCodes": ["P2-NA-FR-1.3"],
+                      "sequenceOrder": 15
+                    },
+                    {
+                      "subTopicCode": "1.4",
+                      "description": "writing the equivalent fraction of a fraction given the denominator or the numerator",
+                      "keywords": ["equivalent", "fraction", "given denominator", "given numerator", "find"],
+                      "sequenceOrder": 16
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "2",
+                  "topicTitle": "Addition and Subtraction",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "2.1",
+                      "description": "adding and subtracting two related fractions within one whole with denominators of given fractions not exceeding 12",
+                      "keywords": ["adding", "subtracting", "related fractions", "unlike fractions"],
+                      "prerequisiteCodes": ["P2-NA-FR-2.1"],
+                      "sequenceOrder": 17
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "subStrand": "Money",
+              "subStrandCode": "MO",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Money",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "adding and subtracting money in decimal notation",
+                      "keywords": ["adding", "subtracting", "money", "decimal", "dollars", "cents"],
+                      "prerequisiteCodes": ["P2-NA-MO-1.2"],
+                      "sequenceOrder": 18
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strand": "Measurement and Geometry",
+          "strandCode": "MG",
+          "subStrands": [
+            {
+              "subStrand": "Measurement",
+              "subStrandCode": "ME",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Length, Mass and Volume",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "measuring",
+                      "keywords": ["measuring", "kilometres", "km", "millilitres", "ml"],
+                      "bulletPoints": [
+                        "length in kilometres (km)",
+                        "volume of liquid in millilitres (ml)"
+                      ],
+                      "prerequisiteCodes": ["P2-MG-ME-1.1"],
+                      "sequenceOrder": 19
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "measuring length/mass/volume (of liquid) in compound units",
+                      "keywords": ["compound units", "mixed units", "km and m", "kg and g"],
+                      "sequenceOrder": 20
+                    },
+                    {
+                      "subTopicCode": "1.3",
+                      "description": "converting a measurement in compound units to the smaller unit, and vice versa",
+                      "keywords": ["converting", "compound units", "smaller unit"],
+                      "bulletPoints": [
+                        "kilometres and metres",
+                        "metres and centimetres",
+                        "kilograms and grams",
+                        "litres and millilitres"
+                      ],
+                      "notes": "numbers involved should be within easy manipulation",
+                      "sequenceOrder": 21
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "2",
+                  "topicTitle": "Time",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "2.1",
+                      "description": "measuring time in seconds",
+                      "keywords": ["measuring", "time", "seconds", "s", "stopwatch"],
+                      "prerequisiteCodes": ["P2-MG-ME-2.2"],
+                      "sequenceOrder": 22
+                    },
+                    {
+                      "subTopicCode": "2.2",
+                      "description": "finding the starting time, finishing time or duration given the other two quantities",
+                      "keywords": ["starting time", "finishing time", "duration", "elapsed time", "how long"],
+                      "sequenceOrder": 23
+                    },
+                    {
+                      "subTopicCode": "2.3",
+                      "description": "24-hour clock",
+                      "keywords": ["24-hour", "clock", "military time", "2359", "0000"],
+                      "sequenceOrder": 24
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "subStrand": "Area and Volume",
+              "subStrandCode": "AV",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Area and Perimeter",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "concepts of area and perimeter of a plane figure",
+                      "keywords": ["area", "perimeter", "concept", "plane figure", "surface", "boundary"],
+                      "sequenceOrder": 25
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "measuring area in square units, cm² and m², excluding conversion between cm² and m²",
+                      "keywords": ["measuring", "area", "square units", "cm²", "m²", "square centimetres"],
+                      "sequenceOrder": 26
+                    },
+                    {
+                      "subTopicCode": "1.3",
+                      "description": "perimeter of",
+                      "keywords": ["perimeter", "rectilinear", "rectangle", "square", "boundary"],
+                      "bulletPoints": [
+                        "rectilinear figure",
+                        "rectangle",
+                        "square"
+                      ],
+                      "sequenceOrder": 27
+                    },
+                    {
+                      "subTopicCode": "1.4",
+                      "description": "area of rectangle/square",
+                      "keywords": ["area", "rectangle", "square", "formula", "length x width"],
+                      "sequenceOrder": 28
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "subStrand": "Geometry",
+              "subStrandCode": "GE",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Angles",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "concepts of angle",
+                      "keywords": ["angle", "concept", "turn", "rotation", "corner"],
+                      "sequenceOrder": 29
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "right angles, angles greater than/smaller than a right angle",
+                      "keywords": ["right angle", "90 degrees", "greater than", "smaller than", "acute", "obtuse"],
+                      "sequenceOrder": 30
+                    }
+                  ]
+                },
+                {
+                  "topicNumber": "2",
+                  "topicTitle": "Perpendicular and Parallel Lines",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "2.1",
+                      "description": "perpendicular and parallel lines",
+                      "keywords": ["perpendicular", "parallel", "lines", "right angle", "never meet"],
+                      "sequenceOrder": 31
+                    },
+                    {
+                      "subTopicCode": "2.2",
+                      "description": "drawing perpendicular and parallel lines",
+                      "keywords": ["drawing", "perpendicular", "parallel", "set square", "ruler"],
+                      "sequenceOrder": 32
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "strand": "Statistics",
+          "strandCode": "ST",
+          "subStrands": [
+            {
+              "subStrand": "Data Representation and Interpretation",
+              "subStrandCode": "DR",
+              "topics": [
+                {
+                  "topicNumber": "1",
+                  "topicTitle": "Bar Graphs",
+                  "subTopics": [
+                    {
+                      "subTopicCode": "1.1",
+                      "description": "reading and interpreting data from bar graphs",
+                      "keywords": ["bar graph", "bar chart", "data", "reading", "interpreting"],
+                      "prerequisiteCodes": ["P2-ST-DR-1.1"],
+                      "sequenceOrder": 33
+                    },
+                    {
+                      "subTopicCode": "1.2",
+                      "description": "using different scales on axis",
+                      "keywords": ["scales", "axis", "bar graph", "intervals"],
+                      "sequenceOrder": 34
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

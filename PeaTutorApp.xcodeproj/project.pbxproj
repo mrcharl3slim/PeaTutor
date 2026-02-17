@@ -1,0 +1,958 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04272CDC78814B9F1BEA89D7 /* QuestionMetadata+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4282EC7493300BEAB3C /* QuestionMetadata+Schema.swift */; };
+		05018EF36AA40E74B08E8ED1 /* StudentAnalyticsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4292EC7493300BEAB3C /* StudentAnalyticsSummary.swift */; };
+		0B76969DB561601ACD17C504 /* StudentProgress+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7AA8E2EA8673A004463FF /* StudentProgress+Schema.swift */; };
+		0F256610D3569757C9A3B3AD /* RelationshipType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF652EA6340400F59DB2 /* RelationshipType.swift */; };
+		12EFDD62FB525E173214A84C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563519612EA5246F00937170 /* UserProfile.swift */; };
+		193922A6EF7994F872242ACA /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF672EA6340400F59DB2 /* UserRole.swift */; };
+		24FCF9F93576468D3205A8BB /* PracticeProblem+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4262EC7493300BEAB3C /* PracticeProblem+Schema.swift */; };
+		259F8335EABBB3B0611D4A6E /* WorksheetMetadata+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A42C2EC7493300BEAB3C /* WorksheetMetadata+Schema.swift */; };
+		2648EAE9005816519DC41309 /* UserStats+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB84EA7056BF536422771C8 /* UserStats+Schema.swift */; };
+		296E01CE0FD0718B3A1E164D /* LinkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF632EA6340400F59DB2 /* LinkStatus.swift */; };
+		2D3B781A1EE8625300413E34 /* SubmissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF662EA6340400F59DB2 /* SubmissionStatus.swift */; };
+		2E34FE21FE869B2E45DABABE /* StudentCurriculumProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ACF3FB7D77520A73D5A4A2 /* StudentCurriculumProgress.swift */; };
+		317D6956E44A924EC9AAA0BD /* StudentCurriculumProgress+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC36CF214B70050EE9FCA239 /* StudentCurriculumProgress+Schema.swift */; };
+		31BC2A9D396949C2EC6B5459 /* ParentChildRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635195D2EA5246F00937170 /* ParentChildRelationship.swift */; };
+		353FF8D151469EFDAEF8AF10 /* MembershipStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF642EA6340400F59DB2 /* MembershipStatus.swift */; };
+		36F7DE7C4DC6617C84EF4AE0 /* CurriculumStandard+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD716C72665397702FE28215 /* CurriculumStandard+Schema.swift */; };
+		3B08AB55AC53B9E7367104C7 /* FullWorksheetSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C29AAE081E78A8594A69DB /* FullWorksheetSolution.swift */; };
+		3D11A6E032FD1023FE9F90B8 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6682AEB7F61081B2B938544E /* amplifyconfiguration.json */; };
+		3DC22C0958AA66DFA315B005 /* HomeworkSubmission+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635195A2EA5246F00937170 /* HomeworkSubmission+Schema.swift */; };
+		3DDA4031C8989BA3E55632B5 /* PracticeProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4252EC7493300BEAB3C /* PracticeProblem.swift */; };
+		4AD13E356A53164C3D517C9E /* HomeworkAnalytics+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7AA8C2EA8673A004463FF /* HomeworkAnalytics+Schema.swift */; };
+		511DB36F91401ED618BE6238 /* HomeworkAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7AA8B2EA8673A004463FF /* HomeworkAnalytics.swift */; };
+		563519692EA5246F00937170 /* UserProfile+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563519622EA5246F00937170 /* UserProfile+Schema.swift */; };
+		5635196A2EA5246F00937170 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563519612EA5246F00937170 /* UserProfile.swift */; };
+		5635196C2EA5246F00937170 /* HomeworkSubmission+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635195A2EA5246F00937170 /* HomeworkSubmission+Schema.swift */; };
+		5635196E2EA5246F00937170 /* HomeworkSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563519592EA5246F00937170 /* HomeworkSubmission.swift */; };
+		5635196F2EA5246F00937170 /* Homework+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563519582EA5246F00937170 /* Homework+Schema.swift */; };
+		563519702EA5246F00937170 /* ParentChildRelationship+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635195E2EA5246F00937170 /* ParentChildRelationship+Schema.swift */; };
+		563519712EA5246F00937170 /* ParentChildRelationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635195D2EA5246F00937170 /* ParentChildRelationship.swift */; };
+		563519722EA5246F00937170 /* Homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563519572EA5246F00937170 /* Homework.swift */; };
+		563AF95B2E9A16EA00FCBDA7 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 563AF95A2E9A16EA00FCBDA7 /* AWSCognitoAuthPlugin */; };
+		563AF95D2E9A16EA00FCBDA7 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 563AF95C2E9A16EA00FCBDA7 /* Amplify */; };
+		563AF9642E9A217A00FCBDA7 /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 563AF9632E9A217A00FCBDA7 /* AWSS3StoragePlugin */; };
+		564202EA2EE525CF00C94486 /* PracticeAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564202E82EE525CF00C94486 /* PracticeAssignment.swift */; };
+		564202EB2EE525CF00C94486 /* PracticeAssignment+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564202E92EE525CF00C94486 /* PracticeAssignment+Schema.swift */; };
+		5650A42D2EC7493300BEAB3C /* StudentAnalyticsSummary+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A42A2EC7493300BEAB3C /* StudentAnalyticsSummary+Schema.swift */; };
+		5650A42E2EC7493300BEAB3C /* ErrorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4232EC7493300BEAB3C /* ErrorPattern.swift */; };
+		5650A42F2EC7493300BEAB3C /* ConceptMastery+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4222EC7493300BEAB3C /* ConceptMastery+Schema.swift */; };
+		5650A4302EC7493300BEAB3C /* ErrorPattern+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4242EC7493300BEAB3C /* ErrorPattern+Schema.swift */; };
+		5650A4312EC7493300BEAB3C /* PracticeProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4252EC7493300BEAB3C /* PracticeProblem.swift */; };
+		5650A4322EC7493300BEAB3C /* PracticeProblem+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4262EC7493300BEAB3C /* PracticeProblem+Schema.swift */; };
+		5650A4332EC7493300BEAB3C /* StudentAnalyticsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4292EC7493300BEAB3C /* StudentAnalyticsSummary.swift */; };
+		5650A4342EC7493300BEAB3C /* WorksheetMetadata+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A42C2EC7493300BEAB3C /* WorksheetMetadata+Schema.swift */; };
+		5650A4352EC7493300BEAB3C /* ConceptMastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4212EC7493300BEAB3C /* ConceptMastery.swift */; };
+		5650A4362EC7493300BEAB3C /* QuestionMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4272EC7493300BEAB3C /* QuestionMetadata.swift */; };
+		5650A4372EC7493300BEAB3C /* WorksheetMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A42B2EC7493300BEAB3C /* WorksheetMetadata.swift */; };
+		5650A4382EC7493300BEAB3C /* QuestionMetadata+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4282EC7493300BEAB3C /* QuestionMetadata+Schema.swift */; };
+		5670FF5F2EA6336700F59DB2 /* Classroom+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF5C2EA6336700F59DB2 /* Classroom+Schema.swift */; };
+		5670FF602EA6336700F59DB2 /* ClassroomMembership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF5D2EA6336700F59DB2 /* ClassroomMembership.swift */; };
+		5670FF612EA6336700F59DB2 /* Classroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF5B2EA6336700F59DB2 /* Classroom.swift */; };
+		5670FF622EA6336700F59DB2 /* ClassroomMembership+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF5E2EA6336700F59DB2 /* ClassroomMembership+Schema.swift */; };
+		5670FF682EA6340400F59DB2 /* LinkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF632EA6340400F59DB2 /* LinkStatus.swift */; };
+		5670FF692EA6340400F59DB2 /* SubmissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF662EA6340400F59DB2 /* SubmissionStatus.swift */; };
+		5670FF6A2EA6340400F59DB2 /* MembershipStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF642EA6340400F59DB2 /* MembershipStatus.swift */; };
+		5670FF6B2EA6340400F59DB2 /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF672EA6340400F59DB2 /* UserRole.swift */; };
+		5670FF6C2EA6340400F59DB2 /* RelationshipType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670FF652EA6340400F59DB2 /* RelationshipType.swift */; };
+		569A40022E9B9538004AE9F9 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 569A40012E9B9538004AE9F9 /* AWSAPIPlugin */; };
+		569A40042E9B9538004AE9F9 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 569A40032E9B9538004AE9F9 /* AWSDataStorePlugin */; };
+		56A7AA8F2EA8673A004463FF /* HomeworkAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7AA8B2EA8673A004463FF /* HomeworkAnalytics.swift */; };
+		56A7AA902EA8673A004463FF /* HomeworkAnalytics+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7AA8C2EA8673A004463FF /* HomeworkAnalytics+Schema.swift */; };
+		56A7AA912EA8673A004463FF /* StudentProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7AA8D2EA8673A004463FF /* StudentProgress.swift */; };
+		56A7AA922EA8673A004463FF /* StudentProgress+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7AA8E2EA8673A004463FF /* StudentProgress+Schema.swift */; };
+		6817D6AF776348F25B0322D8 /* ErrorPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4232EC7493300BEAB3C /* ErrorPattern.swift */; };
+		6A03FCC99032711A701846DA /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792802DA1F10E1269DFE656F /* AmplifyModels.swift */; };
+		6CD3FB81187E20C9C388C611 /* FullWorksheetSolution+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADFFBAD3646BDA09D59B711 /* FullWorksheetSolution+Schema.swift */; };
+		76CFA239B566821C515B5493 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E20C10CA167CE84B1339B78 /* Worksheet.swift */; };
+		7E149C565F3E52110DFCA93B /* SolutionFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C87901732E91D27CF1F2A89 /* SolutionFeedback.swift */; };
+		7FC3BDB0FC6003FE2476EB35 /* SolutionFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C87901732E91D27CF1F2A89 /* SolutionFeedback.swift */; };
+		803B9E3909FA4DDB53FB8275 /* CurriculumStandard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9734C4EBF9082321E1A8E4B /* CurriculumStandard.swift */; };
+		82F281F11874F9FBFF9A743C /* UserProfile+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563519622EA5246F00937170 /* UserProfile+Schema.swift */; };
+		8719B0A0A2CA1E3A7FC8B76C /* Question+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF84A82F331B95057E9D4854 /* Question+Schema.swift */; };
+		8852C70F01192ADDDF590D20 /* StudentProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7AA8D2EA8673A004463FF /* StudentProgress.swift */; };
+		8868B7E23D74584864109089 /* CurriculumTopicSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACEB70F98DCEF6786B3BDAC /* CurriculumTopicSummary.swift */; };
+		88CE02F12F51A00F0BB58B77 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E5A44998998EFA35F2509F0 /* awsconfiguration.json */; };
+		905ADFC366BFE8081EEB524E /* UserStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D93327860C6010205992FDB /* UserStats.swift */; };
+		91FA267034D83BD6FB7FDDF0 /* UserStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D93327860C6010205992FDB /* UserStats.swift */; };
+		9488BFA624FC6B26C6DE2447 /* FullWorksheetSolution+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADFFBAD3646BDA09D59B711 /* FullWorksheetSolution+Schema.swift */; };
+		970EC3A4D28C4DEED1EB44E2 /* FullWorksheetSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C29AAE081E78A8594A69DB /* FullWorksheetSolution.swift */; };
+		9845043A41345477329FDDA6 /* Question+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF84A82F331B95057E9D4854 /* Question+Schema.swift */; };
+		9FB244021FD3144BAE754349 /* Worksheet+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8C4024EB756AE7FAA45337 /* Worksheet+Schema.swift */; };
+		ACB039ABB58E35F1F7F41DCF /* ParentChildRelationship+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635195E2EA5246F00937170 /* ParentChildRelationship+Schema.swift */; };
+		B1BD99113361D95821C47497 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3EEFA8348034C9B1FE1FE /* Question.swift */; };
+		B4CA67AD23FA3CF01A1B8B3B /* SolutionFeedback+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C1CC349ED9E374D1AC81D4 /* SolutionFeedback+Schema.swift */; };
+		C8B4641B01BF0C1A4973C3D3 /* HomeworkSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563519592EA5246F00937170 /* HomeworkSubmission.swift */; };
+		CA3792BE3E6FE4C67E6D83F9 /* ErrorPattern+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4242EC7493300BEAB3C /* ErrorPattern+Schema.swift */; };
+		E06E1D43AC97044E3169F41A /* WorksheetMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A42B2EC7493300BEAB3C /* WorksheetMetadata.swift */; };
+		E33187851068F34624915A4F /* SolutionFeedback+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C1CC349ED9E374D1AC81D4 /* SolutionFeedback+Schema.swift */; };
+		F0006CEFEEF9FC77010B51A5 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3EEFA8348034C9B1FE1FE /* Question.swift */; };
+		F4A5C74BA1FFF50CECC02E5F /* Homework+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563519582EA5246F00937170 /* Homework+Schema.swift */; };
+		F6EFED9364F9A2A8B79FE978 /* Worksheet+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8C4024EB756AE7FAA45337 /* Worksheet+Schema.swift */; };
+		F9779D45616C2BE07151946B /* UserStats+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB84EA7056BF536422771C8 /* UserStats+Schema.swift */; };
+		FBBC1C65C9D0B049E2E45F38 /* Worksheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E20C10CA167CE84B1339B78 /* Worksheet.swift */; };
+		FCA062CE00A0D796FA033909 /* Homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563519572EA5246F00937170 /* Homework.swift */; };
+		FDC0CC2C13C611BE3BB0F047 /* QuestionMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A4272EC7493300BEAB3C /* QuestionMetadata.swift */; };
+		FE72145E8629FB35AC3B4D57 /* CurriculumTopicSummary+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8042246659C75FBEC111988B /* CurriculumTopicSummary+Schema.swift */; };
+		FEEE766C60B1E7F113D43655 /* StudentAnalyticsSummary+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5650A42A2EC7493300BEAB3C /* StudentAnalyticsSummary+Schema.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		568875EC2E86D3CE009237C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568875D62E86D3CD009237C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 568875DD2E86D3CD009237C7;
+			remoteInfo = PeaTutorApp;
+		};
+		568875F62E86D3CE009237C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 568875D62E86D3CD009237C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 568875DD2E86D3CD009237C7;
+			remoteInfo = PeaTutorApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BE3EEFA8348034C9B1FE1FE /* Question.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Question.swift; path = amplify/generated/models/Question.swift; sourceTree = "<group>"; };
+		2C87901732E91D27CF1F2A89 /* SolutionFeedback.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = SolutionFeedback.swift; path = amplify/generated/models/SolutionFeedback.swift; sourceTree = "<group>"; };
+		3ACEB70F98DCEF6786B3BDAC /* CurriculumTopicSummary.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = CurriculumTopicSummary.swift; path = amplify/generated/models/CurriculumTopicSummary.swift; sourceTree = "<group>"; };
+		563519572EA5246F00937170 /* Homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Homework.swift; path = amplify/generated/models/Homework.swift; sourceTree = "<group>"; };
+		563519582EA5246F00937170 /* Homework+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Homework+Schema.swift"; path = "amplify/generated/models/Homework+Schema.swift"; sourceTree = "<group>"; };
+		563519592EA5246F00937170 /* HomeworkSubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeworkSubmission.swift; path = amplify/generated/models/HomeworkSubmission.swift; sourceTree = "<group>"; };
+		5635195A2EA5246F00937170 /* HomeworkSubmission+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "HomeworkSubmission+Schema.swift"; path = "amplify/generated/models/HomeworkSubmission+Schema.swift"; sourceTree = "<group>"; };
+		5635195D2EA5246F00937170 /* ParentChildRelationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParentChildRelationship.swift; path = amplify/generated/models/ParentChildRelationship.swift; sourceTree = "<group>"; };
+		5635195E2EA5246F00937170 /* ParentChildRelationship+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ParentChildRelationship+Schema.swift"; path = "amplify/generated/models/ParentChildRelationship+Schema.swift"; sourceTree = "<group>"; };
+		563519612EA5246F00937170 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfile.swift; path = amplify/generated/models/UserProfile.swift; sourceTree = "<group>"; };
+		563519622EA5246F00937170 /* UserProfile+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserProfile+Schema.swift"; path = "amplify/generated/models/UserProfile+Schema.swift"; sourceTree = "<group>"; };
+		564202E82EE525CF00C94486 /* PracticeAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeAssignment.swift; path = amplify/generated/models/PracticeAssignment.swift; sourceTree = "<group>"; };
+		564202E92EE525CF00C94486 /* PracticeAssignment+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PracticeAssignment+Schema.swift"; path = "amplify/generated/models/PracticeAssignment+Schema.swift"; sourceTree = "<group>"; };
+		5650A4212EC7493300BEAB3C /* ConceptMastery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConceptMastery.swift; path = amplify/generated/models/ConceptMastery.swift; sourceTree = "<group>"; };
+		5650A4222EC7493300BEAB3C /* ConceptMastery+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ConceptMastery+Schema.swift"; path = "amplify/generated/models/ConceptMastery+Schema.swift"; sourceTree = "<group>"; };
+		5650A4232EC7493300BEAB3C /* ErrorPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorPattern.swift; path = amplify/generated/models/ErrorPattern.swift; sourceTree = "<group>"; };
+		5650A4242EC7493300BEAB3C /* ErrorPattern+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ErrorPattern+Schema.swift"; path = "amplify/generated/models/ErrorPattern+Schema.swift"; sourceTree = "<group>"; };
+		5650A4252EC7493300BEAB3C /* PracticeProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PracticeProblem.swift; path = amplify/generated/models/PracticeProblem.swift; sourceTree = "<group>"; };
+		5650A4262EC7493300BEAB3C /* PracticeProblem+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PracticeProblem+Schema.swift"; path = "amplify/generated/models/PracticeProblem+Schema.swift"; sourceTree = "<group>"; };
+		5650A4272EC7493300BEAB3C /* QuestionMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionMetadata.swift; path = amplify/generated/models/QuestionMetadata.swift; sourceTree = "<group>"; };
+		5650A4282EC7493300BEAB3C /* QuestionMetadata+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "QuestionMetadata+Schema.swift"; path = "amplify/generated/models/QuestionMetadata+Schema.swift"; sourceTree = "<group>"; };
+		5650A4292EC7493300BEAB3C /* StudentAnalyticsSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentAnalyticsSummary.swift; path = amplify/generated/models/StudentAnalyticsSummary.swift; sourceTree = "<group>"; };
+		5650A42A2EC7493300BEAB3C /* StudentAnalyticsSummary+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "StudentAnalyticsSummary+Schema.swift"; path = "amplify/generated/models/StudentAnalyticsSummary+Schema.swift"; sourceTree = "<group>"; };
+		5650A42B2EC7493300BEAB3C /* WorksheetMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorksheetMetadata.swift; path = amplify/generated/models/WorksheetMetadata.swift; sourceTree = "<group>"; };
+		5650A42C2EC7493300BEAB3C /* WorksheetMetadata+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WorksheetMetadata+Schema.swift"; path = "amplify/generated/models/WorksheetMetadata+Schema.swift"; sourceTree = "<group>"; };
+		5670FF5B2EA6336700F59DB2 /* Classroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Classroom.swift; path = amplify/generated/models/Classroom.swift; sourceTree = "<group>"; };
+		5670FF5C2EA6336700F59DB2 /* Classroom+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Classroom+Schema.swift"; path = "amplify/generated/models/Classroom+Schema.swift"; sourceTree = "<group>"; };
+		5670FF5D2EA6336700F59DB2 /* ClassroomMembership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClassroomMembership.swift; path = amplify/generated/models/ClassroomMembership.swift; sourceTree = "<group>"; };
+		5670FF5E2EA6336700F59DB2 /* ClassroomMembership+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ClassroomMembership+Schema.swift"; path = "amplify/generated/models/ClassroomMembership+Schema.swift"; sourceTree = "<group>"; };
+		5670FF632EA6340400F59DB2 /* LinkStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinkStatus.swift; path = amplify/generated/models/LinkStatus.swift; sourceTree = "<group>"; };
+		5670FF642EA6340400F59DB2 /* MembershipStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MembershipStatus.swift; path = amplify/generated/models/MembershipStatus.swift; sourceTree = "<group>"; };
+		5670FF652EA6340400F59DB2 /* RelationshipType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RelationshipType.swift; path = amplify/generated/models/RelationshipType.swift; sourceTree = "<group>"; };
+		5670FF662EA6340400F59DB2 /* SubmissionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SubmissionStatus.swift; path = amplify/generated/models/SubmissionStatus.swift; sourceTree = "<group>"; };
+		5670FF672EA6340400F59DB2 /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserRole.swift; path = amplify/generated/models/UserRole.swift; sourceTree = "<group>"; };
+		568875DE2E86D3CD009237C7 /* PeaTutorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeaTutorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		568875EB2E86D3CE009237C7 /* PeaTutorAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeaTutorAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		568875F52E86D3CE009237C7 /* PeaTutorAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeaTutorAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A7AA8B2EA8673A004463FF /* HomeworkAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeworkAnalytics.swift; path = amplify/generated/models/HomeworkAnalytics.swift; sourceTree = "<group>"; };
+		56A7AA8C2EA8673A004463FF /* HomeworkAnalytics+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "HomeworkAnalytics+Schema.swift"; path = "amplify/generated/models/HomeworkAnalytics+Schema.swift"; sourceTree = "<group>"; };
+		56A7AA8D2EA8673A004463FF /* StudentProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentProgress.swift; path = amplify/generated/models/StudentProgress.swift; sourceTree = "<group>"; };
+		56A7AA8E2EA8673A004463FF /* StudentProgress+Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "StudentProgress+Schema.swift"; path = "amplify/generated/models/StudentProgress+Schema.swift"; sourceTree = "<group>"; };
+		5E5A44998998EFA35F2509F0 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		6682AEB7F61081B2B938544E /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		6E20C10CA167CE84B1339B78 /* Worksheet.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Worksheet.swift; path = amplify/generated/models/Worksheet.swift; sourceTree = "<group>"; };
+		792802DA1F10E1269DFE656F /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
+		7ADFFBAD3646BDA09D59B711 /* FullWorksheetSolution+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "FullWorksheetSolution+Schema.swift"; path = "amplify/generated/models/FullWorksheetSolution+Schema.swift"; sourceTree = "<group>"; };
+		7D93327860C6010205992FDB /* UserStats.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = UserStats.swift; path = amplify/generated/models/UserStats.swift; sourceTree = "<group>"; };
+		7E8C4024EB756AE7FAA45337 /* Worksheet+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Worksheet+Schema.swift"; path = "amplify/generated/models/Worksheet+Schema.swift"; sourceTree = "<group>"; };
+		8042246659C75FBEC111988B /* CurriculumTopicSummary+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "CurriculumTopicSummary+Schema.swift"; path = "amplify/generated/models/CurriculumTopicSummary+Schema.swift"; sourceTree = "<group>"; };
+		95C1CC349ED9E374D1AC81D4 /* SolutionFeedback+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "SolutionFeedback+Schema.swift"; path = "amplify/generated/models/SolutionFeedback+Schema.swift"; sourceTree = "<group>"; };
+		98ACF3FB7D77520A73D5A4A2 /* StudentCurriculumProgress.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = StudentCurriculumProgress.swift; path = amplify/generated/models/StudentCurriculumProgress.swift; sourceTree = "<group>"; };
+		9DB84EA7056BF536422771C8 /* UserStats+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "UserStats+Schema.swift"; path = "amplify/generated/models/UserStats+Schema.swift"; sourceTree = "<group>"; };
+		CD716C72665397702FE28215 /* CurriculumStandard+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "CurriculumStandard+Schema.swift"; path = "amplify/generated/models/CurriculumStandard+Schema.swift"; sourceTree = "<group>"; };
+		D9734C4EBF9082321E1A8E4B /* CurriculumStandard.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = CurriculumStandard.swift; path = amplify/generated/models/CurriculumStandard.swift; sourceTree = "<group>"; };
+		E5C29AAE081E78A8594A69DB /* FullWorksheetSolution.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = FullWorksheetSolution.swift; path = amplify/generated/models/FullWorksheetSolution.swift; sourceTree = "<group>"; };
+		EF84A82F331B95057E9D4854 /* Question+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "Question+Schema.swift"; path = "amplify/generated/models/Question+Schema.swift"; sourceTree = "<group>"; };
+		FC36CF214B70050EE9FCA239 /* StudentCurriculumProgress+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "StudentCurriculumProgress+Schema.swift"; path = "amplify/generated/models/StudentCurriculumProgress+Schema.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		568876192E86D5CE009237C7 /* Exceptions for "PeaTutorApp" folder in "PeaTutorApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 568875DD2E86D3CD009237C7 /* PeaTutorApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		568875E02E86D3CD009237C7 /* PeaTutorApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				568876192E86D5CE009237C7 /* Exceptions for "PeaTutorApp" folder in "PeaTutorApp" target */,
+			);
+			path = PeaTutorApp;
+			sourceTree = "<group>";
+		};
+		568875EE2E86D3CE009237C7 /* PeaTutorAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PeaTutorAppTests;
+			sourceTree = "<group>";
+		};
+		568875F82E86D3CE009237C7 /* PeaTutorAppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PeaTutorAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		568875DB2E86D3CD009237C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				569A40022E9B9538004AE9F9 /* AWSAPIPlugin in Frameworks */,
+				563AF95B2E9A16EA00FCBDA7 /* AWSCognitoAuthPlugin in Frameworks */,
+				563AF95D2E9A16EA00FCBDA7 /* Amplify in Frameworks */,
+				569A40042E9B9538004AE9F9 /* AWSDataStorePlugin in Frameworks */,
+				563AF9642E9A217A00FCBDA7 /* AWSS3StoragePlugin in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568875E82E86D3CE009237C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568875F22E86D3CE009237C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17FF309954E03A4437FFB73F /* AmplifyModels */ = {
+			isa = PBXGroup;
+			children = (
+				563519572EA5246F00937170 /* Homework.swift */,
+				563519582EA5246F00937170 /* Homework+Schema.swift */,
+				563519592EA5246F00937170 /* HomeworkSubmission.swift */,
+				5635195A2EA5246F00937170 /* HomeworkSubmission+Schema.swift */,
+				5635195D2EA5246F00937170 /* ParentChildRelationship.swift */,
+				5635195E2EA5246F00937170 /* ParentChildRelationship+Schema.swift */,
+				563519612EA5246F00937170 /* UserProfile.swift */,
+				563519622EA5246F00937170 /* UserProfile+Schema.swift */,
+				792802DA1F10E1269DFE656F /* AmplifyModels.swift */,
+				7ADFFBAD3646BDA09D59B711 /* FullWorksheetSolution+Schema.swift */,
+				E5C29AAE081E78A8594A69DB /* FullWorksheetSolution.swift */,
+				EF84A82F331B95057E9D4854 /* Question+Schema.swift */,
+				0BE3EEFA8348034C9B1FE1FE /* Question.swift */,
+				95C1CC349ED9E374D1AC81D4 /* SolutionFeedback+Schema.swift */,
+				2C87901732E91D27CF1F2A89 /* SolutionFeedback.swift */,
+				9DB84EA7056BF536422771C8 /* UserStats+Schema.swift */,
+				7D93327860C6010205992FDB /* UserStats.swift */,
+				7E8C4024EB756AE7FAA45337 /* Worksheet+Schema.swift */,
+				6E20C10CA167CE84B1339B78 /* Worksheet.swift */,
+				5670FF5B2EA6336700F59DB2 /* Classroom.swift */,
+				5670FF5C2EA6336700F59DB2 /* Classroom+Schema.swift */,
+				5670FF5D2EA6336700F59DB2 /* ClassroomMembership.swift */,
+				5670FF5E2EA6336700F59DB2 /* ClassroomMembership+Schema.swift */,
+				5670FF632EA6340400F59DB2 /* LinkStatus.swift */,
+				5670FF642EA6340400F59DB2 /* MembershipStatus.swift */,
+				5670FF652EA6340400F59DB2 /* RelationshipType.swift */,
+				5670FF662EA6340400F59DB2 /* SubmissionStatus.swift */,
+				5670FF672EA6340400F59DB2 /* UserRole.swift */,
+				56A7AA8B2EA8673A004463FF /* HomeworkAnalytics.swift */,
+				56A7AA8C2EA8673A004463FF /* HomeworkAnalytics+Schema.swift */,
+				56A7AA8D2EA8673A004463FF /* StudentProgress.swift */,
+				56A7AA8E2EA8673A004463FF /* StudentProgress+Schema.swift */,
+				5650A4212EC7493300BEAB3C /* ConceptMastery.swift */,
+				5650A4222EC7493300BEAB3C /* ConceptMastery+Schema.swift */,
+				5650A4232EC7493300BEAB3C /* ErrorPattern.swift */,
+				5650A4242EC7493300BEAB3C /* ErrorPattern+Schema.swift */,
+				5650A4252EC7493300BEAB3C /* PracticeProblem.swift */,
+				5650A4262EC7493300BEAB3C /* PracticeProblem+Schema.swift */,
+				5650A4272EC7493300BEAB3C /* QuestionMetadata.swift */,
+				5650A4282EC7493300BEAB3C /* QuestionMetadata+Schema.swift */,
+				5650A4292EC7493300BEAB3C /* StudentAnalyticsSummary.swift */,
+				5650A42A2EC7493300BEAB3C /* StudentAnalyticsSummary+Schema.swift */,
+				5650A42B2EC7493300BEAB3C /* WorksheetMetadata.swift */,
+				5650A42C2EC7493300BEAB3C /* WorksheetMetadata+Schema.swift */,
+				CD716C72665397702FE28215 /* CurriculumStandard+Schema.swift */,
+				D9734C4EBF9082321E1A8E4B /* CurriculumStandard.swift */,
+				8042246659C75FBEC111988B /* CurriculumTopicSummary+Schema.swift */,
+				3ACEB70F98DCEF6786B3BDAC /* CurriculumTopicSummary.swift */,
+				FC36CF214B70050EE9FCA239 /* StudentCurriculumProgress+Schema.swift */,
+				98ACF3FB7D77520A73D5A4A2 /* StudentCurriculumProgress.swift */,
+				564202E82EE525CF00C94486 /* PracticeAssignment.swift */,
+				564202E92EE525CF00C94486 /* PracticeAssignment+Schema.swift */,
+			);
+			name = AmplifyModels;
+			sourceTree = "<group>";
+		};
+		568875D52E86D3CD009237C7 = {
+			isa = PBXGroup;
+			children = (
+				568875E02E86D3CD009237C7 /* PeaTutorApp */,
+				568875EE2E86D3CE009237C7 /* PeaTutorAppTests */,
+				568875F82E86D3CE009237C7 /* PeaTutorAppUITests */,
+				568875DF2E86D3CD009237C7 /* Products */,
+				CC9289290562CA905DA06928 /* AmplifyConfig */,
+				17FF309954E03A4437FFB73F /* AmplifyModels */,
+			);
+			sourceTree = "<group>";
+		};
+		568875DF2E86D3CD009237C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				568875DE2E86D3CD009237C7 /* PeaTutorApp.app */,
+				568875EB2E86D3CE009237C7 /* PeaTutorAppTests.xctest */,
+				568875F52E86D3CE009237C7 /* PeaTutorAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC9289290562CA905DA06928 /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				5E5A44998998EFA35F2509F0 /* awsconfiguration.json */,
+				6682AEB7F61081B2B938544E /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		568875DD2E86D3CD009237C7 /* PeaTutorApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 568875FF2E86D3CE009237C7 /* Build configuration list for PBXNativeTarget "PeaTutorApp" */;
+			buildPhases = (
+				568875DA2E86D3CD009237C7 /* Sources */,
+				568875DB2E86D3CD009237C7 /* Frameworks */,
+				568875DC2E86D3CD009237C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				568875E02E86D3CD009237C7 /* PeaTutorApp */,
+			);
+			name = PeaTutorApp;
+			packageProductDependencies = (
+				563AF95A2E9A16EA00FCBDA7 /* AWSCognitoAuthPlugin */,
+				563AF95C2E9A16EA00FCBDA7 /* Amplify */,
+				563AF9632E9A217A00FCBDA7 /* AWSS3StoragePlugin */,
+				569A40012E9B9538004AE9F9 /* AWSAPIPlugin */,
+				569A40032E9B9538004AE9F9 /* AWSDataStorePlugin */,
+			);
+			productName = PeaTutorApp;
+			productReference = 568875DE2E86D3CD009237C7 /* PeaTutorApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		568875EA2E86D3CE009237C7 /* PeaTutorAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 568876022E86D3CE009237C7 /* Build configuration list for PBXNativeTarget "PeaTutorAppTests" */;
+			buildPhases = (
+				568875E72E86D3CE009237C7 /* Sources */,
+				568875E82E86D3CE009237C7 /* Frameworks */,
+				568875E92E86D3CE009237C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				568875ED2E86D3CE009237C7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				568875EE2E86D3CE009237C7 /* PeaTutorAppTests */,
+			);
+			name = PeaTutorAppTests;
+			packageProductDependencies = (
+			);
+			productName = PeaTutorAppTests;
+			productReference = 568875EB2E86D3CE009237C7 /* PeaTutorAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		568875F42E86D3CE009237C7 /* PeaTutorAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 568876052E86D3CE009237C7 /* Build configuration list for PBXNativeTarget "PeaTutorAppUITests" */;
+			buildPhases = (
+				568875F12E86D3CE009237C7 /* Sources */,
+				568875F22E86D3CE009237C7 /* Frameworks */,
+				568875F32E86D3CE009237C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				568875F72E86D3CE009237C7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				568875F82E86D3CE009237C7 /* PeaTutorAppUITests */,
+			);
+			name = PeaTutorAppUITests;
+			packageProductDependencies = (
+			);
+			productName = PeaTutorAppUITests;
+			productReference = 568875F52E86D3CE009237C7 /* PeaTutorAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		568875D62E86D3CD009237C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					568875DD2E86D3CD009237C7 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					568875EA2E86D3CE009237C7 = {
+						CreatedOnToolsVersion = 16.4;
+						LastSwiftMigration = 1640;
+						TestTargetID = 568875DD2E86D3CD009237C7;
+					};
+					568875F42E86D3CE009237C7 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 568875DD2E86D3CD009237C7;
+					};
+				};
+			};
+			buildConfigurationList = 568875D92E86D3CD009237C7 /* Build configuration list for PBXProject "PeaTutorApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 568875D52E86D3CD009237C7;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				563AF9592E9A16EA00FCBDA7 /* XCRemoteSwiftPackageReference "amplify-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 568875DF2E86D3CD009237C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				568875DD2E86D3CD009237C7 /* PeaTutorApp */,
+				568875EA2E86D3CE009237C7 /* PeaTutorAppTests */,
+				568875F42E86D3CE009237C7 /* PeaTutorAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		568875DC2E86D3CD009237C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88CE02F12F51A00F0BB58B77 /* awsconfiguration.json in Resources */,
+				3D11A6E032FD1023FE9F90B8 /* amplifyconfiguration.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568875E92E86D3CE009237C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568875F32E86D3CE009237C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		568875DA2E86D3CD009237C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A03FCC99032711A701846DA /* AmplifyModels.swift in Sources */,
+				6CD3FB81187E20C9C388C611 /* FullWorksheetSolution+Schema.swift in Sources */,
+				3B08AB55AC53B9E7367104C7 /* FullWorksheetSolution.swift in Sources */,
+				5670FF5F2EA6336700F59DB2 /* Classroom+Schema.swift in Sources */,
+				5670FF602EA6336700F59DB2 /* ClassroomMembership.swift in Sources */,
+				5670FF612EA6336700F59DB2 /* Classroom.swift in Sources */,
+				5670FF622EA6336700F59DB2 /* ClassroomMembership+Schema.swift in Sources */,
+				5650A42D2EC7493300BEAB3C /* StudentAnalyticsSummary+Schema.swift in Sources */,
+				5650A42E2EC7493300BEAB3C /* ErrorPattern.swift in Sources */,
+				5650A42F2EC7493300BEAB3C /* ConceptMastery+Schema.swift in Sources */,
+				5650A4302EC7493300BEAB3C /* ErrorPattern+Schema.swift in Sources */,
+				5650A4312EC7493300BEAB3C /* PracticeProblem.swift in Sources */,
+				5650A4322EC7493300BEAB3C /* PracticeProblem+Schema.swift in Sources */,
+				5650A4332EC7493300BEAB3C /* StudentAnalyticsSummary.swift in Sources */,
+				5650A4342EC7493300BEAB3C /* WorksheetMetadata+Schema.swift in Sources */,
+				5650A4352EC7493300BEAB3C /* ConceptMastery.swift in Sources */,
+				5650A4362EC7493300BEAB3C /* QuestionMetadata.swift in Sources */,
+				5650A4372EC7493300BEAB3C /* WorksheetMetadata.swift in Sources */,
+				5650A4382EC7493300BEAB3C /* QuestionMetadata+Schema.swift in Sources */,
+				5670FF682EA6340400F59DB2 /* LinkStatus.swift in Sources */,
+				5670FF692EA6340400F59DB2 /* SubmissionStatus.swift in Sources */,
+				5670FF6A2EA6340400F59DB2 /* MembershipStatus.swift in Sources */,
+				5670FF6B2EA6340400F59DB2 /* UserRole.swift in Sources */,
+				5670FF6C2EA6340400F59DB2 /* RelationshipType.swift in Sources */,
+				563519692EA5246F00937170 /* UserProfile+Schema.swift in Sources */,
+				5635196A2EA5246F00937170 /* UserProfile.swift in Sources */,
+				5635196C2EA5246F00937170 /* HomeworkSubmission+Schema.swift in Sources */,
+				5635196E2EA5246F00937170 /* HomeworkSubmission.swift in Sources */,
+				5635196F2EA5246F00937170 /* Homework+Schema.swift in Sources */,
+				563519702EA5246F00937170 /* ParentChildRelationship+Schema.swift in Sources */,
+				563519712EA5246F00937170 /* ParentChildRelationship.swift in Sources */,
+				563519722EA5246F00937170 /* Homework.swift in Sources */,
+				9845043A41345477329FDDA6 /* Question+Schema.swift in Sources */,
+				B1BD99113361D95821C47497 /* Question.swift in Sources */,
+				E33187851068F34624915A4F /* SolutionFeedback+Schema.swift in Sources */,
+				7FC3BDB0FC6003FE2476EB35 /* SolutionFeedback.swift in Sources */,
+				F9779D45616C2BE07151946B /* UserStats+Schema.swift in Sources */,
+				905ADFC366BFE8081EEB524E /* UserStats.swift in Sources */,
+				9FB244021FD3144BAE754349 /* Worksheet+Schema.swift in Sources */,
+				FBBC1C65C9D0B049E2E45F38 /* Worksheet.swift in Sources */,
+				56A7AA8F2EA8673A004463FF /* HomeworkAnalytics.swift in Sources */,
+				56A7AA902EA8673A004463FF /* HomeworkAnalytics+Schema.swift in Sources */,
+				56A7AA912EA8673A004463FF /* StudentProgress.swift in Sources */,
+				56A7AA922EA8673A004463FF /* StudentProgress+Schema.swift in Sources */,
+				36F7DE7C4DC6617C84EF4AE0 /* CurriculumStandard+Schema.swift in Sources */,
+				803B9E3909FA4DDB53FB8275 /* CurriculumStandard.swift in Sources */,
+				FE72145E8629FB35AC3B4D57 /* CurriculumTopicSummary+Schema.swift in Sources */,
+				8868B7E23D74584864109089 /* CurriculumTopicSummary.swift in Sources */,
+				CA3792BE3E6FE4C67E6D83F9 /* ErrorPattern+Schema.swift in Sources */,
+				6817D6AF776348F25B0322D8 /* ErrorPattern.swift in Sources */,
+				9488BFA624FC6B26C6DE2447 /* FullWorksheetSolution+Schema.swift in Sources */,
+				970EC3A4D28C4DEED1EB44E2 /* FullWorksheetSolution.swift in Sources */,
+				F4A5C74BA1FFF50CECC02E5F /* Homework+Schema.swift in Sources */,
+				564202EA2EE525CF00C94486 /* PracticeAssignment.swift in Sources */,
+				564202EB2EE525CF00C94486 /* PracticeAssignment+Schema.swift in Sources */,
+				FCA062CE00A0D796FA033909 /* Homework.swift in Sources */,
+				4AD13E356A53164C3D517C9E /* HomeworkAnalytics+Schema.swift in Sources */,
+				511DB36F91401ED618BE6238 /* HomeworkAnalytics.swift in Sources */,
+				3DC22C0958AA66DFA315B005 /* HomeworkSubmission+Schema.swift in Sources */,
+				C8B4641B01BF0C1A4973C3D3 /* HomeworkSubmission.swift in Sources */,
+				296E01CE0FD0718B3A1E164D /* LinkStatus.swift in Sources */,
+				353FF8D151469EFDAEF8AF10 /* MembershipStatus.swift in Sources */,
+				ACB039ABB58E35F1F7F41DCF /* ParentChildRelationship+Schema.swift in Sources */,
+				31BC2A9D396949C2EC6B5459 /* ParentChildRelationship.swift in Sources */,
+				24FCF9F93576468D3205A8BB /* PracticeProblem+Schema.swift in Sources */,
+				3DDA4031C8989BA3E55632B5 /* PracticeProblem.swift in Sources */,
+				8719B0A0A2CA1E3A7FC8B76C /* Question+Schema.swift in Sources */,
+				F0006CEFEEF9FC77010B51A5 /* Question.swift in Sources */,
+				04272CDC78814B9F1BEA89D7 /* QuestionMetadata+Schema.swift in Sources */,
+				FDC0CC2C13C611BE3BB0F047 /* QuestionMetadata.swift in Sources */,
+				0F256610D3569757C9A3B3AD /* RelationshipType.swift in Sources */,
+				B4CA67AD23FA3CF01A1B8B3B /* SolutionFeedback+Schema.swift in Sources */,
+				7E149C565F3E52110DFCA93B /* SolutionFeedback.swift in Sources */,
+				FEEE766C60B1E7F113D43655 /* StudentAnalyticsSummary+Schema.swift in Sources */,
+				05018EF36AA40E74B08E8ED1 /* StudentAnalyticsSummary.swift in Sources */,
+				317D6956E44A924EC9AAA0BD /* StudentCurriculumProgress+Schema.swift in Sources */,
+				2E34FE21FE869B2E45DABABE /* StudentCurriculumProgress.swift in Sources */,
+				0B76969DB561601ACD17C504 /* StudentProgress+Schema.swift in Sources */,
+				8852C70F01192ADDDF590D20 /* StudentProgress.swift in Sources */,
+				2D3B781A1EE8625300413E34 /* SubmissionStatus.swift in Sources */,
+				82F281F11874F9FBFF9A743C /* UserProfile+Schema.swift in Sources */,
+				12EFDD62FB525E173214A84C /* UserProfile.swift in Sources */,
+				193922A6EF7994F872242ACA /* UserRole.swift in Sources */,
+				2648EAE9005816519DC41309 /* UserStats+Schema.swift in Sources */,
+				91FA267034D83BD6FB7FDDF0 /* UserStats.swift in Sources */,
+				F6EFED9364F9A2A8B79FE978 /* Worksheet+Schema.swift in Sources */,
+				76CFA239B566821C515B5493 /* Worksheet.swift in Sources */,
+				259F8335EABBB3B0611D4A6E /* WorksheetMetadata+Schema.swift in Sources */,
+				E06E1D43AC97044E3169F41A /* WorksheetMetadata.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568875E72E86D3CE009237C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568875F12E86D3CE009237C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		568875ED2E86D3CE009237C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 568875DD2E86D3CD009237C7 /* PeaTutorApp */;
+			targetProxy = 568875EC2E86D3CE009237C7 /* PBXContainerItemProxy */;
+		};
+		568875F72E86D3CE009237C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 568875DD2E86D3CD009237C7 /* PeaTutorApp */;
+			targetProxy = 568875F62E86D3CE009237C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		568875FD2E86D3CE009237C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2QHJNBXM5F;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		568875FE2E86D3CE009237C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2QHJNBXM5F;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		568876002E86D3CE009237C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QHJNBXM5F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PeaTutorApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan worksheets";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Access imported worksheets";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Import worksheet images";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peaplejungle.peatutorapp.PeaTutorApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		568876012E86D3CE009237C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QHJNBXM5F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PeaTutorApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan worksheets";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Access imported worksheets";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Import worksheet images";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peaplejungle.peatutorapp.PeaTutorApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		568876032E86D3CE009237C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QHJNBXM5F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peaplejungle.peatutorapp.PeaTutorAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeaTutorApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PeaTutorApp";
+			};
+			name = Debug;
+		};
+		568876042E86D3CE009237C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QHJNBXM5F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peaplejungle.peatutorapp.PeaTutorAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeaTutorApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PeaTutorApp";
+			};
+			name = Release;
+		};
+		568876062E86D3CE009237C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QHJNBXM5F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peaplejungle.peatutorapp.PeaTutorAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PeaTutorApp;
+			};
+			name = Debug;
+		};
+		568876072E86D3CE009237C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QHJNBXM5F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.peaplejungle.peatutorapp.PeaTutorAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PeaTutorApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		568875D92E86D3CD009237C7 /* Build configuration list for PBXProject "PeaTutorApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568875FD2E86D3CE009237C7 /* Debug */,
+				568875FE2E86D3CE009237C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		568875FF2E86D3CE009237C7 /* Build configuration list for PBXNativeTarget "PeaTutorApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568876002E86D3CE009237C7 /* Debug */,
+				568876012E86D3CE009237C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		568876022E86D3CE009237C7 /* Build configuration list for PBXNativeTarget "PeaTutorAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568876032E86D3CE009237C7 /* Debug */,
+				568876042E86D3CE009237C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		568876052E86D3CE009237C7 /* Build configuration list for PBXNativeTarget "PeaTutorAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				568876062E86D3CE009237C7 /* Debug */,
+				568876072E86D3CE009237C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		563AF9592E9A16EA00FCBDA7 /* XCRemoteSwiftPackageReference "amplify-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.51.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		563AF95A2E9A16EA00FCBDA7 /* AWSCognitoAuthPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 563AF9592E9A16EA00FCBDA7 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSCognitoAuthPlugin;
+		};
+		563AF95C2E9A16EA00FCBDA7 /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 563AF9592E9A16EA00FCBDA7 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = Amplify;
+		};
+		563AF9632E9A217A00FCBDA7 /* AWSS3StoragePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 563AF9592E9A16EA00FCBDA7 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSS3StoragePlugin;
+		};
+		569A40012E9B9538004AE9F9 /* AWSAPIPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 563AF9592E9A16EA00FCBDA7 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSAPIPlugin;
+		};
+		569A40032E9B9538004AE9F9 /* AWSDataStorePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 563AF9592E9A16EA00FCBDA7 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSDataStorePlugin;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 568875D62E86D3CD009237C7 /* Project object */;
+}

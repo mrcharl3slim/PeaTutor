@@ -1,0 +1,2821 @@
+# this is an auto generated file. This will be overwritten
+
+mutation CreateWorksheet(
+  $input: CreateWorksheetInput!
+  $condition: ModelWorksheetConditionInput
+) {
+  createWorksheet(input: $input, condition: $condition) {
+    id
+    userId
+    title
+    fileType
+    fileName
+    s3WorksheetKey
+    extractionResult
+    questionCount
+    totalMarks
+    uploadedAt
+    fileSize
+    contentHash
+    sourceFileHashes
+    lastAccessedAt
+    questions {
+      nextToken
+      startedAt
+      __typename
+    }
+    fullWorksheetSolutions {
+      nextToken
+      startedAt
+      __typename
+    }
+    homeworkAssignments {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation UpdateWorksheet(
+  $input: UpdateWorksheetInput!
+  $condition: ModelWorksheetConditionInput
+) {
+  updateWorksheet(input: $input, condition: $condition) {
+    id
+    userId
+    title
+    fileType
+    fileName
+    s3WorksheetKey
+    extractionResult
+    questionCount
+    totalMarks
+    uploadedAt
+    fileSize
+    contentHash
+    sourceFileHashes
+    lastAccessedAt
+    questions {
+      nextToken
+      startedAt
+      __typename
+    }
+    fullWorksheetSolutions {
+      nextToken
+      startedAt
+      __typename
+    }
+    homeworkAssignments {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation DeleteWorksheet(
+  $input: DeleteWorksheetInput!
+  $condition: ModelWorksheetConditionInput
+) {
+  deleteWorksheet(input: $input, condition: $condition) {
+    id
+    userId
+    title
+    fileType
+    fileName
+    s3WorksheetKey
+    extractionResult
+    questionCount
+    totalMarks
+    uploadedAt
+    fileSize
+    contentHash
+    sourceFileHashes
+    lastAccessedAt
+    questions {
+      nextToken
+      startedAt
+      __typename
+    }
+    fullWorksheetSolutions {
+      nextToken
+      startedAt
+      __typename
+    }
+    homeworkAssignments {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation CreateQuestion(
+  $input: CreateQuestionInput!
+  $condition: ModelQuestionConditionInput
+) {
+  createQuestion(input: $input, condition: $condition) {
+    id
+    worksheetId
+    userId
+    questionId
+    questionText
+    marks
+    skillsTested
+    hints
+    stepByStep
+    answer
+    isSubpart
+    parentQuestionId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    solutionFeedbacks {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation UpdateQuestion(
+  $input: UpdateQuestionInput!
+  $condition: ModelQuestionConditionInput
+) {
+  updateQuestion(input: $input, condition: $condition) {
+    id
+    worksheetId
+    userId
+    questionId
+    questionText
+    marks
+    skillsTested
+    hints
+    stepByStep
+    answer
+    isSubpart
+    parentQuestionId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    solutionFeedbacks {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation DeleteQuestion(
+  $input: DeleteQuestionInput!
+  $condition: ModelQuestionConditionInput
+) {
+  deleteQuestion(input: $input, condition: $condition) {
+    id
+    worksheetId
+    userId
+    questionId
+    questionText
+    marks
+    skillsTested
+    hints
+    stepByStep
+    answer
+    isSubpart
+    parentQuestionId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    solutionFeedbacks {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation CreateSolutionFeedback(
+  $input: CreateSolutionFeedbackInput!
+  $condition: ModelSolutionFeedbackConditionInput
+) {
+  createSolutionFeedback(input: $input, condition: $condition) {
+    id
+    questionId
+    worksheetId
+    userId
+    s3SolutionImageKey
+    feedback
+    isCorrect
+    suggestions
+    attemptNumber
+    submittedAt
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation UpdateSolutionFeedback(
+  $input: UpdateSolutionFeedbackInput!
+  $condition: ModelSolutionFeedbackConditionInput
+) {
+  updateSolutionFeedback(input: $input, condition: $condition) {
+    id
+    questionId
+    worksheetId
+    userId
+    s3SolutionImageKey
+    feedback
+    isCorrect
+    suggestions
+    attemptNumber
+    submittedAt
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation DeleteSolutionFeedback(
+  $input: DeleteSolutionFeedbackInput!
+  $condition: ModelSolutionFeedbackConditionInput
+) {
+  deleteSolutionFeedback(input: $input, condition: $condition) {
+    id
+    questionId
+    worksheetId
+    userId
+    s3SolutionImageKey
+    feedback
+    isCorrect
+    suggestions
+    attemptNumber
+    submittedAt
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation CreateFullWorksheetSolution(
+  $input: CreateFullWorksheetSolutionInput!
+  $condition: ModelFullWorksheetSolutionConditionInput
+) {
+  createFullWorksheetSolution(input: $input, condition: $condition) {
+    id
+    worksheetId
+    userId
+    s3SolutionImageKey
+    overallFeedback
+    overallScore
+    totalQuestions
+    completedQuestions
+    questionsWithIssues
+    suggestions
+    detailedFeedback
+    attemptNumber
+    submittedAt
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    homeworkId
+    homework {
+      id
+      classroomId
+      teacherId
+      title
+      description
+      dueDate
+      assignedDate
+      totalPoints
+      isPublished
+      worksheetId
+      instructions
+      learningObjectives
+      allowLateSubmissions
+      allowMultipleAttempts
+      maxAttempts
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    isLate
+    teacherReviewed
+    teacherNotes
+    teacherReviewedAt
+    teacherReviewedBy
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation UpdateFullWorksheetSolution(
+  $input: UpdateFullWorksheetSolutionInput!
+  $condition: ModelFullWorksheetSolutionConditionInput
+) {
+  updateFullWorksheetSolution(input: $input, condition: $condition) {
+    id
+    worksheetId
+    userId
+    s3SolutionImageKey
+    overallFeedback
+    overallScore
+    totalQuestions
+    completedQuestions
+    questionsWithIssues
+    suggestions
+    detailedFeedback
+    attemptNumber
+    submittedAt
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    homeworkId
+    homework {
+      id
+      classroomId
+      teacherId
+      title
+      description
+      dueDate
+      assignedDate
+      totalPoints
+      isPublished
+      worksheetId
+      instructions
+      learningObjectives
+      allowLateSubmissions
+      allowMultipleAttempts
+      maxAttempts
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    isLate
+    teacherReviewed
+    teacherNotes
+    teacherReviewedAt
+    teacherReviewedBy
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation DeleteFullWorksheetSolution(
+  $input: DeleteFullWorksheetSolutionInput!
+  $condition: ModelFullWorksheetSolutionConditionInput
+) {
+  deleteFullWorksheetSolution(input: $input, condition: $condition) {
+    id
+    worksheetId
+    userId
+    s3SolutionImageKey
+    overallFeedback
+    overallScore
+    totalQuestions
+    completedQuestions
+    questionsWithIssues
+    suggestions
+    detailedFeedback
+    attemptNumber
+    submittedAt
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    homeworkId
+    homework {
+      id
+      classroomId
+      teacherId
+      title
+      description
+      dueDate
+      assignedDate
+      totalPoints
+      isPublished
+      worksheetId
+      instructions
+      learningObjectives
+      allowLateSubmissions
+      allowMultipleAttempts
+      maxAttempts
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    isLate
+    teacherReviewed
+    teacherNotes
+    teacherReviewedAt
+    teacherReviewedBy
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation CreateUserStats(
+  $input: CreateUserStatsInput!
+  $condition: ModelUserStatsConditionInput
+) {
+  createUserStats(input: $input, condition: $condition) {
+    id
+    userId
+    userRole
+    totalWorksheets
+    totalQuestions
+    totalSolutionsSubmitted
+    totalFeedbackReceived
+    averageScore
+    correctAnswersCount
+    totalAttemptsCount
+    lastActiveAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation UpdateUserStats(
+  $input: UpdateUserStatsInput!
+  $condition: ModelUserStatsConditionInput
+) {
+  updateUserStats(input: $input, condition: $condition) {
+    id
+    userId
+    userRole
+    totalWorksheets
+    totalQuestions
+    totalSolutionsSubmitted
+    totalFeedbackReceived
+    averageScore
+    correctAnswersCount
+    totalAttemptsCount
+    lastActiveAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation DeleteUserStats(
+  $input: DeleteUserStatsInput!
+  $condition: ModelUserStatsConditionInput
+) {
+  deleteUserStats(input: $input, condition: $condition) {
+    id
+    userId
+    userRole
+    totalWorksheets
+    totalQuestions
+    totalSolutionsSubmitted
+    totalFeedbackReceived
+    averageScore
+    correctAnswersCount
+    totalAttemptsCount
+    lastActiveAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation CreateUserProfile(
+  $input: CreateUserProfileInput!
+  $condition: ModelUserProfileConditionInput
+) {
+  createUserProfile(input: $input, condition: $condition) {
+    id
+    userId
+    email
+    userRole
+    displayName
+    schoolName
+    gradeLevel
+    profileImageUrl
+    onboardingCompleted
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateUserProfile(
+  $input: UpdateUserProfileInput!
+  $condition: ModelUserProfileConditionInput
+) {
+  updateUserProfile(input: $input, condition: $condition) {
+    id
+    userId
+    email
+    userRole
+    displayName
+    schoolName
+    gradeLevel
+    profileImageUrl
+    onboardingCompleted
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteUserProfile(
+  $input: DeleteUserProfileInput!
+  $condition: ModelUserProfileConditionInput
+) {
+  deleteUserProfile(input: $input, condition: $condition) {
+    id
+    userId
+    email
+    userRole
+    displayName
+    schoolName
+    gradeLevel
+    profileImageUrl
+    onboardingCompleted
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateClassroom(
+  $input: CreateClassroomInput!
+  $condition: ModelClassroomConditionInput
+) {
+  createClassroom(input: $input, condition: $condition) {
+    id
+    teacherId
+    className
+    classCode
+    subject
+    description
+    gradeLevel
+    isActive
+    memberships {
+      nextToken
+      startedAt
+      __typename
+    }
+    homework {
+      nextToken
+      startedAt
+      __typename
+    }
+    studentProgress {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateClassroom(
+  $input: UpdateClassroomInput!
+  $condition: ModelClassroomConditionInput
+) {
+  updateClassroom(input: $input, condition: $condition) {
+    id
+    teacherId
+    className
+    classCode
+    subject
+    description
+    gradeLevel
+    isActive
+    memberships {
+      nextToken
+      startedAt
+      __typename
+    }
+    homework {
+      nextToken
+      startedAt
+      __typename
+    }
+    studentProgress {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteClassroom(
+  $input: DeleteClassroomInput!
+  $condition: ModelClassroomConditionInput
+) {
+  deleteClassroom(input: $input, condition: $condition) {
+    id
+    teacherId
+    className
+    classCode
+    subject
+    description
+    gradeLevel
+    isActive
+    memberships {
+      nextToken
+      startedAt
+      __typename
+    }
+    homework {
+      nextToken
+      startedAt
+      __typename
+    }
+    studentProgress {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateClassroomMembership(
+  $input: CreateClassroomMembershipInput!
+  $condition: ModelClassroomMembershipConditionInput
+) {
+  createClassroomMembership(input: $input, condition: $condition) {
+    id
+    classroomId
+    studentId
+    status
+    enrolledAt
+    approvedAt
+    approvedBy
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateClassroomMembership(
+  $input: UpdateClassroomMembershipInput!
+  $condition: ModelClassroomMembershipConditionInput
+) {
+  updateClassroomMembership(input: $input, condition: $condition) {
+    id
+    classroomId
+    studentId
+    status
+    enrolledAt
+    approvedAt
+    approvedBy
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteClassroomMembership(
+  $input: DeleteClassroomMembershipInput!
+  $condition: ModelClassroomMembershipConditionInput
+) {
+  deleteClassroomMembership(input: $input, condition: $condition) {
+    id
+    classroomId
+    studentId
+    status
+    enrolledAt
+    approvedAt
+    approvedBy
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateParentChildRelationship(
+  $input: CreateParentChildRelationshipInput!
+  $condition: ModelParentChildRelationshipConditionInput
+) {
+  createParentChildRelationship(input: $input, condition: $condition) {
+    id
+    parentId
+    childId
+    linkingCode
+    relationshipType
+    status
+    approvedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateParentChildRelationship(
+  $input: UpdateParentChildRelationshipInput!
+  $condition: ModelParentChildRelationshipConditionInput
+) {
+  updateParentChildRelationship(input: $input, condition: $condition) {
+    id
+    parentId
+    childId
+    linkingCode
+    relationshipType
+    status
+    approvedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteParentChildRelationship(
+  $input: DeleteParentChildRelationshipInput!
+  $condition: ModelParentChildRelationshipConditionInput
+) {
+  deleteParentChildRelationship(input: $input, condition: $condition) {
+    id
+    parentId
+    childId
+    linkingCode
+    relationshipType
+    status
+    approvedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateHomework(
+  $input: CreateHomeworkInput!
+  $condition: ModelHomeworkConditionInput
+) {
+  createHomework(input: $input, condition: $condition) {
+    id
+    classroomId
+    teacherId
+    title
+    description
+    dueDate
+    assignedDate
+    totalPoints
+    isPublished
+    worksheetId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    instructions
+    learningObjectives
+    allowLateSubmissions
+    allowMultipleAttempts
+    maxAttempts
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    submissions {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateHomework(
+  $input: UpdateHomeworkInput!
+  $condition: ModelHomeworkConditionInput
+) {
+  updateHomework(input: $input, condition: $condition) {
+    id
+    classroomId
+    teacherId
+    title
+    description
+    dueDate
+    assignedDate
+    totalPoints
+    isPublished
+    worksheetId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    instructions
+    learningObjectives
+    allowLateSubmissions
+    allowMultipleAttempts
+    maxAttempts
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    submissions {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteHomework(
+  $input: DeleteHomeworkInput!
+  $condition: ModelHomeworkConditionInput
+) {
+  deleteHomework(input: $input, condition: $condition) {
+    id
+    classroomId
+    teacherId
+    title
+    description
+    dueDate
+    assignedDate
+    totalPoints
+    isPublished
+    worksheetId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    instructions
+    learningObjectives
+    allowLateSubmissions
+    allowMultipleAttempts
+    maxAttempts
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    submissions {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateHomeworkAnalytics(
+  $input: CreateHomeworkAnalyticsInput!
+  $condition: ModelHomeworkAnalyticsConditionInput
+) {
+  createHomeworkAnalytics(input: $input, condition: $condition) {
+    id
+    homeworkId
+    teacherId
+    totalStudents
+    submittedCount
+    totalSubmissions
+    lateCount
+    averageAttempts
+    multipleAttemptsCount
+    reviewedCount
+    pendingReviewCount
+    commonMistakes
+    strugglingStudents
+    lastUpdatedAt
+    lastCalculatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateHomeworkAnalytics(
+  $input: UpdateHomeworkAnalyticsInput!
+  $condition: ModelHomeworkAnalyticsConditionInput
+) {
+  updateHomeworkAnalytics(input: $input, condition: $condition) {
+    id
+    homeworkId
+    teacherId
+    totalStudents
+    submittedCount
+    totalSubmissions
+    lateCount
+    averageAttempts
+    multipleAttemptsCount
+    reviewedCount
+    pendingReviewCount
+    commonMistakes
+    strugglingStudents
+    lastUpdatedAt
+    lastCalculatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteHomeworkAnalytics(
+  $input: DeleteHomeworkAnalyticsInput!
+  $condition: ModelHomeworkAnalyticsConditionInput
+) {
+  deleteHomeworkAnalytics(input: $input, condition: $condition) {
+    id
+    homeworkId
+    teacherId
+    totalStudents
+    submittedCount
+    totalSubmissions
+    lateCount
+    averageAttempts
+    multipleAttemptsCount
+    reviewedCount
+    pendingReviewCount
+    commonMistakes
+    strugglingStudents
+    lastUpdatedAt
+    lastCalculatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateStudentProgress(
+  $input: CreateStudentProgressInput!
+  $condition: ModelStudentProgressConditionInput
+) {
+  createStudentProgress(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    totalHomeworkAssigned
+    totalHomeworkCompleted
+    totalHomeworkLate
+    totalSubmissions
+    averageAttemptsPerHomework
+    currentStreak
+    longestStreak
+    skillsBreakdown
+    strengthAreas
+    improvementAreas
+    lastSubmissionAt
+    progressUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateStudentProgress(
+  $input: UpdateStudentProgressInput!
+  $condition: ModelStudentProgressConditionInput
+) {
+  updateStudentProgress(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    totalHomeworkAssigned
+    totalHomeworkCompleted
+    totalHomeworkLate
+    totalSubmissions
+    averageAttemptsPerHomework
+    currentStreak
+    longestStreak
+    skillsBreakdown
+    strengthAreas
+    improvementAreas
+    lastSubmissionAt
+    progressUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteStudentProgress(
+  $input: DeleteStudentProgressInput!
+  $condition: ModelStudentProgressConditionInput
+) {
+  deleteStudentProgress(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    totalHomeworkAssigned
+    totalHomeworkCompleted
+    totalHomeworkLate
+    totalSubmissions
+    averageAttemptsPerHomework
+    currentStreak
+    longestStreak
+    skillsBreakdown
+    strengthAreas
+    improvementAreas
+    lastSubmissionAt
+    progressUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateWorksheetMetadata(
+  $input: CreateWorksheetMetadataInput!
+  $condition: ModelWorksheetMetadataConditionInput
+) {
+  createWorksheetMetadata(input: $input, condition: $condition) {
+    id
+    worksheetId
+    userId
+    topics
+    difficulty
+    cognitiveSkills
+    questionTypes
+    estimatedTimeMinutes
+    complexityLevel
+    commonCoreStandards
+    bloomsTaxonomyLevels
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    curriculumCountry
+    curriculumVersion
+    moeCurriculumCodes
+    detectedGradeLevel
+    detectedGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumConfidence
+    curriculumMappedAt
+    extractedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation UpdateWorksheetMetadata(
+  $input: UpdateWorksheetMetadataInput!
+  $condition: ModelWorksheetMetadataConditionInput
+) {
+  updateWorksheetMetadata(input: $input, condition: $condition) {
+    id
+    worksheetId
+    userId
+    topics
+    difficulty
+    cognitiveSkills
+    questionTypes
+    estimatedTimeMinutes
+    complexityLevel
+    commonCoreStandards
+    bloomsTaxonomyLevels
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    curriculumCountry
+    curriculumVersion
+    moeCurriculumCodes
+    detectedGradeLevel
+    detectedGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumConfidence
+    curriculumMappedAt
+    extractedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation DeleteWorksheetMetadata(
+  $input: DeleteWorksheetMetadataInput!
+  $condition: ModelWorksheetMetadataConditionInput
+) {
+  deleteWorksheetMetadata(input: $input, condition: $condition) {
+    id
+    worksheetId
+    userId
+    topics
+    difficulty
+    cognitiveSkills
+    questionTypes
+    estimatedTimeMinutes
+    complexityLevel
+    commonCoreStandards
+    bloomsTaxonomyLevels
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    curriculumCountry
+    curriculumVersion
+    moeCurriculumCodes
+    detectedGradeLevel
+    detectedGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumConfidence
+    curriculumMappedAt
+    extractedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation CreateQuestionMetadata(
+  $input: CreateQuestionMetadataInput!
+  $condition: ModelQuestionMetadataConditionInput
+) {
+  createQuestionMetadata(input: $input, condition: $condition) {
+    id
+    questionId
+    userId
+    questionType
+    difficultyLevel
+    cognitiveLevel
+    primaryConcept
+    secondaryConcepts
+    prerequisiteSkills
+    commonMistakes
+    conceptualChallenges
+    hasMultipleSteps
+    requiresVisualization
+    isWordProblem
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    extractedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation UpdateQuestionMetadata(
+  $input: UpdateQuestionMetadataInput!
+  $condition: ModelQuestionMetadataConditionInput
+) {
+  updateQuestionMetadata(input: $input, condition: $condition) {
+    id
+    questionId
+    userId
+    questionType
+    difficultyLevel
+    cognitiveLevel
+    primaryConcept
+    secondaryConcepts
+    prerequisiteSkills
+    commonMistakes
+    conceptualChallenges
+    hasMultipleSteps
+    requiresVisualization
+    isWordProblem
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    extractedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation DeleteQuestionMetadata(
+  $input: DeleteQuestionMetadataInput!
+  $condition: ModelQuestionMetadataConditionInput
+) {
+  deleteQuestionMetadata(input: $input, condition: $condition) {
+    id
+    questionId
+    userId
+    questionType
+    difficultyLevel
+    cognitiveLevel
+    primaryConcept
+    secondaryConcepts
+    prerequisiteSkills
+    commonMistakes
+    conceptualChallenges
+    hasMultipleSteps
+    requiresVisualization
+    isWordProblem
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    extractedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation CreateConceptMastery(
+  $input: CreateConceptMasteryInput!
+  $condition: ModelConceptMasteryConditionInput
+) {
+  createConceptMastery(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    concept
+    gradeLevel
+    masteryPercentage
+    accuracyRate
+    totalAttempts
+    correctAttempts
+    incorrectAttempts
+    trend
+    recentQuestions
+    lastPracticed
+    easyQuestions
+    mediumQuestions
+    hardQuestions
+    easyCorrect
+    mediumCorrect
+    hardCorrect
+    strengthAreas
+    improvementAreas
+    recommendedPractice
+    curriculumCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumTopicTitle
+    prerequisitesMastered
+    prerequisiteGaps
+    curriculumMappedAt
+    calculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateConceptMastery(
+  $input: UpdateConceptMasteryInput!
+  $condition: ModelConceptMasteryConditionInput
+) {
+  updateConceptMastery(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    concept
+    gradeLevel
+    masteryPercentage
+    accuracyRate
+    totalAttempts
+    correctAttempts
+    incorrectAttempts
+    trend
+    recentQuestions
+    lastPracticed
+    easyQuestions
+    mediumQuestions
+    hardQuestions
+    easyCorrect
+    mediumCorrect
+    hardCorrect
+    strengthAreas
+    improvementAreas
+    recommendedPractice
+    curriculumCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumTopicTitle
+    prerequisitesMastered
+    prerequisiteGaps
+    curriculumMappedAt
+    calculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteConceptMastery(
+  $input: DeleteConceptMasteryInput!
+  $condition: ModelConceptMasteryConditionInput
+) {
+  deleteConceptMastery(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    concept
+    gradeLevel
+    masteryPercentage
+    accuracyRate
+    totalAttempts
+    correctAttempts
+    incorrectAttempts
+    trend
+    recentQuestions
+    lastPracticed
+    easyQuestions
+    mediumQuestions
+    hardQuestions
+    easyCorrect
+    mediumCorrect
+    hardCorrect
+    strengthAreas
+    improvementAreas
+    recommendedPractice
+    curriculumCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumTopicTitle
+    prerequisitesMastered
+    prerequisiteGaps
+    curriculumMappedAt
+    calculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateErrorPattern(
+  $input: CreateErrorPatternInput!
+  $condition: ModelErrorPatternConditionInput
+) {
+  createErrorPattern(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    errorType
+    errorCategory
+    severity
+    occurrenceCount
+    firstSeen
+    lastSeen
+    affectedConcepts
+    exampleQuestionIds
+    description
+    rootCause
+    remediation
+    isResolved
+    resolvedAt
+    detectedAt
+    lastAnalyzedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateErrorPattern(
+  $input: UpdateErrorPatternInput!
+  $condition: ModelErrorPatternConditionInput
+) {
+  updateErrorPattern(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    errorType
+    errorCategory
+    severity
+    occurrenceCount
+    firstSeen
+    lastSeen
+    affectedConcepts
+    exampleQuestionIds
+    description
+    rootCause
+    remediation
+    isResolved
+    resolvedAt
+    detectedAt
+    lastAnalyzedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteErrorPattern(
+  $input: DeleteErrorPatternInput!
+  $condition: ModelErrorPatternConditionInput
+) {
+  deleteErrorPattern(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    errorType
+    errorCategory
+    severity
+    occurrenceCount
+    firstSeen
+    lastSeen
+    affectedConcepts
+    exampleQuestionIds
+    description
+    rootCause
+    remediation
+    isResolved
+    resolvedAt
+    detectedAt
+    lastAnalyzedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreatePracticeProblem(
+  $input: CreatePracticeProblemInput!
+  $condition: ModelPracticeProblemConditionInput
+) {
+  createPracticeProblem(input: $input, condition: $condition) {
+    id
+    sourceWorksheetId
+    sourceQuestionId
+    userId
+    problemText
+    answer
+    stepByStep
+    hints
+    concept
+    difficultyLevel
+    questionType
+    generatedFrom
+    difficultyAdjustment
+    timesUsed
+    averageScore
+    curriculumCode
+    curriculumGradeLevel
+    curriculumGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    respectsGradeBoundary
+    targetCurriculumCodes
+    generatedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation UpdatePracticeProblem(
+  $input: UpdatePracticeProblemInput!
+  $condition: ModelPracticeProblemConditionInput
+) {
+  updatePracticeProblem(input: $input, condition: $condition) {
+    id
+    sourceWorksheetId
+    sourceQuestionId
+    userId
+    problemText
+    answer
+    stepByStep
+    hints
+    concept
+    difficultyLevel
+    questionType
+    generatedFrom
+    difficultyAdjustment
+    timesUsed
+    averageScore
+    curriculumCode
+    curriculumGradeLevel
+    curriculumGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    respectsGradeBoundary
+    targetCurriculumCodes
+    generatedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation DeletePracticeProblem(
+  $input: DeletePracticeProblemInput!
+  $condition: ModelPracticeProblemConditionInput
+) {
+  deletePracticeProblem(input: $input, condition: $condition) {
+    id
+    sourceWorksheetId
+    sourceQuestionId
+    userId
+    problemText
+    answer
+    stepByStep
+    hints
+    concept
+    difficultyLevel
+    questionType
+    generatedFrom
+    difficultyAdjustment
+    timesUsed
+    averageScore
+    curriculumCode
+    curriculumGradeLevel
+    curriculumGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    respectsGradeBoundary
+    targetCurriculumCodes
+    generatedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+mutation CreatePracticeAssignment(
+  $input: CreatePracticeAssignmentInput!
+  $condition: ModelPracticeAssignmentConditionInput
+) {
+  createPracticeAssignment(input: $input, condition: $condition) {
+    id
+    assignedByUserId
+    assignedByRole
+    studentId
+    classroomId
+    title
+    description
+    dueDate
+    assignedDate
+    problemIds
+    problemCount
+    curriculumCodes
+    curriculumGradeLevel
+    targetConcepts
+    sourceType
+    status
+    startedAt
+    completedAt
+    correctCount
+    totalAttempted
+    score
+    timeSpentSeconds
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdatePracticeAssignment(
+  $input: UpdatePracticeAssignmentInput!
+  $condition: ModelPracticeAssignmentConditionInput
+) {
+  updatePracticeAssignment(input: $input, condition: $condition) {
+    id
+    assignedByUserId
+    assignedByRole
+    studentId
+    classroomId
+    title
+    description
+    dueDate
+    assignedDate
+    problemIds
+    problemCount
+    curriculumCodes
+    curriculumGradeLevel
+    targetConcepts
+    sourceType
+    status
+    startedAt
+    completedAt
+    correctCount
+    totalAttempted
+    score
+    timeSpentSeconds
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeletePracticeAssignment(
+  $input: DeletePracticeAssignmentInput!
+  $condition: ModelPracticeAssignmentConditionInput
+) {
+  deletePracticeAssignment(input: $input, condition: $condition) {
+    id
+    assignedByUserId
+    assignedByRole
+    studentId
+    classroomId
+    title
+    description
+    dueDate
+    assignedDate
+    problemIds
+    problemCount
+    curriculumCodes
+    curriculumGradeLevel
+    targetConcepts
+    sourceType
+    status
+    startedAt
+    completedAt
+    correctCount
+    totalAttempted
+    score
+    timeSpentSeconds
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateStudentAnalyticsSummary(
+  $input: CreateStudentAnalyticsSummaryInput!
+  $condition: ModelStudentAnalyticsSummaryConditionInput
+) {
+  createStudentAnalyticsSummary(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    overallProgress
+    totalQuestionsAttempted
+    totalQuestionsCorrect
+    overallAccuracy
+    masteredConcepts
+    developingConcepts
+    needsWorkConcepts
+    topStrengths
+    topWeaknesses
+    mostCommonErrors
+    highSeverityErrorCount
+    mediumSeverityErrorCount
+    currentStreak
+    longestStreak
+    practiceFrequency
+    computationScore
+    problemSolvingScore
+    reasoningScore
+    accuracyScore
+    wordProblemScore
+    lastCalculated
+    lastUpdated
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateStudentAnalyticsSummary(
+  $input: UpdateStudentAnalyticsSummaryInput!
+  $condition: ModelStudentAnalyticsSummaryConditionInput
+) {
+  updateStudentAnalyticsSummary(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    overallProgress
+    totalQuestionsAttempted
+    totalQuestionsCorrect
+    overallAccuracy
+    masteredConcepts
+    developingConcepts
+    needsWorkConcepts
+    topStrengths
+    topWeaknesses
+    mostCommonErrors
+    highSeverityErrorCount
+    mediumSeverityErrorCount
+    currentStreak
+    longestStreak
+    practiceFrequency
+    computationScore
+    problemSolvingScore
+    reasoningScore
+    accuracyScore
+    wordProblemScore
+    lastCalculated
+    lastUpdated
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteStudentAnalyticsSummary(
+  $input: DeleteStudentAnalyticsSummaryInput!
+  $condition: ModelStudentAnalyticsSummaryConditionInput
+) {
+  deleteStudentAnalyticsSummary(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    overallProgress
+    totalQuestionsAttempted
+    totalQuestionsCorrect
+    overallAccuracy
+    masteredConcepts
+    developingConcepts
+    needsWorkConcepts
+    topStrengths
+    topWeaknesses
+    mostCommonErrors
+    highSeverityErrorCount
+    mediumSeverityErrorCount
+    currentStreak
+    longestStreak
+    practiceFrequency
+    computationScore
+    problemSolvingScore
+    reasoningScore
+    accuracyScore
+    wordProblemScore
+    lastCalculated
+    lastUpdated
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateCurriculumStandard(
+  $input: CreateCurriculumStandardInput!
+  $condition: ModelCurriculumStandardConditionInput
+) {
+  createCurriculumStandard(input: $input, condition: $condition) {
+    id
+    country
+    curriculumName
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    subTopicCode
+    subTopicDescription
+    curriculumCode
+    keywords
+    sequenceOrder
+    prerequisiteCodes
+    bulletPoints
+    notes
+    isActive
+    effectiveFrom
+    effectiveUntil
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateCurriculumStandard(
+  $input: UpdateCurriculumStandardInput!
+  $condition: ModelCurriculumStandardConditionInput
+) {
+  updateCurriculumStandard(input: $input, condition: $condition) {
+    id
+    country
+    curriculumName
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    subTopicCode
+    subTopicDescription
+    curriculumCode
+    keywords
+    sequenceOrder
+    prerequisiteCodes
+    bulletPoints
+    notes
+    isActive
+    effectiveFrom
+    effectiveUntil
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteCurriculumStandard(
+  $input: DeleteCurriculumStandardInput!
+  $condition: ModelCurriculumStandardConditionInput
+) {
+  deleteCurriculumStandard(input: $input, condition: $condition) {
+    id
+    country
+    curriculumName
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    subTopicCode
+    subTopicDescription
+    curriculumCode
+    keywords
+    sequenceOrder
+    prerequisiteCodes
+    bulletPoints
+    notes
+    isActive
+    effectiveFrom
+    effectiveUntil
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateCurriculumTopicSummary(
+  $input: CreateCurriculumTopicSummaryInput!
+  $condition: ModelCurriculumTopicSummaryConditionInput
+) {
+  createCurriculumTopicSummary(input: $input, condition: $condition) {
+    id
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    topicCode
+    subTopicCount
+    subTopicCodes
+    allKeywords
+    sequenceOrder
+    isActive
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateCurriculumTopicSummary(
+  $input: UpdateCurriculumTopicSummaryInput!
+  $condition: ModelCurriculumTopicSummaryConditionInput
+) {
+  updateCurriculumTopicSummary(input: $input, condition: $condition) {
+    id
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    topicCode
+    subTopicCount
+    subTopicCodes
+    allKeywords
+    sequenceOrder
+    isActive
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteCurriculumTopicSummary(
+  $input: DeleteCurriculumTopicSummaryInput!
+  $condition: ModelCurriculumTopicSummaryConditionInput
+) {
+  deleteCurriculumTopicSummary(input: $input, condition: $condition) {
+    id
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    topicCode
+    subTopicCount
+    subTopicCodes
+    allKeywords
+    sequenceOrder
+    isActive
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation CreateStudentCurriculumProgress(
+  $input: CreateStudentCurriculumProgressInput!
+  $condition: ModelStudentCurriculumProgressConditionInput
+) {
+  createStudentCurriculumProgress(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    totalTopicsInGrade
+    topicsAttempted
+    topicsMastered
+    topicsInProgress
+    topicsNotStarted
+    coveragePercentage
+    masteryPercentage
+    strandProgress
+    masteredTopicCodes
+    inProgressTopicCodes
+    notStartedTopicCodes
+    prerequisiteGaps
+    recommendedNextTopics
+    lastCalculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation UpdateStudentCurriculumProgress(
+  $input: UpdateStudentCurriculumProgressInput!
+  $condition: ModelStudentCurriculumProgressConditionInput
+) {
+  updateStudentCurriculumProgress(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    totalTopicsInGrade
+    topicsAttempted
+    topicsMastered
+    topicsInProgress
+    topicsNotStarted
+    coveragePercentage
+    masteryPercentage
+    strandProgress
+    masteredTopicCodes
+    inProgressTopicCodes
+    notStartedTopicCodes
+    prerequisiteGaps
+    recommendedNextTopics
+    lastCalculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+mutation DeleteStudentCurriculumProgress(
+  $input: DeleteStudentCurriculumProgressInput!
+  $condition: ModelStudentCurriculumProgressConditionInput
+) {
+  deleteStudentCurriculumProgress(input: $input, condition: $condition) {
+    id
+    studentId
+    classroomId
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    totalTopicsInGrade
+    topicsAttempted
+    topicsMastered
+    topicsInProgress
+    topicsNotStarted
+    coveragePercentage
+    masteryPercentage
+    strandProgress
+    masteredTopicCodes
+    inProgressTopicCodes
+    notStartedTopicCodes
+    prerequisiteGaps
+    recommendedNextTopics
+    lastCalculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}

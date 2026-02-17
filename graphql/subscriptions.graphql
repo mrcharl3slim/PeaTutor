@@ -1,0 +1,2830 @@
+# this is an auto generated file. This will be overwritten
+
+subscription OnCreateWorksheet(
+  $filter: ModelSubscriptionWorksheetFilterInput
+  $owner: String
+) {
+  onCreateWorksheet(filter: $filter, owner: $owner) {
+    id
+    userId
+    title
+    fileType
+    fileName
+    s3WorksheetKey
+    extractionResult
+    questionCount
+    totalMarks
+    uploadedAt
+    fileSize
+    contentHash
+    sourceFileHashes
+    lastAccessedAt
+    questions {
+      nextToken
+      startedAt
+      __typename
+    }
+    fullWorksheetSolutions {
+      nextToken
+      startedAt
+      __typename
+    }
+    homeworkAssignments {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateWorksheet(
+  $filter: ModelSubscriptionWorksheetFilterInput
+  $owner: String
+) {
+  onUpdateWorksheet(filter: $filter, owner: $owner) {
+    id
+    userId
+    title
+    fileType
+    fileName
+    s3WorksheetKey
+    extractionResult
+    questionCount
+    totalMarks
+    uploadedAt
+    fileSize
+    contentHash
+    sourceFileHashes
+    lastAccessedAt
+    questions {
+      nextToken
+      startedAt
+      __typename
+    }
+    fullWorksheetSolutions {
+      nextToken
+      startedAt
+      __typename
+    }
+    homeworkAssignments {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteWorksheet(
+  $filter: ModelSubscriptionWorksheetFilterInput
+  $owner: String
+) {
+  onDeleteWorksheet(filter: $filter, owner: $owner) {
+    id
+    userId
+    title
+    fileType
+    fileName
+    s3WorksheetKey
+    extractionResult
+    questionCount
+    totalMarks
+    uploadedAt
+    fileSize
+    contentHash
+    sourceFileHashes
+    lastAccessedAt
+    questions {
+      nextToken
+      startedAt
+      __typename
+    }
+    fullWorksheetSolutions {
+      nextToken
+      startedAt
+      __typename
+    }
+    homeworkAssignments {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateQuestion(
+  $filter: ModelSubscriptionQuestionFilterInput
+  $owner: String
+) {
+  onCreateQuestion(filter: $filter, owner: $owner) {
+    id
+    worksheetId
+    userId
+    questionId
+    questionText
+    marks
+    skillsTested
+    hints
+    stepByStep
+    answer
+    isSubpart
+    parentQuestionId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    solutionFeedbacks {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateQuestion(
+  $filter: ModelSubscriptionQuestionFilterInput
+  $owner: String
+) {
+  onUpdateQuestion(filter: $filter, owner: $owner) {
+    id
+    worksheetId
+    userId
+    questionId
+    questionText
+    marks
+    skillsTested
+    hints
+    stepByStep
+    answer
+    isSubpart
+    parentQuestionId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    solutionFeedbacks {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteQuestion(
+  $filter: ModelSubscriptionQuestionFilterInput
+  $owner: String
+) {
+  onDeleteQuestion(filter: $filter, owner: $owner) {
+    id
+    worksheetId
+    userId
+    questionId
+    questionText
+    marks
+    skillsTested
+    hints
+    stepByStep
+    answer
+    isSubpart
+    parentQuestionId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    solutionFeedbacks {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateSolutionFeedback(
+  $filter: ModelSubscriptionSolutionFeedbackFilterInput
+  $owner: String
+) {
+  onCreateSolutionFeedback(filter: $filter, owner: $owner) {
+    id
+    questionId
+    worksheetId
+    userId
+    s3SolutionImageKey
+    feedback
+    isCorrect
+    suggestions
+    attemptNumber
+    submittedAt
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateSolutionFeedback(
+  $filter: ModelSubscriptionSolutionFeedbackFilterInput
+  $owner: String
+) {
+  onUpdateSolutionFeedback(filter: $filter, owner: $owner) {
+    id
+    questionId
+    worksheetId
+    userId
+    s3SolutionImageKey
+    feedback
+    isCorrect
+    suggestions
+    attemptNumber
+    submittedAt
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteSolutionFeedback(
+  $filter: ModelSubscriptionSolutionFeedbackFilterInput
+  $owner: String
+) {
+  onDeleteSolutionFeedback(filter: $filter, owner: $owner) {
+    id
+    questionId
+    worksheetId
+    userId
+    s3SolutionImageKey
+    feedback
+    isCorrect
+    suggestions
+    attemptNumber
+    submittedAt
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateFullWorksheetSolution(
+  $filter: ModelSubscriptionFullWorksheetSolutionFilterInput
+  $owner: String
+) {
+  onCreateFullWorksheetSolution(filter: $filter, owner: $owner) {
+    id
+    worksheetId
+    userId
+    s3SolutionImageKey
+    overallFeedback
+    overallScore
+    totalQuestions
+    completedQuestions
+    questionsWithIssues
+    suggestions
+    detailedFeedback
+    attemptNumber
+    submittedAt
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    homeworkId
+    homework {
+      id
+      classroomId
+      teacherId
+      title
+      description
+      dueDate
+      assignedDate
+      totalPoints
+      isPublished
+      worksheetId
+      instructions
+      learningObjectives
+      allowLateSubmissions
+      allowMultipleAttempts
+      maxAttempts
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    isLate
+    teacherReviewed
+    teacherNotes
+    teacherReviewedAt
+    teacherReviewedBy
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateFullWorksheetSolution(
+  $filter: ModelSubscriptionFullWorksheetSolutionFilterInput
+  $owner: String
+) {
+  onUpdateFullWorksheetSolution(filter: $filter, owner: $owner) {
+    id
+    worksheetId
+    userId
+    s3SolutionImageKey
+    overallFeedback
+    overallScore
+    totalQuestions
+    completedQuestions
+    questionsWithIssues
+    suggestions
+    detailedFeedback
+    attemptNumber
+    submittedAt
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    homeworkId
+    homework {
+      id
+      classroomId
+      teacherId
+      title
+      description
+      dueDate
+      assignedDate
+      totalPoints
+      isPublished
+      worksheetId
+      instructions
+      learningObjectives
+      allowLateSubmissions
+      allowMultipleAttempts
+      maxAttempts
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    isLate
+    teacherReviewed
+    teacherNotes
+    teacherReviewedAt
+    teacherReviewedBy
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteFullWorksheetSolution(
+  $filter: ModelSubscriptionFullWorksheetSolutionFilterInput
+  $owner: String
+) {
+  onDeleteFullWorksheetSolution(filter: $filter, owner: $owner) {
+    id
+    worksheetId
+    userId
+    s3SolutionImageKey
+    overallFeedback
+    overallScore
+    totalQuestions
+    completedQuestions
+    questionsWithIssues
+    suggestions
+    detailedFeedback
+    attemptNumber
+    submittedAt
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    homeworkId
+    homework {
+      id
+      classroomId
+      teacherId
+      title
+      description
+      dueDate
+      assignedDate
+      totalPoints
+      isPublished
+      worksheetId
+      instructions
+      learningObjectives
+      allowLateSubmissions
+      allowMultipleAttempts
+      maxAttempts
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    isLate
+    teacherReviewed
+    teacherNotes
+    teacherReviewedAt
+    teacherReviewedBy
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateUserStats(
+  $filter: ModelSubscriptionUserStatsFilterInput
+  $owner: String
+) {
+  onCreateUserStats(filter: $filter, owner: $owner) {
+    id
+    userId
+    userRole
+    totalWorksheets
+    totalQuestions
+    totalSolutionsSubmitted
+    totalFeedbackReceived
+    averageScore
+    correctAnswersCount
+    totalAttemptsCount
+    lastActiveAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateUserStats(
+  $filter: ModelSubscriptionUserStatsFilterInput
+  $owner: String
+) {
+  onUpdateUserStats(filter: $filter, owner: $owner) {
+    id
+    userId
+    userRole
+    totalWorksheets
+    totalQuestions
+    totalSolutionsSubmitted
+    totalFeedbackReceived
+    averageScore
+    correctAnswersCount
+    totalAttemptsCount
+    lastActiveAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteUserStats(
+  $filter: ModelSubscriptionUserStatsFilterInput
+  $owner: String
+) {
+  onDeleteUserStats(filter: $filter, owner: $owner) {
+    id
+    userId
+    userRole
+    totalWorksheets
+    totalQuestions
+    totalSolutionsSubmitted
+    totalFeedbackReceived
+    averageScore
+    correctAnswersCount
+    totalAttemptsCount
+    lastActiveAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateUserProfile(
+  $filter: ModelSubscriptionUserProfileFilterInput
+  $userId: String
+) {
+  onCreateUserProfile(filter: $filter, userId: $userId) {
+    id
+    userId
+    email
+    userRole
+    displayName
+    schoolName
+    gradeLevel
+    profileImageUrl
+    onboardingCompleted
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateUserProfile(
+  $filter: ModelSubscriptionUserProfileFilterInput
+  $userId: String
+) {
+  onUpdateUserProfile(filter: $filter, userId: $userId) {
+    id
+    userId
+    email
+    userRole
+    displayName
+    schoolName
+    gradeLevel
+    profileImageUrl
+    onboardingCompleted
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteUserProfile(
+  $filter: ModelSubscriptionUserProfileFilterInput
+  $userId: String
+) {
+  onDeleteUserProfile(filter: $filter, userId: $userId) {
+    id
+    userId
+    email
+    userRole
+    displayName
+    schoolName
+    gradeLevel
+    profileImageUrl
+    onboardingCompleted
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateClassroom(
+  $filter: ModelSubscriptionClassroomFilterInput
+  $teacherId: String
+) {
+  onCreateClassroom(filter: $filter, teacherId: $teacherId) {
+    id
+    teacherId
+    className
+    classCode
+    subject
+    description
+    gradeLevel
+    isActive
+    memberships {
+      nextToken
+      startedAt
+      __typename
+    }
+    homework {
+      nextToken
+      startedAt
+      __typename
+    }
+    studentProgress {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateClassroom(
+  $filter: ModelSubscriptionClassroomFilterInput
+  $teacherId: String
+) {
+  onUpdateClassroom(filter: $filter, teacherId: $teacherId) {
+    id
+    teacherId
+    className
+    classCode
+    subject
+    description
+    gradeLevel
+    isActive
+    memberships {
+      nextToken
+      startedAt
+      __typename
+    }
+    homework {
+      nextToken
+      startedAt
+      __typename
+    }
+    studentProgress {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteClassroom(
+  $filter: ModelSubscriptionClassroomFilterInput
+  $teacherId: String
+) {
+  onDeleteClassroom(filter: $filter, teacherId: $teacherId) {
+    id
+    teacherId
+    className
+    classCode
+    subject
+    description
+    gradeLevel
+    isActive
+    memberships {
+      nextToken
+      startedAt
+      __typename
+    }
+    homework {
+      nextToken
+      startedAt
+      __typename
+    }
+    studentProgress {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateClassroomMembership(
+  $filter: ModelSubscriptionClassroomMembershipFilterInput
+  $studentId: String
+) {
+  onCreateClassroomMembership(filter: $filter, studentId: $studentId) {
+    id
+    classroomId
+    studentId
+    status
+    enrolledAt
+    approvedAt
+    approvedBy
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateClassroomMembership(
+  $filter: ModelSubscriptionClassroomMembershipFilterInput
+  $studentId: String
+) {
+  onUpdateClassroomMembership(filter: $filter, studentId: $studentId) {
+    id
+    classroomId
+    studentId
+    status
+    enrolledAt
+    approvedAt
+    approvedBy
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteClassroomMembership(
+  $filter: ModelSubscriptionClassroomMembershipFilterInput
+  $studentId: String
+) {
+  onDeleteClassroomMembership(filter: $filter, studentId: $studentId) {
+    id
+    classroomId
+    studentId
+    status
+    enrolledAt
+    approvedAt
+    approvedBy
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateParentChildRelationship(
+  $filter: ModelSubscriptionParentChildRelationshipFilterInput
+  $childId: String
+) {
+  onCreateParentChildRelationship(filter: $filter, childId: $childId) {
+    id
+    parentId
+    childId
+    linkingCode
+    relationshipType
+    status
+    approvedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateParentChildRelationship(
+  $filter: ModelSubscriptionParentChildRelationshipFilterInput
+  $childId: String
+) {
+  onUpdateParentChildRelationship(filter: $filter, childId: $childId) {
+    id
+    parentId
+    childId
+    linkingCode
+    relationshipType
+    status
+    approvedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteParentChildRelationship(
+  $filter: ModelSubscriptionParentChildRelationshipFilterInput
+  $childId: String
+) {
+  onDeleteParentChildRelationship(filter: $filter, childId: $childId) {
+    id
+    parentId
+    childId
+    linkingCode
+    relationshipType
+    status
+    approvedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateHomework(
+  $filter: ModelSubscriptionHomeworkFilterInput
+  $teacherId: String
+) {
+  onCreateHomework(filter: $filter, teacherId: $teacherId) {
+    id
+    classroomId
+    teacherId
+    title
+    description
+    dueDate
+    assignedDate
+    totalPoints
+    isPublished
+    worksheetId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    instructions
+    learningObjectives
+    allowLateSubmissions
+    allowMultipleAttempts
+    maxAttempts
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    submissions {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateHomework(
+  $filter: ModelSubscriptionHomeworkFilterInput
+  $teacherId: String
+) {
+  onUpdateHomework(filter: $filter, teacherId: $teacherId) {
+    id
+    classroomId
+    teacherId
+    title
+    description
+    dueDate
+    assignedDate
+    totalPoints
+    isPublished
+    worksheetId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    instructions
+    learningObjectives
+    allowLateSubmissions
+    allowMultipleAttempts
+    maxAttempts
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    submissions {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteHomework(
+  $filter: ModelSubscriptionHomeworkFilterInput
+  $teacherId: String
+) {
+  onDeleteHomework(filter: $filter, teacherId: $teacherId) {
+    id
+    classroomId
+    teacherId
+    title
+    description
+    dueDate
+    assignedDate
+    totalPoints
+    isPublished
+    worksheetId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    instructions
+    learningObjectives
+    allowLateSubmissions
+    allowMultipleAttempts
+    maxAttempts
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    submissions {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateHomeworkAnalytics(
+  $filter: ModelSubscriptionHomeworkAnalyticsFilterInput
+  $teacherId: String
+) {
+  onCreateHomeworkAnalytics(filter: $filter, teacherId: $teacherId) {
+    id
+    homeworkId
+    teacherId
+    totalStudents
+    submittedCount
+    totalSubmissions
+    lateCount
+    averageAttempts
+    multipleAttemptsCount
+    reviewedCount
+    pendingReviewCount
+    commonMistakes
+    strugglingStudents
+    lastUpdatedAt
+    lastCalculatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateHomeworkAnalytics(
+  $filter: ModelSubscriptionHomeworkAnalyticsFilterInput
+  $teacherId: String
+) {
+  onUpdateHomeworkAnalytics(filter: $filter, teacherId: $teacherId) {
+    id
+    homeworkId
+    teacherId
+    totalStudents
+    submittedCount
+    totalSubmissions
+    lateCount
+    averageAttempts
+    multipleAttemptsCount
+    reviewedCount
+    pendingReviewCount
+    commonMistakes
+    strugglingStudents
+    lastUpdatedAt
+    lastCalculatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteHomeworkAnalytics(
+  $filter: ModelSubscriptionHomeworkAnalyticsFilterInput
+  $teacherId: String
+) {
+  onDeleteHomeworkAnalytics(filter: $filter, teacherId: $teacherId) {
+    id
+    homeworkId
+    teacherId
+    totalStudents
+    submittedCount
+    totalSubmissions
+    lateCount
+    averageAttempts
+    multipleAttemptsCount
+    reviewedCount
+    pendingReviewCount
+    commonMistakes
+    strugglingStudents
+    lastUpdatedAt
+    lastCalculatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateStudentProgress(
+  $filter: ModelSubscriptionStudentProgressFilterInput
+  $studentId: String
+) {
+  onCreateStudentProgress(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    totalHomeworkAssigned
+    totalHomeworkCompleted
+    totalHomeworkLate
+    totalSubmissions
+    averageAttemptsPerHomework
+    currentStreak
+    longestStreak
+    skillsBreakdown
+    strengthAreas
+    improvementAreas
+    lastSubmissionAt
+    progressUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateStudentProgress(
+  $filter: ModelSubscriptionStudentProgressFilterInput
+  $studentId: String
+) {
+  onUpdateStudentProgress(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    totalHomeworkAssigned
+    totalHomeworkCompleted
+    totalHomeworkLate
+    totalSubmissions
+    averageAttemptsPerHomework
+    currentStreak
+    longestStreak
+    skillsBreakdown
+    strengthAreas
+    improvementAreas
+    lastSubmissionAt
+    progressUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteStudentProgress(
+  $filter: ModelSubscriptionStudentProgressFilterInput
+  $studentId: String
+) {
+  onDeleteStudentProgress(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    totalHomeworkAssigned
+    totalHomeworkCompleted
+    totalHomeworkLate
+    totalSubmissions
+    averageAttemptsPerHomework
+    currentStreak
+    longestStreak
+    skillsBreakdown
+    strengthAreas
+    improvementAreas
+    lastSubmissionAt
+    progressUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateWorksheetMetadata(
+  $filter: ModelSubscriptionWorksheetMetadataFilterInput
+  $owner: String
+) {
+  onCreateWorksheetMetadata(filter: $filter, owner: $owner) {
+    id
+    worksheetId
+    userId
+    topics
+    difficulty
+    cognitiveSkills
+    questionTypes
+    estimatedTimeMinutes
+    complexityLevel
+    commonCoreStandards
+    bloomsTaxonomyLevels
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    curriculumCountry
+    curriculumVersion
+    moeCurriculumCodes
+    detectedGradeLevel
+    detectedGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumConfidence
+    curriculumMappedAt
+    extractedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateWorksheetMetadata(
+  $filter: ModelSubscriptionWorksheetMetadataFilterInput
+  $owner: String
+) {
+  onUpdateWorksheetMetadata(filter: $filter, owner: $owner) {
+    id
+    worksheetId
+    userId
+    topics
+    difficulty
+    cognitiveSkills
+    questionTypes
+    estimatedTimeMinutes
+    complexityLevel
+    commonCoreStandards
+    bloomsTaxonomyLevels
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    curriculumCountry
+    curriculumVersion
+    moeCurriculumCodes
+    detectedGradeLevel
+    detectedGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumConfidence
+    curriculumMappedAt
+    extractedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteWorksheetMetadata(
+  $filter: ModelSubscriptionWorksheetMetadataFilterInput
+  $owner: String
+) {
+  onDeleteWorksheetMetadata(filter: $filter, owner: $owner) {
+    id
+    worksheetId
+    userId
+    topics
+    difficulty
+    cognitiveSkills
+    questionTypes
+    estimatedTimeMinutes
+    complexityLevel
+    commonCoreStandards
+    bloomsTaxonomyLevels
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    curriculumCountry
+    curriculumVersion
+    moeCurriculumCodes
+    detectedGradeLevel
+    detectedGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumConfidence
+    curriculumMappedAt
+    extractedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateQuestionMetadata(
+  $filter: ModelSubscriptionQuestionMetadataFilterInput
+  $owner: String
+) {
+  onCreateQuestionMetadata(filter: $filter, owner: $owner) {
+    id
+    questionId
+    userId
+    questionType
+    difficultyLevel
+    cognitiveLevel
+    primaryConcept
+    secondaryConcepts
+    prerequisiteSkills
+    commonMistakes
+    conceptualChallenges
+    hasMultipleSteps
+    requiresVisualization
+    isWordProblem
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    extractedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdateQuestionMetadata(
+  $filter: ModelSubscriptionQuestionMetadataFilterInput
+  $owner: String
+) {
+  onUpdateQuestionMetadata(filter: $filter, owner: $owner) {
+    id
+    questionId
+    userId
+    questionType
+    difficultyLevel
+    cognitiveLevel
+    primaryConcept
+    secondaryConcepts
+    prerequisiteSkills
+    commonMistakes
+    conceptualChallenges
+    hasMultipleSteps
+    requiresVisualization
+    isWordProblem
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    extractedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnDeleteQuestionMetadata(
+  $filter: ModelSubscriptionQuestionMetadataFilterInput
+  $owner: String
+) {
+  onDeleteQuestionMetadata(filter: $filter, owner: $owner) {
+    id
+    questionId
+    userId
+    questionType
+    difficultyLevel
+    cognitiveLevel
+    primaryConcept
+    secondaryConcepts
+    prerequisiteSkills
+    commonMistakes
+    conceptualChallenges
+    hasMultipleSteps
+    requiresVisualization
+    isWordProblem
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    extractedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnCreateConceptMastery(
+  $filter: ModelSubscriptionConceptMasteryFilterInput
+  $studentId: String
+) {
+  onCreateConceptMastery(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    concept
+    gradeLevel
+    masteryPercentage
+    accuracyRate
+    totalAttempts
+    correctAttempts
+    incorrectAttempts
+    trend
+    recentQuestions
+    lastPracticed
+    easyQuestions
+    mediumQuestions
+    hardQuestions
+    easyCorrect
+    mediumCorrect
+    hardCorrect
+    strengthAreas
+    improvementAreas
+    recommendedPractice
+    curriculumCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumTopicTitle
+    prerequisitesMastered
+    prerequisiteGaps
+    curriculumMappedAt
+    calculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateConceptMastery(
+  $filter: ModelSubscriptionConceptMasteryFilterInput
+  $studentId: String
+) {
+  onUpdateConceptMastery(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    concept
+    gradeLevel
+    masteryPercentage
+    accuracyRate
+    totalAttempts
+    correctAttempts
+    incorrectAttempts
+    trend
+    recentQuestions
+    lastPracticed
+    easyQuestions
+    mediumQuestions
+    hardQuestions
+    easyCorrect
+    mediumCorrect
+    hardCorrect
+    strengthAreas
+    improvementAreas
+    recommendedPractice
+    curriculumCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumTopicTitle
+    prerequisitesMastered
+    prerequisiteGaps
+    curriculumMappedAt
+    calculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteConceptMastery(
+  $filter: ModelSubscriptionConceptMasteryFilterInput
+  $studentId: String
+) {
+  onDeleteConceptMastery(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    concept
+    gradeLevel
+    masteryPercentage
+    accuracyRate
+    totalAttempts
+    correctAttempts
+    incorrectAttempts
+    trend
+    recentQuestions
+    lastPracticed
+    easyQuestions
+    mediumQuestions
+    hardQuestions
+    easyCorrect
+    mediumCorrect
+    hardCorrect
+    strengthAreas
+    improvementAreas
+    recommendedPractice
+    curriculumCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumTopicTitle
+    prerequisitesMastered
+    prerequisiteGaps
+    curriculumMappedAt
+    calculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateErrorPattern(
+  $filter: ModelSubscriptionErrorPatternFilterInput
+  $studentId: String
+) {
+  onCreateErrorPattern(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    errorType
+    errorCategory
+    severity
+    occurrenceCount
+    firstSeen
+    lastSeen
+    affectedConcepts
+    exampleQuestionIds
+    description
+    rootCause
+    remediation
+    isResolved
+    resolvedAt
+    detectedAt
+    lastAnalyzedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateErrorPattern(
+  $filter: ModelSubscriptionErrorPatternFilterInput
+  $studentId: String
+) {
+  onUpdateErrorPattern(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    errorType
+    errorCategory
+    severity
+    occurrenceCount
+    firstSeen
+    lastSeen
+    affectedConcepts
+    exampleQuestionIds
+    description
+    rootCause
+    remediation
+    isResolved
+    resolvedAt
+    detectedAt
+    lastAnalyzedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteErrorPattern(
+  $filter: ModelSubscriptionErrorPatternFilterInput
+  $studentId: String
+) {
+  onDeleteErrorPattern(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    errorType
+    errorCategory
+    severity
+    occurrenceCount
+    firstSeen
+    lastSeen
+    affectedConcepts
+    exampleQuestionIds
+    description
+    rootCause
+    remediation
+    isResolved
+    resolvedAt
+    detectedAt
+    lastAnalyzedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreatePracticeProblem(
+  $filter: ModelSubscriptionPracticeProblemFilterInput
+  $owner: String
+) {
+  onCreatePracticeProblem(filter: $filter, owner: $owner) {
+    id
+    sourceWorksheetId
+    sourceQuestionId
+    userId
+    problemText
+    answer
+    stepByStep
+    hints
+    concept
+    difficultyLevel
+    questionType
+    generatedFrom
+    difficultyAdjustment
+    timesUsed
+    averageScore
+    curriculumCode
+    curriculumGradeLevel
+    curriculumGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    respectsGradeBoundary
+    targetCurriculumCodes
+    generatedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnUpdatePracticeProblem(
+  $filter: ModelSubscriptionPracticeProblemFilterInput
+  $owner: String
+) {
+  onUpdatePracticeProblem(filter: $filter, owner: $owner) {
+    id
+    sourceWorksheetId
+    sourceQuestionId
+    userId
+    problemText
+    answer
+    stepByStep
+    hints
+    concept
+    difficultyLevel
+    questionType
+    generatedFrom
+    difficultyAdjustment
+    timesUsed
+    averageScore
+    curriculumCode
+    curriculumGradeLevel
+    curriculumGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    respectsGradeBoundary
+    targetCurriculumCodes
+    generatedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnDeletePracticeProblem(
+  $filter: ModelSubscriptionPracticeProblemFilterInput
+  $owner: String
+) {
+  onDeletePracticeProblem(filter: $filter, owner: $owner) {
+    id
+    sourceWorksheetId
+    sourceQuestionId
+    userId
+    problemText
+    answer
+    stepByStep
+    hints
+    concept
+    difficultyLevel
+    questionType
+    generatedFrom
+    difficultyAdjustment
+    timesUsed
+    averageScore
+    curriculumCode
+    curriculumGradeLevel
+    curriculumGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    respectsGradeBoundary
+    targetCurriculumCodes
+    generatedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+subscription OnCreatePracticeAssignment(
+  $filter: ModelSubscriptionPracticeAssignmentFilterInput
+  $assignedByUserId: String
+  $studentId: String
+) {
+  onCreatePracticeAssignment(
+    filter: $filter
+    assignedByUserId: $assignedByUserId
+    studentId: $studentId
+  ) {
+    id
+    assignedByUserId
+    assignedByRole
+    studentId
+    classroomId
+    title
+    description
+    dueDate
+    assignedDate
+    problemIds
+    problemCount
+    curriculumCodes
+    curriculumGradeLevel
+    targetConcepts
+    sourceType
+    status
+    startedAt
+    completedAt
+    correctCount
+    totalAttempted
+    score
+    timeSpentSeconds
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdatePracticeAssignment(
+  $filter: ModelSubscriptionPracticeAssignmentFilterInput
+  $assignedByUserId: String
+  $studentId: String
+) {
+  onUpdatePracticeAssignment(
+    filter: $filter
+    assignedByUserId: $assignedByUserId
+    studentId: $studentId
+  ) {
+    id
+    assignedByUserId
+    assignedByRole
+    studentId
+    classroomId
+    title
+    description
+    dueDate
+    assignedDate
+    problemIds
+    problemCount
+    curriculumCodes
+    curriculumGradeLevel
+    targetConcepts
+    sourceType
+    status
+    startedAt
+    completedAt
+    correctCount
+    totalAttempted
+    score
+    timeSpentSeconds
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeletePracticeAssignment(
+  $filter: ModelSubscriptionPracticeAssignmentFilterInput
+  $assignedByUserId: String
+  $studentId: String
+) {
+  onDeletePracticeAssignment(
+    filter: $filter
+    assignedByUserId: $assignedByUserId
+    studentId: $studentId
+  ) {
+    id
+    assignedByUserId
+    assignedByRole
+    studentId
+    classroomId
+    title
+    description
+    dueDate
+    assignedDate
+    problemIds
+    problemCount
+    curriculumCodes
+    curriculumGradeLevel
+    targetConcepts
+    sourceType
+    status
+    startedAt
+    completedAt
+    correctCount
+    totalAttempted
+    score
+    timeSpentSeconds
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateStudentAnalyticsSummary(
+  $filter: ModelSubscriptionStudentAnalyticsSummaryFilterInput
+  $studentId: String
+) {
+  onCreateStudentAnalyticsSummary(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    overallProgress
+    totalQuestionsAttempted
+    totalQuestionsCorrect
+    overallAccuracy
+    masteredConcepts
+    developingConcepts
+    needsWorkConcepts
+    topStrengths
+    topWeaknesses
+    mostCommonErrors
+    highSeverityErrorCount
+    mediumSeverityErrorCount
+    currentStreak
+    longestStreak
+    practiceFrequency
+    computationScore
+    problemSolvingScore
+    reasoningScore
+    accuracyScore
+    wordProblemScore
+    lastCalculated
+    lastUpdated
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateStudentAnalyticsSummary(
+  $filter: ModelSubscriptionStudentAnalyticsSummaryFilterInput
+  $studentId: String
+) {
+  onUpdateStudentAnalyticsSummary(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    overallProgress
+    totalQuestionsAttempted
+    totalQuestionsCorrect
+    overallAccuracy
+    masteredConcepts
+    developingConcepts
+    needsWorkConcepts
+    topStrengths
+    topWeaknesses
+    mostCommonErrors
+    highSeverityErrorCount
+    mediumSeverityErrorCount
+    currentStreak
+    longestStreak
+    practiceFrequency
+    computationScore
+    problemSolvingScore
+    reasoningScore
+    accuracyScore
+    wordProblemScore
+    lastCalculated
+    lastUpdated
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteStudentAnalyticsSummary(
+  $filter: ModelSubscriptionStudentAnalyticsSummaryFilterInput
+  $studentId: String
+) {
+  onDeleteStudentAnalyticsSummary(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    overallProgress
+    totalQuestionsAttempted
+    totalQuestionsCorrect
+    overallAccuracy
+    masteredConcepts
+    developingConcepts
+    needsWorkConcepts
+    topStrengths
+    topWeaknesses
+    mostCommonErrors
+    highSeverityErrorCount
+    mediumSeverityErrorCount
+    currentStreak
+    longestStreak
+    practiceFrequency
+    computationScore
+    problemSolvingScore
+    reasoningScore
+    accuracyScore
+    wordProblemScore
+    lastCalculated
+    lastUpdated
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateCurriculumStandard(
+  $filter: ModelSubscriptionCurriculumStandardFilterInput
+) {
+  onCreateCurriculumStandard(filter: $filter) {
+    id
+    country
+    curriculumName
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    subTopicCode
+    subTopicDescription
+    curriculumCode
+    keywords
+    sequenceOrder
+    prerequisiteCodes
+    bulletPoints
+    notes
+    isActive
+    effectiveFrom
+    effectiveUntil
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateCurriculumStandard(
+  $filter: ModelSubscriptionCurriculumStandardFilterInput
+) {
+  onUpdateCurriculumStandard(filter: $filter) {
+    id
+    country
+    curriculumName
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    subTopicCode
+    subTopicDescription
+    curriculumCode
+    keywords
+    sequenceOrder
+    prerequisiteCodes
+    bulletPoints
+    notes
+    isActive
+    effectiveFrom
+    effectiveUntil
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteCurriculumStandard(
+  $filter: ModelSubscriptionCurriculumStandardFilterInput
+) {
+  onDeleteCurriculumStandard(filter: $filter) {
+    id
+    country
+    curriculumName
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    subTopicCode
+    subTopicDescription
+    curriculumCode
+    keywords
+    sequenceOrder
+    prerequisiteCodes
+    bulletPoints
+    notes
+    isActive
+    effectiveFrom
+    effectiveUntil
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateCurriculumTopicSummary(
+  $filter: ModelSubscriptionCurriculumTopicSummaryFilterInput
+) {
+  onCreateCurriculumTopicSummary(filter: $filter) {
+    id
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    topicCode
+    subTopicCount
+    subTopicCodes
+    allKeywords
+    sequenceOrder
+    isActive
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateCurriculumTopicSummary(
+  $filter: ModelSubscriptionCurriculumTopicSummaryFilterInput
+) {
+  onUpdateCurriculumTopicSummary(filter: $filter) {
+    id
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    topicCode
+    subTopicCount
+    subTopicCodes
+    allKeywords
+    sequenceOrder
+    isActive
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteCurriculumTopicSummary(
+  $filter: ModelSubscriptionCurriculumTopicSummaryFilterInput
+) {
+  onDeleteCurriculumTopicSummary(filter: $filter) {
+    id
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    topicCode
+    subTopicCount
+    subTopicCodes
+    allKeywords
+    sequenceOrder
+    isActive
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnCreateStudentCurriculumProgress(
+  $filter: ModelSubscriptionStudentCurriculumProgressFilterInput
+  $studentId: String
+) {
+  onCreateStudentCurriculumProgress(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    totalTopicsInGrade
+    topicsAttempted
+    topicsMastered
+    topicsInProgress
+    topicsNotStarted
+    coveragePercentage
+    masteryPercentage
+    strandProgress
+    masteredTopicCodes
+    inProgressTopicCodes
+    notStartedTopicCodes
+    prerequisiteGaps
+    recommendedNextTopics
+    lastCalculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnUpdateStudentCurriculumProgress(
+  $filter: ModelSubscriptionStudentCurriculumProgressFilterInput
+  $studentId: String
+) {
+  onUpdateStudentCurriculumProgress(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    totalTopicsInGrade
+    topicsAttempted
+    topicsMastered
+    topicsInProgress
+    topicsNotStarted
+    coveragePercentage
+    masteryPercentage
+    strandProgress
+    masteredTopicCodes
+    inProgressTopicCodes
+    notStartedTopicCodes
+    prerequisiteGaps
+    recommendedNextTopics
+    lastCalculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+subscription OnDeleteStudentCurriculumProgress(
+  $filter: ModelSubscriptionStudentCurriculumProgressFilterInput
+  $studentId: String
+) {
+  onDeleteStudentCurriculumProgress(filter: $filter, studentId: $studentId) {
+    id
+    studentId
+    classroomId
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    totalTopicsInGrade
+    topicsAttempted
+    topicsMastered
+    topicsInProgress
+    topicsNotStarted
+    coveragePercentage
+    masteryPercentage
+    strandProgress
+    masteredTopicCodes
+    inProgressTopicCodes
+    notStartedTopicCodes
+    prerequisiteGaps
+    recommendedNextTopics
+    lastCalculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}

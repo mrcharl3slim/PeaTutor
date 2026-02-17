@@ -1,0 +1,4301 @@
+# this is an auto generated file. This will be overwritten
+
+query GetWorksheet($id: ID!) {
+  getWorksheet(id: $id) {
+    id
+    userId
+    title
+    fileType
+    fileName
+    s3WorksheetKey
+    extractionResult
+    questionCount
+    totalMarks
+    uploadedAt
+    fileSize
+    contentHash
+    sourceFileHashes
+    lastAccessedAt
+    questions {
+      nextToken
+      startedAt
+      __typename
+    }
+    fullWorksheetSolutions {
+      nextToken
+      startedAt
+      __typename
+    }
+    homeworkAssignments {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+query ListWorksheets(
+  $filter: ModelWorksheetFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listWorksheets(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncWorksheets(
+  $filter: ModelWorksheetFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncWorksheets(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetQuestion($id: ID!) {
+  getQuestion(id: $id) {
+    id
+    worksheetId
+    userId
+    questionId
+    questionText
+    marks
+    skillsTested
+    hints
+    stepByStep
+    answer
+    isSubpart
+    parentQuestionId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    solutionFeedbacks {
+      nextToken
+      startedAt
+      __typename
+    }
+    metadata {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+query ListQuestions(
+  $filter: ModelQuestionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listQuestions(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncQuestions(
+  $filter: ModelQuestionFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncQuestions(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetSolutionFeedback($id: ID!) {
+  getSolutionFeedback(id: $id) {
+    id
+    questionId
+    worksheetId
+    userId
+    s3SolutionImageKey
+    feedback
+    isCorrect
+    suggestions
+    attemptNumber
+    submittedAt
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+query ListSolutionFeedbacks(
+  $filter: ModelSolutionFeedbackFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listSolutionFeedbacks(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      questionId
+      worksheetId
+      userId
+      s3SolutionImageKey
+      feedback
+      isCorrect
+      suggestions
+      attemptNumber
+      submittedAt
+      aiModel
+      tokensUsed
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncSolutionFeedbacks(
+  $filter: ModelSolutionFeedbackFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncSolutionFeedbacks(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      questionId
+      worksheetId
+      userId
+      s3SolutionImageKey
+      feedback
+      isCorrect
+      suggestions
+      attemptNumber
+      submittedAt
+      aiModel
+      tokensUsed
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetFullWorksheetSolution($id: ID!) {
+  getFullWorksheetSolution(id: $id) {
+    id
+    worksheetId
+    userId
+    s3SolutionImageKey
+    overallFeedback
+    overallScore
+    totalQuestions
+    completedQuestions
+    questionsWithIssues
+    suggestions
+    detailedFeedback
+    attemptNumber
+    submittedAt
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    aiModel
+    tokensUsed
+    homeworkId
+    homework {
+      id
+      classroomId
+      teacherId
+      title
+      description
+      dueDate
+      assignedDate
+      totalPoints
+      isPublished
+      worksheetId
+      instructions
+      learningObjectives
+      allowLateSubmissions
+      allowMultipleAttempts
+      maxAttempts
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    isLate
+    teacherReviewed
+    teacherNotes
+    teacherReviewedAt
+    teacherReviewedBy
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+query ListFullWorksheetSolutions(
+  $filter: ModelFullWorksheetSolutionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listFullWorksheetSolutions(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      worksheetId
+      userId
+      s3SolutionImageKey
+      overallFeedback
+      overallScore
+      totalQuestions
+      completedQuestions
+      questionsWithIssues
+      suggestions
+      detailedFeedback
+      attemptNumber
+      submittedAt
+      aiModel
+      tokensUsed
+      homeworkId
+      isLate
+      teacherReviewed
+      teacherNotes
+      teacherReviewedAt
+      teacherReviewedBy
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncFullWorksheetSolutions(
+  $filter: ModelFullWorksheetSolutionFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncFullWorksheetSolutions(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      worksheetId
+      userId
+      s3SolutionImageKey
+      overallFeedback
+      overallScore
+      totalQuestions
+      completedQuestions
+      questionsWithIssues
+      suggestions
+      detailedFeedback
+      attemptNumber
+      submittedAt
+      aiModel
+      tokensUsed
+      homeworkId
+      isLate
+      teacherReviewed
+      teacherNotes
+      teacherReviewedAt
+      teacherReviewedBy
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetUserStats($id: ID!) {
+  getUserStats(id: $id) {
+    id
+    userId
+    userRole
+    totalWorksheets
+    totalQuestions
+    totalSolutionsSubmitted
+    totalFeedbackReceived
+    averageScore
+    correctAnswersCount
+    totalAttemptsCount
+    lastActiveAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+query ListUserStats(
+  $filter: ModelUserStatsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUserStats(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      userId
+      userRole
+      totalWorksheets
+      totalQuestions
+      totalSolutionsSubmitted
+      totalFeedbackReceived
+      averageScore
+      correctAnswersCount
+      totalAttemptsCount
+      lastActiveAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncUserStats(
+  $filter: ModelUserStatsFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncUserStats(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      userId
+      userRole
+      totalWorksheets
+      totalQuestions
+      totalSolutionsSubmitted
+      totalFeedbackReceived
+      averageScore
+      correctAnswersCount
+      totalAttemptsCount
+      lastActiveAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetUserProfile($id: ID!) {
+  getUserProfile(id: $id) {
+    id
+    userId
+    email
+    userRole
+    displayName
+    schoolName
+    gradeLevel
+    profileImageUrl
+    onboardingCompleted
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListUserProfiles(
+  $filter: ModelUserProfileFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUserProfiles(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      userId
+      email
+      userRole
+      displayName
+      schoolName
+      gradeLevel
+      profileImageUrl
+      onboardingCompleted
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncUserProfiles(
+  $filter: ModelUserProfileFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncUserProfiles(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      userId
+      email
+      userRole
+      displayName
+      schoolName
+      gradeLevel
+      profileImageUrl
+      onboardingCompleted
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetClassroom($id: ID!) {
+  getClassroom(id: $id) {
+    id
+    teacherId
+    className
+    classCode
+    subject
+    description
+    gradeLevel
+    isActive
+    memberships {
+      nextToken
+      startedAt
+      __typename
+    }
+    homework {
+      nextToken
+      startedAt
+      __typename
+    }
+    studentProgress {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListClassrooms(
+  $filter: ModelClassroomFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listClassrooms(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncClassrooms(
+  $filter: ModelClassroomFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncClassrooms(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetClassroomMembership($id: ID!) {
+  getClassroomMembership(id: $id) {
+    id
+    classroomId
+    studentId
+    status
+    enrolledAt
+    approvedAt
+    approvedBy
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListClassroomMemberships(
+  $filter: ModelClassroomMembershipFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listClassroomMemberships(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      classroomId
+      studentId
+      status
+      enrolledAt
+      approvedAt
+      approvedBy
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncClassroomMemberships(
+  $filter: ModelClassroomMembershipFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncClassroomMemberships(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      classroomId
+      studentId
+      status
+      enrolledAt
+      approvedAt
+      approvedBy
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetParentChildRelationship($id: ID!) {
+  getParentChildRelationship(id: $id) {
+    id
+    parentId
+    childId
+    linkingCode
+    relationshipType
+    status
+    approvedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListParentChildRelationships(
+  $filter: ModelParentChildRelationshipFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listParentChildRelationships(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      parentId
+      childId
+      linkingCode
+      relationshipType
+      status
+      approvedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncParentChildRelationships(
+  $filter: ModelParentChildRelationshipFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncParentChildRelationships(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      parentId
+      childId
+      linkingCode
+      relationshipType
+      status
+      approvedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetHomework($id: ID!) {
+  getHomework(id: $id) {
+    id
+    classroomId
+    teacherId
+    title
+    description
+    dueDate
+    assignedDate
+    totalPoints
+    isPublished
+    worksheetId
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    instructions
+    learningObjectives
+    allowLateSubmissions
+    allowMultipleAttempts
+    maxAttempts
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    submissions {
+      nextToken
+      startedAt
+      __typename
+    }
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListHomework(
+  $filter: ModelHomeworkFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listHomework(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      classroomId
+      teacherId
+      title
+      description
+      dueDate
+      assignedDate
+      totalPoints
+      isPublished
+      worksheetId
+      instructions
+      learningObjectives
+      allowLateSubmissions
+      allowMultipleAttempts
+      maxAttempts
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncHomework(
+  $filter: ModelHomeworkFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncHomework(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      classroomId
+      teacherId
+      title
+      description
+      dueDate
+      assignedDate
+      totalPoints
+      isPublished
+      worksheetId
+      instructions
+      learningObjectives
+      allowLateSubmissions
+      allowMultipleAttempts
+      maxAttempts
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetHomeworkAnalytics($id: ID!) {
+  getHomeworkAnalytics(id: $id) {
+    id
+    homeworkId
+    teacherId
+    totalStudents
+    submittedCount
+    totalSubmissions
+    lateCount
+    averageAttempts
+    multipleAttemptsCount
+    reviewedCount
+    pendingReviewCount
+    commonMistakes
+    strugglingStudents
+    lastUpdatedAt
+    lastCalculatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListHomeworkAnalytics(
+  $filter: ModelHomeworkAnalyticsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listHomeworkAnalytics(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      homeworkId
+      teacherId
+      totalStudents
+      submittedCount
+      totalSubmissions
+      lateCount
+      averageAttempts
+      multipleAttemptsCount
+      reviewedCount
+      pendingReviewCount
+      commonMistakes
+      strugglingStudents
+      lastUpdatedAt
+      lastCalculatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncHomeworkAnalytics(
+  $filter: ModelHomeworkAnalyticsFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncHomeworkAnalytics(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      homeworkId
+      teacherId
+      totalStudents
+      submittedCount
+      totalSubmissions
+      lateCount
+      averageAttempts
+      multipleAttemptsCount
+      reviewedCount
+      pendingReviewCount
+      commonMistakes
+      strugglingStudents
+      lastUpdatedAt
+      lastCalculatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetStudentProgress($id: ID!) {
+  getStudentProgress(id: $id) {
+    id
+    studentId
+    classroomId
+    classroom {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    totalHomeworkAssigned
+    totalHomeworkCompleted
+    totalHomeworkLate
+    totalSubmissions
+    averageAttemptsPerHomework
+    currentStreak
+    longestStreak
+    skillsBreakdown
+    strengthAreas
+    improvementAreas
+    lastSubmissionAt
+    progressUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListStudentProgresses(
+  $filter: ModelStudentProgressFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listStudentProgresses(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      studentId
+      classroomId
+      totalHomeworkAssigned
+      totalHomeworkCompleted
+      totalHomeworkLate
+      totalSubmissions
+      averageAttemptsPerHomework
+      currentStreak
+      longestStreak
+      skillsBreakdown
+      strengthAreas
+      improvementAreas
+      lastSubmissionAt
+      progressUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncStudentProgresses(
+  $filter: ModelStudentProgressFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncStudentProgresses(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      totalHomeworkAssigned
+      totalHomeworkCompleted
+      totalHomeworkLate
+      totalSubmissions
+      averageAttemptsPerHomework
+      currentStreak
+      longestStreak
+      skillsBreakdown
+      strengthAreas
+      improvementAreas
+      lastSubmissionAt
+      progressUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetWorksheetMetadata($id: ID!) {
+  getWorksheetMetadata(id: $id) {
+    id
+    worksheetId
+    userId
+    topics
+    difficulty
+    cognitiveSkills
+    questionTypes
+    estimatedTimeMinutes
+    complexityLevel
+    commonCoreStandards
+    bloomsTaxonomyLevels
+    worksheet {
+      id
+      userId
+      title
+      fileType
+      fileName
+      s3WorksheetKey
+      extractionResult
+      questionCount
+      totalMarks
+      uploadedAt
+      fileSize
+      contentHash
+      sourceFileHashes
+      lastAccessedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    curriculumCountry
+    curriculumVersion
+    moeCurriculumCodes
+    detectedGradeLevel
+    detectedGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumConfidence
+    curriculumMappedAt
+    extractedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+query ListWorksheetMetadata(
+  $filter: ModelWorksheetMetadataFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listWorksheetMetadata(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      worksheetId
+      userId
+      topics
+      difficulty
+      cognitiveSkills
+      questionTypes
+      estimatedTimeMinutes
+      complexityLevel
+      commonCoreStandards
+      bloomsTaxonomyLevels
+      curriculumCountry
+      curriculumVersion
+      moeCurriculumCodes
+      detectedGradeLevel
+      detectedGradeLevelCode
+      curriculumStrand
+      curriculumSubStrand
+      curriculumConfidence
+      curriculumMappedAt
+      extractedAt
+      aiModel
+      tokensUsed
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncWorksheetMetadata(
+  $filter: ModelWorksheetMetadataFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncWorksheetMetadata(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      worksheetId
+      userId
+      topics
+      difficulty
+      cognitiveSkills
+      questionTypes
+      estimatedTimeMinutes
+      complexityLevel
+      commonCoreStandards
+      bloomsTaxonomyLevels
+      curriculumCountry
+      curriculumVersion
+      moeCurriculumCodes
+      detectedGradeLevel
+      detectedGradeLevelCode
+      curriculumStrand
+      curriculumSubStrand
+      curriculumConfidence
+      curriculumMappedAt
+      extractedAt
+      aiModel
+      tokensUsed
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetQuestionMetadata($id: ID!) {
+  getQuestionMetadata(id: $id) {
+    id
+    questionId
+    userId
+    questionType
+    difficultyLevel
+    cognitiveLevel
+    primaryConcept
+    secondaryConcepts
+    prerequisiteSkills
+    commonMistakes
+    conceptualChallenges
+    hasMultipleSteps
+    requiresVisualization
+    isWordProblem
+    question {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    extractedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+query ListQuestionMetadata(
+  $filter: ModelQuestionMetadataFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listQuestionMetadata(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      questionId
+      userId
+      questionType
+      difficultyLevel
+      cognitiveLevel
+      primaryConcept
+      secondaryConcepts
+      prerequisiteSkills
+      commonMistakes
+      conceptualChallenges
+      hasMultipleSteps
+      requiresVisualization
+      isWordProblem
+      extractedAt
+      aiModel
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncQuestionMetadata(
+  $filter: ModelQuestionMetadataFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncQuestionMetadata(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      questionId
+      userId
+      questionType
+      difficultyLevel
+      cognitiveLevel
+      primaryConcept
+      secondaryConcepts
+      prerequisiteSkills
+      commonMistakes
+      conceptualChallenges
+      hasMultipleSteps
+      requiresVisualization
+      isWordProblem
+      extractedAt
+      aiModel
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetConceptMastery($id: ID!) {
+  getConceptMastery(id: $id) {
+    id
+    studentId
+    classroomId
+    concept
+    gradeLevel
+    masteryPercentage
+    accuracyRate
+    totalAttempts
+    correctAttempts
+    incorrectAttempts
+    trend
+    recentQuestions
+    lastPracticed
+    easyQuestions
+    mediumQuestions
+    hardQuestions
+    easyCorrect
+    mediumCorrect
+    hardCorrect
+    strengthAreas
+    improvementAreas
+    recommendedPractice
+    curriculumCode
+    curriculumStrand
+    curriculumSubStrand
+    curriculumTopicTitle
+    prerequisitesMastered
+    prerequisiteGaps
+    curriculumMappedAt
+    calculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListConceptMasteries(
+  $filter: ModelConceptMasteryFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listConceptMasteries(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      studentId
+      classroomId
+      concept
+      gradeLevel
+      masteryPercentage
+      accuracyRate
+      totalAttempts
+      correctAttempts
+      incorrectAttempts
+      trend
+      recentQuestions
+      lastPracticed
+      easyQuestions
+      mediumQuestions
+      hardQuestions
+      easyCorrect
+      mediumCorrect
+      hardCorrect
+      strengthAreas
+      improvementAreas
+      recommendedPractice
+      curriculumCode
+      curriculumStrand
+      curriculumSubStrand
+      curriculumTopicTitle
+      prerequisitesMastered
+      prerequisiteGaps
+      curriculumMappedAt
+      calculatedAt
+      lastUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncConceptMasteries(
+  $filter: ModelConceptMasteryFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncConceptMasteries(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      concept
+      gradeLevel
+      masteryPercentage
+      accuracyRate
+      totalAttempts
+      correctAttempts
+      incorrectAttempts
+      trend
+      recentQuestions
+      lastPracticed
+      easyQuestions
+      mediumQuestions
+      hardQuestions
+      easyCorrect
+      mediumCorrect
+      hardCorrect
+      strengthAreas
+      improvementAreas
+      recommendedPractice
+      curriculumCode
+      curriculumStrand
+      curriculumSubStrand
+      curriculumTopicTitle
+      prerequisitesMastered
+      prerequisiteGaps
+      curriculumMappedAt
+      calculatedAt
+      lastUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetErrorPattern($id: ID!) {
+  getErrorPattern(id: $id) {
+    id
+    studentId
+    classroomId
+    errorType
+    errorCategory
+    severity
+    occurrenceCount
+    firstSeen
+    lastSeen
+    affectedConcepts
+    exampleQuestionIds
+    description
+    rootCause
+    remediation
+    isResolved
+    resolvedAt
+    detectedAt
+    lastAnalyzedAt
+    aiModel
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListErrorPatterns(
+  $filter: ModelErrorPatternFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listErrorPatterns(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      studentId
+      classroomId
+      errorType
+      errorCategory
+      severity
+      occurrenceCount
+      firstSeen
+      lastSeen
+      affectedConcepts
+      exampleQuestionIds
+      description
+      rootCause
+      remediation
+      isResolved
+      resolvedAt
+      detectedAt
+      lastAnalyzedAt
+      aiModel
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncErrorPatterns(
+  $filter: ModelErrorPatternFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncErrorPatterns(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      errorType
+      errorCategory
+      severity
+      occurrenceCount
+      firstSeen
+      lastSeen
+      affectedConcepts
+      exampleQuestionIds
+      description
+      rootCause
+      remediation
+      isResolved
+      resolvedAt
+      detectedAt
+      lastAnalyzedAt
+      aiModel
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetPracticeProblem($id: ID!) {
+  getPracticeProblem(id: $id) {
+    id
+    sourceWorksheetId
+    sourceQuestionId
+    userId
+    problemText
+    answer
+    stepByStep
+    hints
+    concept
+    difficultyLevel
+    questionType
+    generatedFrom
+    difficultyAdjustment
+    timesUsed
+    averageScore
+    curriculumCode
+    curriculumGradeLevel
+    curriculumGradeLevelCode
+    curriculumStrand
+    curriculumSubStrand
+    respectsGradeBoundary
+    targetCurriculumCodes
+    generatedAt
+    aiModel
+    tokensUsed
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    owner
+    __typename
+  }
+}
+
+query ListPracticeProblems(
+  $filter: ModelPracticeProblemFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPracticeProblems(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      sourceWorksheetId
+      sourceQuestionId
+      userId
+      problemText
+      answer
+      stepByStep
+      hints
+      concept
+      difficultyLevel
+      questionType
+      generatedFrom
+      difficultyAdjustment
+      timesUsed
+      averageScore
+      curriculumCode
+      curriculumGradeLevel
+      curriculumGradeLevelCode
+      curriculumStrand
+      curriculumSubStrand
+      respectsGradeBoundary
+      targetCurriculumCodes
+      generatedAt
+      aiModel
+      tokensUsed
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncPracticeProblems(
+  $filter: ModelPracticeProblemFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncPracticeProblems(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      sourceWorksheetId
+      sourceQuestionId
+      userId
+      problemText
+      answer
+      stepByStep
+      hints
+      concept
+      difficultyLevel
+      questionType
+      generatedFrom
+      difficultyAdjustment
+      timesUsed
+      averageScore
+      curriculumCode
+      curriculumGradeLevel
+      curriculumGradeLevelCode
+      curriculumStrand
+      curriculumSubStrand
+      respectsGradeBoundary
+      targetCurriculumCodes
+      generatedAt
+      aiModel
+      tokensUsed
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetPracticeAssignment($id: ID!) {
+  getPracticeAssignment(id: $id) {
+    id
+    assignedByUserId
+    assignedByRole
+    studentId
+    classroomId
+    title
+    description
+    dueDate
+    assignedDate
+    problemIds
+    problemCount
+    curriculumCodes
+    curriculumGradeLevel
+    targetConcepts
+    sourceType
+    status
+    startedAt
+    completedAt
+    correctCount
+    totalAttempted
+    score
+    timeSpentSeconds
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListPracticeAssignments(
+  $filter: ModelPracticeAssignmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPracticeAssignments(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      assignedByUserId
+      assignedByRole
+      studentId
+      classroomId
+      title
+      description
+      dueDate
+      assignedDate
+      problemIds
+      problemCount
+      curriculumCodes
+      curriculumGradeLevel
+      targetConcepts
+      sourceType
+      status
+      startedAt
+      completedAt
+      correctCount
+      totalAttempted
+      score
+      timeSpentSeconds
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncPracticeAssignments(
+  $filter: ModelPracticeAssignmentFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncPracticeAssignments(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      assignedByUserId
+      assignedByRole
+      studentId
+      classroomId
+      title
+      description
+      dueDate
+      assignedDate
+      problemIds
+      problemCount
+      curriculumCodes
+      curriculumGradeLevel
+      targetConcepts
+      sourceType
+      status
+      startedAt
+      completedAt
+      correctCount
+      totalAttempted
+      score
+      timeSpentSeconds
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetStudentAnalyticsSummary($id: ID!) {
+  getStudentAnalyticsSummary(id: $id) {
+    id
+    studentId
+    classroomId
+    overallProgress
+    totalQuestionsAttempted
+    totalQuestionsCorrect
+    overallAccuracy
+    masteredConcepts
+    developingConcepts
+    needsWorkConcepts
+    topStrengths
+    topWeaknesses
+    mostCommonErrors
+    highSeverityErrorCount
+    mediumSeverityErrorCount
+    currentStreak
+    longestStreak
+    practiceFrequency
+    computationScore
+    problemSolvingScore
+    reasoningScore
+    accuracyScore
+    wordProblemScore
+    lastCalculated
+    lastUpdated
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListStudentAnalyticsSummaries(
+  $filter: ModelStudentAnalyticsSummaryFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listStudentAnalyticsSummaries(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      overallProgress
+      totalQuestionsAttempted
+      totalQuestionsCorrect
+      overallAccuracy
+      masteredConcepts
+      developingConcepts
+      needsWorkConcepts
+      topStrengths
+      topWeaknesses
+      mostCommonErrors
+      highSeverityErrorCount
+      mediumSeverityErrorCount
+      currentStreak
+      longestStreak
+      practiceFrequency
+      computationScore
+      problemSolvingScore
+      reasoningScore
+      accuracyScore
+      wordProblemScore
+      lastCalculated
+      lastUpdated
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncStudentAnalyticsSummaries(
+  $filter: ModelStudentAnalyticsSummaryFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncStudentAnalyticsSummaries(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      overallProgress
+      totalQuestionsAttempted
+      totalQuestionsCorrect
+      overallAccuracy
+      masteredConcepts
+      developingConcepts
+      needsWorkConcepts
+      topStrengths
+      topWeaknesses
+      mostCommonErrors
+      highSeverityErrorCount
+      mediumSeverityErrorCount
+      currentStreak
+      longestStreak
+      practiceFrequency
+      computationScore
+      problemSolvingScore
+      reasoningScore
+      accuracyScore
+      wordProblemScore
+      lastCalculated
+      lastUpdated
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetCurriculumStandard($id: ID!) {
+  getCurriculumStandard(id: $id) {
+    id
+    country
+    curriculumName
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    subTopicCode
+    subTopicDescription
+    curriculumCode
+    keywords
+    sequenceOrder
+    prerequisiteCodes
+    bulletPoints
+    notes
+    isActive
+    effectiveFrom
+    effectiveUntil
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListCurriculumStandards(
+  $filter: ModelCurriculumStandardFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCurriculumStandards(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      country
+      curriculumName
+      curriculumVersion
+      gradeLevel
+      gradeLevelCode
+      strand
+      strandCode
+      subStrand
+      subStrandCode
+      topicNumber
+      topicTitle
+      subTopicCode
+      subTopicDescription
+      curriculumCode
+      keywords
+      sequenceOrder
+      prerequisiteCodes
+      bulletPoints
+      notes
+      isActive
+      effectiveFrom
+      effectiveUntil
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncCurriculumStandards(
+  $filter: ModelCurriculumStandardFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncCurriculumStandards(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      country
+      curriculumName
+      curriculumVersion
+      gradeLevel
+      gradeLevelCode
+      strand
+      strandCode
+      subStrand
+      subStrandCode
+      topicNumber
+      topicTitle
+      subTopicCode
+      subTopicDescription
+      curriculumCode
+      keywords
+      sequenceOrder
+      prerequisiteCodes
+      bulletPoints
+      notes
+      isActive
+      effectiveFrom
+      effectiveUntil
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetCurriculumTopicSummary($id: ID!) {
+  getCurriculumTopicSummary(id: $id) {
+    id
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    strand
+    strandCode
+    subStrand
+    subStrandCode
+    topicNumber
+    topicTitle
+    topicCode
+    subTopicCount
+    subTopicCodes
+    allKeywords
+    sequenceOrder
+    isActive
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListCurriculumTopicSummaries(
+  $filter: ModelCurriculumTopicSummaryFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCurriculumTopicSummaries(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      country
+      curriculumVersion
+      gradeLevel
+      gradeLevelCode
+      strand
+      strandCode
+      subStrand
+      subStrandCode
+      topicNumber
+      topicTitle
+      topicCode
+      subTopicCount
+      subTopicCodes
+      allKeywords
+      sequenceOrder
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncCurriculumTopicSummaries(
+  $filter: ModelCurriculumTopicSummaryFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncCurriculumTopicSummaries(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      country
+      curriculumVersion
+      gradeLevel
+      gradeLevelCode
+      strand
+      strandCode
+      subStrand
+      subStrandCode
+      topicNumber
+      topicTitle
+      topicCode
+      subTopicCount
+      subTopicCodes
+      allKeywords
+      sequenceOrder
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query GetStudentCurriculumProgress($id: ID!) {
+  getStudentCurriculumProgress(id: $id) {
+    id
+    studentId
+    classroomId
+    country
+    curriculumVersion
+    gradeLevel
+    gradeLevelCode
+    totalTopicsInGrade
+    topicsAttempted
+    topicsMastered
+    topicsInProgress
+    topicsNotStarted
+    coveragePercentage
+    masteryPercentage
+    strandProgress
+    masteredTopicCodes
+    inProgressTopicCodes
+    notStartedTopicCodes
+    prerequisiteGaps
+    recommendedNextTopics
+    lastCalculatedAt
+    lastUpdatedAt
+    createdAt
+    updatedAt
+    _version
+    _deleted
+    _lastChangedAt
+    __typename
+  }
+}
+
+query ListStudentCurriculumProgresses(
+  $filter: ModelStudentCurriculumProgressFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listStudentCurriculumProgresses(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      country
+      curriculumVersion
+      gradeLevel
+      gradeLevelCode
+      totalTopicsInGrade
+      topicsAttempted
+      topicsMastered
+      topicsInProgress
+      topicsNotStarted
+      coveragePercentage
+      masteryPercentage
+      strandProgress
+      masteredTopicCodes
+      inProgressTopicCodes
+      notStartedTopicCodes
+      prerequisiteGaps
+      recommendedNextTopics
+      lastCalculatedAt
+      lastUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SyncStudentCurriculumProgresses(
+  $filter: ModelStudentCurriculumProgressFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncStudentCurriculumProgresses(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      country
+      curriculumVersion
+      gradeLevel
+      gradeLevelCode
+      totalTopicsInGrade
+      topicsAttempted
+      topicsMastered
+      topicsInProgress
+      topicsNotStarted
+      coveragePercentage
+      masteryPercentage
+      strandProgress
+      masteredTopicCodes
+      inProgressTopicCodes
+      notStartedTopicCodes
+      prerequisiteGaps
+      recommendedNextTopics
+      lastCalculatedAt
+      lastUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query QuestionsByWorksheetIdAndQuestionId(
+  $worksheetId: ID!
+  $questionId: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelQuestionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  questionsByWorksheetIdAndQuestionId(
+    worksheetId: $worksheetId
+    questionId: $questionId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      worksheetId
+      userId
+      questionId
+      questionText
+      marks
+      skillsTested
+      hints
+      stepByStep
+      answer
+      isSubpart
+      parentQuestionId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SolutionFeedbacksByQuestionIdAndSubmittedAt(
+  $questionId: ID!
+  $submittedAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelSolutionFeedbackFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  solutionFeedbacksByQuestionIdAndSubmittedAt(
+    questionId: $questionId
+    submittedAt: $submittedAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      questionId
+      worksheetId
+      userId
+      s3SolutionImageKey
+      feedback
+      isCorrect
+      suggestions
+      attemptNumber
+      submittedAt
+      aiModel
+      tokensUsed
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query SolutionFeedbacksByWorksheetIdAndSubmittedAt(
+  $worksheetId: ID!
+  $submittedAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelSolutionFeedbackFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  solutionFeedbacksByWorksheetIdAndSubmittedAt(
+    worksheetId: $worksheetId
+    submittedAt: $submittedAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      questionId
+      worksheetId
+      userId
+      s3SolutionImageKey
+      feedback
+      isCorrect
+      suggestions
+      attemptNumber
+      submittedAt
+      aiModel
+      tokensUsed
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query FullWorksheetSolutionsByWorksheetIdAndSubmittedAt(
+  $worksheetId: ID!
+  $submittedAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelFullWorksheetSolutionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  fullWorksheetSolutionsByWorksheetIdAndSubmittedAt(
+    worksheetId: $worksheetId
+    submittedAt: $submittedAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      worksheetId
+      userId
+      s3SolutionImageKey
+      overallFeedback
+      overallScore
+      totalQuestions
+      completedQuestions
+      questionsWithIssues
+      suggestions
+      detailedFeedback
+      attemptNumber
+      submittedAt
+      aiModel
+      tokensUsed
+      homeworkId
+      isLate
+      teacherReviewed
+      teacherNotes
+      teacherReviewedAt
+      teacherReviewedBy
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query FullWorksheetSolutionsByHomeworkId(
+  $homeworkId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelFullWorksheetSolutionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  fullWorksheetSolutionsByHomeworkId(
+    homeworkId: $homeworkId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      worksheetId
+      userId
+      s3SolutionImageKey
+      overallFeedback
+      overallScore
+      totalQuestions
+      completedQuestions
+      questionsWithIssues
+      suggestions
+      detailedFeedback
+      attemptNumber
+      submittedAt
+      aiModel
+      tokensUsed
+      homeworkId
+      isLate
+      teacherReviewed
+      teacherNotes
+      teacherReviewedAt
+      teacherReviewedBy
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query ProfileByUserId(
+  $userId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelUserProfileFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  profileByUserId(
+    userId: $userId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      userId
+      email
+      userRole
+      displayName
+      schoolName
+      gradeLevel
+      profileImageUrl
+      onboardingCompleted
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query ClassroomsByTeacherIdAndId(
+  $teacherId: ID!
+  $id: ModelIDKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelClassroomFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  classroomsByTeacherIdAndId(
+    teacherId: $teacherId
+    id: $id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query ClassroomByCode(
+  $classCode: String!
+  $sortDirection: ModelSortDirection
+  $filter: ModelClassroomFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  classroomByCode(
+    classCode: $classCode
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      teacherId
+      className
+      classCode
+      subject
+      description
+      gradeLevel
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query ClassroomMembershipsByClassroomIdAndEnrolledAt(
+  $classroomId: ID!
+  $enrolledAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelClassroomMembershipFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  classroomMembershipsByClassroomIdAndEnrolledAt(
+    classroomId: $classroomId
+    enrolledAt: $enrolledAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      classroomId
+      studentId
+      status
+      enrolledAt
+      approvedAt
+      approvedBy
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query ClassroomMembershipsByStudentIdAndEnrolledAt(
+  $studentId: ID!
+  $enrolledAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelClassroomMembershipFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  classroomMembershipsByStudentIdAndEnrolledAt(
+    studentId: $studentId
+    enrolledAt: $enrolledAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      classroomId
+      studentId
+      status
+      enrolledAt
+      approvedAt
+      approvedBy
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query ParentChildRelationshipsByParentIdAndId(
+  $parentId: ID!
+  $id: ModelIDKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelParentChildRelationshipFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  parentChildRelationshipsByParentIdAndId(
+    parentId: $parentId
+    id: $id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      parentId
+      childId
+      linkingCode
+      relationshipType
+      status
+      approvedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query ParentChildRelationshipsByChildIdAndId(
+  $childId: ID!
+  $id: ModelIDKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelParentChildRelationshipFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  parentChildRelationshipsByChildIdAndId(
+    childId: $childId
+    id: $id
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      parentId
+      childId
+      linkingCode
+      relationshipType
+      status
+      approvedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query RelationshipByLinkingCode(
+  $linkingCode: String!
+  $sortDirection: ModelSortDirection
+  $filter: ModelParentChildRelationshipFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  relationshipByLinkingCode(
+    linkingCode: $linkingCode
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      parentId
+      childId
+      linkingCode
+      relationshipType
+      status
+      approvedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query HomeworkByClassroomIdAndDueDate(
+  $classroomId: ID!
+  $dueDate: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelHomeworkFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  homeworkByClassroomIdAndDueDate(
+    classroomId: $classroomId
+    dueDate: $dueDate
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      classroomId
+      teacherId
+      title
+      description
+      dueDate
+      assignedDate
+      totalPoints
+      isPublished
+      worksheetId
+      instructions
+      learningObjectives
+      allowLateSubmissions
+      allowMultipleAttempts
+      maxAttempts
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query HomeworkByWorksheetId(
+  $worksheetId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelHomeworkFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  homeworkByWorksheetId(
+    worksheetId: $worksheetId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      classroomId
+      teacherId
+      title
+      description
+      dueDate
+      assignedDate
+      totalPoints
+      isPublished
+      worksheetId
+      instructions
+      learningObjectives
+      allowLateSubmissions
+      allowMultipleAttempts
+      maxAttempts
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query HomeworkAnalyticsByHomeworkId(
+  $homeworkId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelHomeworkAnalyticsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  homeworkAnalyticsByHomeworkId(
+    homeworkId: $homeworkId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      homeworkId
+      teacherId
+      totalStudents
+      submittedCount
+      totalSubmissions
+      lateCount
+      averageAttempts
+      multipleAttemptsCount
+      reviewedCount
+      pendingReviewCount
+      commonMistakes
+      strugglingStudents
+      lastUpdatedAt
+      lastCalculatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query StudentProgressesByStudentId(
+  $studentId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelStudentProgressFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  studentProgressesByStudentId(
+    studentId: $studentId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      totalHomeworkAssigned
+      totalHomeworkCompleted
+      totalHomeworkLate
+      totalSubmissions
+      averageAttemptsPerHomework
+      currentStreak
+      longestStreak
+      skillsBreakdown
+      strengthAreas
+      improvementAreas
+      lastSubmissionAt
+      progressUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query StudentProgressesByClassroomId(
+  $classroomId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelStudentProgressFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  studentProgressesByClassroomId(
+    classroomId: $classroomId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      totalHomeworkAssigned
+      totalHomeworkCompleted
+      totalHomeworkLate
+      totalSubmissions
+      averageAttemptsPerHomework
+      currentStreak
+      longestStreak
+      skillsBreakdown
+      strengthAreas
+      improvementAreas
+      lastSubmissionAt
+      progressUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query WorksheetMetadataByWorksheetId(
+  $worksheetId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelWorksheetMetadataFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  worksheetMetadataByWorksheetId(
+    worksheetId: $worksheetId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      worksheetId
+      userId
+      topics
+      difficulty
+      cognitiveSkills
+      questionTypes
+      estimatedTimeMinutes
+      complexityLevel
+      commonCoreStandards
+      bloomsTaxonomyLevels
+      curriculumCountry
+      curriculumVersion
+      moeCurriculumCodes
+      detectedGradeLevel
+      detectedGradeLevelCode
+      curriculumStrand
+      curriculumSubStrand
+      curriculumConfidence
+      curriculumMappedAt
+      extractedAt
+      aiModel
+      tokensUsed
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query QuestionMetadataByQuestionId(
+  $questionId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelQuestionMetadataFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  questionMetadataByQuestionId(
+    questionId: $questionId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      questionId
+      userId
+      questionType
+      difficultyLevel
+      cognitiveLevel
+      primaryConcept
+      secondaryConcepts
+      prerequisiteSkills
+      commonMistakes
+      conceptualChallenges
+      hasMultipleSteps
+      requiresVisualization
+      isWordProblem
+      extractedAt
+      aiModel
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query ConceptMasteriesByStudentIdAndConcept(
+  $studentId: ID!
+  $concept: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelConceptMasteryFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  conceptMasteriesByStudentIdAndConcept(
+    studentId: $studentId
+    concept: $concept
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      concept
+      gradeLevel
+      masteryPercentage
+      accuracyRate
+      totalAttempts
+      correctAttempts
+      incorrectAttempts
+      trend
+      recentQuestions
+      lastPracticed
+      easyQuestions
+      mediumQuestions
+      hardQuestions
+      easyCorrect
+      mediumCorrect
+      hardCorrect
+      strengthAreas
+      improvementAreas
+      recommendedPractice
+      curriculumCode
+      curriculumStrand
+      curriculumSubStrand
+      curriculumTopicTitle
+      prerequisitesMastered
+      prerequisiteGaps
+      curriculumMappedAt
+      calculatedAt
+      lastUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query ConceptMasteriesByClassroomId(
+  $classroomId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelConceptMasteryFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  conceptMasteriesByClassroomId(
+    classroomId: $classroomId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      concept
+      gradeLevel
+      masteryPercentage
+      accuracyRate
+      totalAttempts
+      correctAttempts
+      incorrectAttempts
+      trend
+      recentQuestions
+      lastPracticed
+      easyQuestions
+      mediumQuestions
+      hardQuestions
+      easyCorrect
+      mediumCorrect
+      hardCorrect
+      strengthAreas
+      improvementAreas
+      recommendedPractice
+      curriculumCode
+      curriculumStrand
+      curriculumSubStrand
+      curriculumTopicTitle
+      prerequisitesMastered
+      prerequisiteGaps
+      curriculumMappedAt
+      calculatedAt
+      lastUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query MasteryByCurriculumCode(
+  $curriculumCode: String!
+  $sortDirection: ModelSortDirection
+  $filter: ModelConceptMasteryFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  masteryByCurriculumCode(
+    curriculumCode: $curriculumCode
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      concept
+      gradeLevel
+      masteryPercentage
+      accuracyRate
+      totalAttempts
+      correctAttempts
+      incorrectAttempts
+      trend
+      recentQuestions
+      lastPracticed
+      easyQuestions
+      mediumQuestions
+      hardQuestions
+      easyCorrect
+      mediumCorrect
+      hardCorrect
+      strengthAreas
+      improvementAreas
+      recommendedPractice
+      curriculumCode
+      curriculumStrand
+      curriculumSubStrand
+      curriculumTopicTitle
+      prerequisitesMastered
+      prerequisiteGaps
+      curriculumMappedAt
+      calculatedAt
+      lastUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query ErrorPatternsByStudentIdAndDetectedAt(
+  $studentId: ID!
+  $detectedAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelErrorPatternFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  errorPatternsByStudentIdAndDetectedAt(
+    studentId: $studentId
+    detectedAt: $detectedAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      errorType
+      errorCategory
+      severity
+      occurrenceCount
+      firstSeen
+      lastSeen
+      affectedConcepts
+      exampleQuestionIds
+      description
+      rootCause
+      remediation
+      isResolved
+      resolvedAt
+      detectedAt
+      lastAnalyzedAt
+      aiModel
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query ErrorPatternsByClassroomId(
+  $classroomId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelErrorPatternFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  errorPatternsByClassroomId(
+    classroomId: $classroomId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      errorType
+      errorCategory
+      severity
+      occurrenceCount
+      firstSeen
+      lastSeen
+      affectedConcepts
+      exampleQuestionIds
+      description
+      rootCause
+      remediation
+      isResolved
+      resolvedAt
+      detectedAt
+      lastAnalyzedAt
+      aiModel
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query PracticeProblemsBySourceWorksheetId(
+  $sourceWorksheetId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelPracticeProblemFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  practiceProblemsBySourceWorksheetId(
+    sourceWorksheetId: $sourceWorksheetId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      sourceWorksheetId
+      sourceQuestionId
+      userId
+      problemText
+      answer
+      stepByStep
+      hints
+      concept
+      difficultyLevel
+      questionType
+      generatedFrom
+      difficultyAdjustment
+      timesUsed
+      averageScore
+      curriculumCode
+      curriculumGradeLevel
+      curriculumGradeLevelCode
+      curriculumStrand
+      curriculumSubStrand
+      respectsGradeBoundary
+      targetCurriculumCodes
+      generatedAt
+      aiModel
+      tokensUsed
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      owner
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query PracticeAssignmentsByAssignedByUserIdAndAssignedDate(
+  $assignedByUserId: ID!
+  $assignedDate: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelPracticeAssignmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  practiceAssignmentsByAssignedByUserIdAndAssignedDate(
+    assignedByUserId: $assignedByUserId
+    assignedDate: $assignedDate
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      assignedByUserId
+      assignedByRole
+      studentId
+      classroomId
+      title
+      description
+      dueDate
+      assignedDate
+      problemIds
+      problemCount
+      curriculumCodes
+      curriculumGradeLevel
+      targetConcepts
+      sourceType
+      status
+      startedAt
+      completedAt
+      correctCount
+      totalAttempted
+      score
+      timeSpentSeconds
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query PracticeAssignmentsByStudentIdAndStatus(
+  $studentId: ID!
+  $status: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelPracticeAssignmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  practiceAssignmentsByStudentIdAndStatus(
+    studentId: $studentId
+    status: $status
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      assignedByUserId
+      assignedByRole
+      studentId
+      classroomId
+      title
+      description
+      dueDate
+      assignedDate
+      problemIds
+      problemCount
+      curriculumCodes
+      curriculumGradeLevel
+      targetConcepts
+      sourceType
+      status
+      startedAt
+      completedAt
+      correctCount
+      totalAttempted
+      score
+      timeSpentSeconds
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query PracticeAssignmentsByClassroomIdAndAssignedDate(
+  $classroomId: ID!
+  $assignedDate: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelPracticeAssignmentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  practiceAssignmentsByClassroomIdAndAssignedDate(
+    classroomId: $classroomId
+    assignedDate: $assignedDate
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      assignedByUserId
+      assignedByRole
+      studentId
+      classroomId
+      title
+      description
+      dueDate
+      assignedDate
+      problemIds
+      problemCount
+      curriculumCodes
+      curriculumGradeLevel
+      targetConcepts
+      sourceType
+      status
+      startedAt
+      completedAt
+      correctCount
+      totalAttempted
+      score
+      timeSpentSeconds
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query StudentAnalyticsSummariesByStudentId(
+  $studentId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelStudentAnalyticsSummaryFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  studentAnalyticsSummariesByStudentId(
+    studentId: $studentId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      overallProgress
+      totalQuestionsAttempted
+      totalQuestionsCorrect
+      overallAccuracy
+      masteredConcepts
+      developingConcepts
+      needsWorkConcepts
+      topStrengths
+      topWeaknesses
+      mostCommonErrors
+      highSeverityErrorCount
+      mediumSeverityErrorCount
+      currentStreak
+      longestStreak
+      practiceFrequency
+      computationScore
+      problemSolvingScore
+      reasoningScore
+      accuracyScore
+      wordProblemScore
+      lastCalculated
+      lastUpdated
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query StudentAnalyticsSummariesByClassroomId(
+  $classroomId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelStudentAnalyticsSummaryFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  studentAnalyticsSummariesByClassroomId(
+    classroomId: $classroomId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      overallProgress
+      totalQuestionsAttempted
+      totalQuestionsCorrect
+      overallAccuracy
+      masteredConcepts
+      developingConcepts
+      needsWorkConcepts
+      topStrengths
+      topWeaknesses
+      mostCommonErrors
+      highSeverityErrorCount
+      mediumSeverityErrorCount
+      currentStreak
+      longestStreak
+      practiceFrequency
+      computationScore
+      problemSolvingScore
+      reasoningScore
+      accuracyScore
+      wordProblemScore
+      lastCalculated
+      lastUpdated
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query StandardByCode(
+  $curriculumCode: String!
+  $sortDirection: ModelSortDirection
+  $filter: ModelCurriculumStandardFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  standardByCode(
+    curriculumCode: $curriculumCode
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      country
+      curriculumName
+      curriculumVersion
+      gradeLevel
+      gradeLevelCode
+      strand
+      strandCode
+      subStrand
+      subStrandCode
+      topicNumber
+      topicTitle
+      subTopicCode
+      subTopicDescription
+      curriculumCode
+      keywords
+      sequenceOrder
+      prerequisiteCodes
+      bulletPoints
+      notes
+      isActive
+      effectiveFrom
+      effectiveUntil
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query TopicSummaryByCode(
+  $topicCode: String!
+  $sortDirection: ModelSortDirection
+  $filter: ModelCurriculumTopicSummaryFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  topicSummaryByCode(
+    topicCode: $topicCode
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      country
+      curriculumVersion
+      gradeLevel
+      gradeLevelCode
+      strand
+      strandCode
+      subStrand
+      subStrandCode
+      topicNumber
+      topicTitle
+      topicCode
+      subTopicCount
+      subTopicCodes
+      allKeywords
+      sequenceOrder
+      isActive
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query StudentCurriculumProgressesByStudentIdAndGradeLevel(
+  $studentId: ID!
+  $gradeLevel: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelStudentCurriculumProgressFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  studentCurriculumProgressesByStudentIdAndGradeLevel(
+    studentId: $studentId
+    gradeLevel: $gradeLevel
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      country
+      curriculumVersion
+      gradeLevel
+      gradeLevelCode
+      totalTopicsInGrade
+      topicsAttempted
+      topicsMastered
+      topicsInProgress
+      topicsNotStarted
+      coveragePercentage
+      masteryPercentage
+      strandProgress
+      masteredTopicCodes
+      inProgressTopicCodes
+      notStartedTopicCodes
+      prerequisiteGaps
+      recommendedNextTopics
+      lastCalculatedAt
+      lastUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}
+
+query StudentCurriculumProgressesByClassroomId(
+  $classroomId: ID!
+  $sortDirection: ModelSortDirection
+  $filter: ModelStudentCurriculumProgressFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  studentCurriculumProgressesByClassroomId(
+    classroomId: $classroomId
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      studentId
+      classroomId
+      country
+      curriculumVersion
+      gradeLevel
+      gradeLevelCode
+      totalTopicsInGrade
+      topicsAttempted
+      topicsMastered
+      topicsInProgress
+      topicsNotStarted
+      coveragePercentage
+      masteryPercentage
+      strandProgress
+      masteredTopicCodes
+      inProgressTopicCodes
+      notStartedTopicCodes
+      prerequisiteGaps
+      recommendedNextTopics
+      lastCalculatedAt
+      lastUpdatedAt
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+      __typename
+    }
+    nextToken
+    startedAt
+    __typename
+  }
+}

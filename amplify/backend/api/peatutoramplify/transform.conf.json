@@ -1,0 +1,64 @@
+{
+    "Version": 5,
+    "ElasticsearchWarning": true,
+    "ResolverConfig": {
+        "project": {
+            "ConflictHandler": "AUTOMERGE",
+            "ConflictDetection": "VERSION"
+        },
+        "models": {
+            "Worksheet": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "Question": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "SolutionFeedback": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "FullWorksheetSolution": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "UserStats": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "UserProfile": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "Classroom": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "ClassroomMembership": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "ParentChildRelationship": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "Homework": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "HomeworkSubmission": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "HomeworkAnalytics": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            },
+            "StudentProgress": {
+                "ConflictHandler": "AUTOMERGE",
+                "ConflictDetection": "VERSION"
+            }
+        }
+    }
+}

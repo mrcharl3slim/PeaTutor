@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3storage",
+  "policyUUID": "14491dbf",
+  "bucketName": "peatutorstorage",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ],
+  "groupAccess": {}
+}
